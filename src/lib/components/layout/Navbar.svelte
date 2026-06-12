@@ -127,15 +127,14 @@
 	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window onkeydown={handleKeydown} />
 
 <!-- Nav container utama -->
 <nav
 	bind:this={navElement}
 	class="navbar-wrapper"
-	role="navigation"
 	aria-label="Main navigation"
-	on:mouseleave={handleNavAreaLeave}
+	onmouseleave={handleNavAreaLeave}
 >
 	<!-- Navbar bar -->
 	<div class="navbar-bar">
@@ -148,7 +147,7 @@
 						role="menuitem"
 						class="nav-link"
 						class:active={activeMenu === item.label}
-						on:click={(e) => {
+						onclick={(e) => {
 							if (item.hasMegaMenu) {
 								e.preventDefault();
 								toggleMegaMenu(item.label);
@@ -156,7 +155,7 @@
 								handleSmoothScroll(e, item.href);
 							}
 						}}
-						on:mouseenter={() => handleNavHover(item.label)}
+						onmouseenter={() => handleNavHover(item.label)}
 						aria-expanded={item.hasMegaMenu ? isMegaMenuOpen : undefined}
 						aria-haspopup={item.hasMegaMenu ? 'true' : undefined}
 					>
@@ -169,7 +168,7 @@
 		<!-- Mobile hamburger button -->
 		<button
 			class="mobile-toggle"
-			on:click={toggleMobileMenu}
+			onclick={toggleMobileMenu}
 			aria-label="Toggle navigation menu"
 			aria-expanded={isMobileMenuOpen}
 		>
@@ -184,8 +183,9 @@
 		<div
 			class="mega-menu"
 			transition:slide={{ duration: 400, easing: cubicOut }}
-			on:mouseleave={closeMegaMenu}
+			onmouseleave={closeMegaMenu}
 			role="menu"
+			tabindex="-1"
 			aria-label="Services menu"
 		>
 			<div class="mega-menu-grid">
@@ -194,8 +194,8 @@
 						href={service.href}
 						class="service-card"
 						role="menuitem"
-						on:mouseenter={() => (hoveredService = index)}
-						on:mouseleave={() => (hoveredService = null)}
+						onmouseenter={() => (hoveredService = index)}
+						onmouseleave={() => (hoveredService = null)}
 						in:fade={{ delay: index * 50, duration: 300 }}
 					>
 						<!-- Gambar background yang muncul saat hover/scroll -->
@@ -228,7 +228,7 @@
 					href={item.href}
 					class="mobile-link"
 					class:active={activeMenu === item.label}
-					on:click={(e) => {
+					onclick={(e) => {
 						if (item.hasMegaMenu) {
 							e.preventDefault();
 							toggleMegaMenu(item.label);
