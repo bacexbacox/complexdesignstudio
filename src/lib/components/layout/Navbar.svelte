@@ -12,7 +12,7 @@
 
 	// Data navigasi utama
 	const navItems = [
-		{ label: 'Services', href: '#', hasMegaMenu: true },
+		{ label: 'Services', href: '/service', hasMegaMenu: true },
 		{ label: 'About', href: '#', hasMegaMenu: false },
 		{ label: 'Contact', href: '#', hasMegaMenu: false }
 	];
@@ -23,42 +23,42 @@
 			title: 'Web Development',
 			count: 7,
 			href: '/portofolio/web-development',
-			image: '/image/portofolio/web-development.svg',
+			image: '/icons/web-development.svg',
 			icon: '💻'
 		},
 		{
 			title: 'Web & Mobile Applications',
 			count: 6,
 			href: '/portofolio/web-mobile-applications',
-			image: '/image/portofolio/web-mobile-applications.svg',
+			image: '/icons/web-mobile-applications.svg',
 			icon: '📱'
 		},
 		{
 			title: 'Digital Marketing',
 			count: 7,
 			href: '/portofolio/digital-marketing',
-			image: '/image/portofolio/digital-marketing.svg',
+			image: '/icons/digital-marketing.svg',
 			icon: '🛒'
 		},
 		{
 			title: 'User Experience Design',
 			count: 6,
 			href: '/portofolio/user-experience-design',
-			image: '/image/portofolio/user-experience-design.svg',
+			image: '/icons/user-experience-design.svg',
 			icon: '📐'
 		},
 		{
 			title: 'Creative Design',
 			count: 5,
 			href: '/portofolio/creative-design',
-			image: '/image/portofolio/creative-design.svg',
+			image: '/icons/creative-design.svg',
 			icon: '🎨'
 		},
 		{
 			title: 'Branding Product',
 			count: 6,
 			href: '/portofolio/branding-product',
-			image: '/image/portofolio/branding-product.svg',
+			image: '/icons/branding-product.svg',
 			icon: '⚙️'
 		}
 	];
@@ -148,11 +148,11 @@
 						class="nav-link"
 						class:active={activeMenu === item.label}
 						onclick={(e) => {
-							if (item.hasMegaMenu) {
+							if (item.href.startsWith('#') && item.href.length > 1) {
+								handleSmoothScroll(e, item.href);
+							} else if (item.href === '#' && item.hasMegaMenu) {
 								e.preventDefault();
 								toggleMegaMenu(item.label);
-							} else {
-								handleSmoothScroll(e, item.href);
 							}
 						}}
 						onmouseenter={() => handleNavHover(item.label)}
@@ -229,11 +229,13 @@
 					class="mobile-link"
 					class:active={activeMenu === item.label}
 					onclick={(e) => {
-						if (item.hasMegaMenu) {
+						if (item.href.startsWith('#') && item.href.length > 1) {
+							handleSmoothScroll(e, item.href);
+							isMobileMenuOpen = false;
+						} else if (item.href === '#' && item.hasMegaMenu) {
 							e.preventDefault();
 							toggleMegaMenu(item.label);
 						} else {
-							handleSmoothScroll(e, item.href);
 							isMobileMenuOpen = false;
 						}
 					}}
