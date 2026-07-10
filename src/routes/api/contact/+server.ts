@@ -69,8 +69,9 @@ export const POST = async ({ request }) => {
 			body: new URLSearchParams({ secret: secretKey, response: recaptchaToken })
 		});
 		const recaptchaData = (await recaptchaRes.json()) as { success?: boolean; score?: number };
+		const recaptchaScore = recaptchaData.score ?? 0;
 
-		if (!recaptchaData.success || recaptchaData.score < 0.5) {
+		if (!recaptchaData.success || recaptchaScore < 0.5) {
 			return json({ success: false, message: 'reCAPTCHA verification failed. Are you a bot?' }, { status: 400 });
 		}
 
