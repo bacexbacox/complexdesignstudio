@@ -160,7 +160,7 @@ export const POST = async ({ request }) => {
 				pass: env.SMTP_PASS
 			},
 			tls: {
-				rejectUnauthorized: true
+				rejectUnauthorized: false
 			}
 		});
 
