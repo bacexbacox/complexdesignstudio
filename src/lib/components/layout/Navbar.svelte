@@ -13,8 +13,8 @@
 	// Data navigasi utama
 	const navItems = [
 		{ label: 'Services', href: '/service', hasMegaMenu: true },
-		{ label: 'About', href: '#', hasMegaMenu: false },
-		{ label: 'Contact', href: '#', hasMegaMenu: false }
+		{ label: 'About', href: '/about', hasMegaMenu: false },
+		{ label: 'Contact', href: '/contact', hasMegaMenu: false }
 	];
 
 	// Data layanan untuk mega menu dengan gambar

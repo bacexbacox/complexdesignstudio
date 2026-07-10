@@ -1,11 +1,12 @@
 <script lang="ts">
-  // Contact page
+	import SeoHead from '$lib/components/shared/SeoHead.svelte';
+	import ContactForm from '$lib/components/sections/contact/ContactForm.svelte';
+
+	let { data } = $props();
 </script>
 
-<svelte:head>
-  <title>Contact - Complex Design Studio</title>
-</svelte:head>
+<SeoHead meta={data.meta} />
 
-<section class="min-h-screen pt-32 pb-16 padding-global">
-  <h1>Contact</h1>
+<section class="padding-global min-h-screen pt-32 pb-16">
+	<ContactForm />
 </section>

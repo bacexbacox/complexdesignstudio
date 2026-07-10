@@ -9,7 +9,7 @@
 </script>
 
 <section class="padding-global pb-16 md:pb-24 lg:pb-32">
-	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
 		{#each services as service, index (service.id)}
 			<ServiceCard {service} {index} />
 		{/each}
