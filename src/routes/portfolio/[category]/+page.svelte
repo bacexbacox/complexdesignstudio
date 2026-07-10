@@ -1,11 +1,18 @@
 <script lang="ts">
+  import SeoHead from '$lib/components/shared/SeoHead.svelte';
+  import PortfolioHero from '$lib/components/sections/portfolio/PortfolioHero.svelte';
+  import PortfolioGrid from '$lib/components/sections/portfolio/PortfolioGrid.svelte';
+
   let { data } = $props();
 </script>
 
-<svelte:head>
-  <title>Portfolio: {data.category} - Complex Design Studio</title>
-</svelte:head>
+<SeoHead meta={data.meta} />
 
-<section class="min-h-screen pt-32 pb-16 padding-global">
-  <h1>Portfolio Category: {data.category}</h1>
-</section>
+<div class="min-h-screen bg-[#FAFAFA]">
+  <PortfolioHero 
+    title={data.service.title} 
+    description={data.service.description} 
+  />
+  
+  <PortfolioGrid projects={data.projects} />
+</div>

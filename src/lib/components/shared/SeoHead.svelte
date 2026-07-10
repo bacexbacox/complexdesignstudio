@@ -12,16 +12,20 @@
 	<!-- Open Graph -->
 	<meta property="og:title" content={meta.title} />
 	<meta property="og:description" content={meta.description} />
-	<meta property="og:image" content={meta.ogImage ?? '/og/default.jpg'} />
 	<meta property="og:url" content={meta.canonical} />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Complex Design Studio" />
+	{#if meta.ogImage}
+		<meta property="og:image" content={meta.ogImage} />
+	{/if}
 
 	<!-- Twitter / X Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={meta.title} />
 	<meta name="twitter:description" content={meta.description} />
-	<meta name="twitter:image" content={meta.ogImage ?? '/og/default.jpg'} />
+	{#if meta.ogImage}
+		<meta name="twitter:image" content={meta.ogImage} />
+	{/if}
 
 	{#if meta.noIndex}
 		<meta name="robots" content="noindex, nofollow" />

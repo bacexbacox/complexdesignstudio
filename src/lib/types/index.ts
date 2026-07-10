@@ -14,6 +14,7 @@ export interface PortfolioProject {
   title: string;
   client: string;
   description: string;
+  clientLogo?: string;
   coverImage: string;
   images: string[];
   tags: string[];

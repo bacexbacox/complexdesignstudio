@@ -6,7 +6,6 @@ export const load = () => {
 		description:
 			'Layanan web development, mobile app, digital marketing, UX design, creative design, dan branding dari Complex Design Studio.',
 		canonical: 'https://complexdesignstudio.com/service',
-		ogImage: '/og/service.jpg',
 		noIndex: false,
 		jsonLd: {
 			'@context': 'https://schema.org',

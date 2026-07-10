@@ -6,7 +6,6 @@ export const load = () => {
 		title: 'About Us — Complex Design Studio',
 		description: 'We are a collective of thinkers, designers, and developers dedicated to creating impactful digital experiences that connect brands with people.',
 		canonical: 'https://complexdesignstudio.com/about',
-		ogImage: '/og/about.jpg' // Sesuaikan jika ada gambar spesifik untuk about di folder og
 	};
 
 	return { meta };

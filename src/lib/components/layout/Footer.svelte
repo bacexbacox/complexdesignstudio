@@ -1,17 +1,16 @@
 <script lang="ts">
 	const items = [
 		{ label: 'INSTAGRAM', href: 'https://instagram.com/complexdesignstudio', target: '_blank' },
-		{ label: 'FACEBOOK', href: '#', target: '_blank' },
 		{ label: 'LINKEDIN', href: '#', target: '_blank' },
-		{ label: 'MAIL', href: 'mailto:hello@complexdesignstudio.com', target: '' },
-		{ label: 'WHATSAPP', href: '#', target: '_blank' },
-		{ label: '@2026 ComplexDesign', href: '/', target: '' }
+		{ label: 'ComplexDesign@2026', href: '/', target: '' },
+		{ label: 'MAIL', href: 'mailto:admin@complexdesignstudio.com', target: '' },
+		{ label: 'WHATSAPP', href: '#', target: '_blank' }
 	];
 </script>
 
 <footer class="w-full mt-20">
-	<div class="mx-4 md:mx-8 lg:mx-16 border-t border-black/80 pt-6 pb-12">
-		<div class="flex flex-col sm:flex-row flex-wrap items-center justify-between gap-6 text-xs md:text-sm font-medium tracking-widest">
+	<div class="mx-2 md:mx-8 lg:mx-16 border-t border-black/80 pt-4 pb-8 md:pt-6 md:pb-12">
+		<div class="flex flex-row items-center justify-between gap-2 md:gap-6 text-[10px] sm:text-xs md:text-sm font-medium tracking-tight md:tracking-widest w-full">
 			{#each items as item}
 				<a 
 					href={item.href} 
@@ -19,10 +18,10 @@
 					rel={item.target === '_blank' ? 'noopener noreferrer' : ''}
 					class="hover:opacity-60 transition-opacity"
 				>
-					{#if item.label === '@2026 ComplexDesign'}
-						<span class="normal-case tracking-wide">{item.label}</span>
+					{#if item.label === 'ComplexDesign@2026'}
+						<span class="normal-case tracking-normal md:tracking-wide">{item.label}</span>
 					{:else}
-						<span class="uppercase">{item.label}</span>
+						<span class="uppercase whitespace-nowrap">{item.label}</span>
 					{/if}
 				</a>
 			{/each}

@@ -31,3 +31,8 @@ body {
 *::after {
 	box-sizing: border-box;
 }
+
+/* Hide reCAPTCHA badge (Google allows this as long as we put the text attribution near the form) */
+.grecaptcha-badge {
+	visibility: hidden !important;
+}

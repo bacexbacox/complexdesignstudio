@@ -40,7 +40,7 @@
 			class="overflow-hidden"
 		>
 			<h1
-				class="text-[clamp(3rem,8vw,7rem)] font-medium leading-[0.95] tracking-tight transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+				class="text-[clamp(3rem,8vw,7rem)] font-medium leading-[0.95] tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 				style="transform: translateY({isVisible ? '0%' : '110%'})"
 			>
 				Service
@@ -48,7 +48,7 @@
 		</div>
 
 		<div
-			class="max-w-xs md:max-w-[280px] lg:max-w-[320px] text-right transition-all duration-700 delay-300"
+			class="ml-auto max-w-xs text-right transition-all duration-700 delay-300 md:max-w-[280px] lg:max-w-[320px]"
 			style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '16px'})"
 		>
 			<p class="text-xs md:text-sm text-neutral-500 font-light leading-relaxed">
@@ -60,11 +60,11 @@
 
 	<!-- Tagline besar di bawah -->
 	<div
-		class="transition-all duration-[900ms] delay-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+		class="transition-all duration-900 delay-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
 		style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '32px'})"
 	>
 		<p class="text-2xl md:text-4xl lg:text-[3.5vw] font-medium leading-[1.15] tracking-tight text-center max-w-4xl mx-auto">
-			Complex is a design and technology studio. We build digital products, from concept to production.
+			Below are some case projects from our journey and growth process.
 		</p>
 	</div>
 </section>

@@ -2,19 +2,16 @@
 	import StatsSection from '$lib/components/sections/home/StatsSection.svelte';
 	import HeroSection from '$lib/components/sections/home/HeroSection.svelte';
 	import ServicesSlide from '$lib/components/sections/home/ServicesSlide.svelte';
+	import SeoHead from '$lib/components/shared/SeoHead.svelte';
 	import ServiceList from '$lib/components/shared/ServiceList.svelte';
+
+	let { data } = $props();
 </script>
 
-<svelte:head>
-	<title>Complex Design Studio</title>
-	<meta
-		name="description"
-		content="Complex Design Studio - Premium digital agency specializing in brand strategy, web development, and design."
-	/>
-</svelte:head>
+<SeoHead meta={data.meta} />
 
 <!-- Hero Section -->
-<section class="padding-global flex min-h-screen flex-col pt-32 pb-16 md:pt-[11vw]">
+<section class="padding-global flex min-h-screen flex-col pt-32 pb-16 md:pt-[11vw] overflow-hidden">
 	<div class="flex w-full flex-col gap-16 md:gap-24">
 		<HeroSection />
 		<StatsSection />

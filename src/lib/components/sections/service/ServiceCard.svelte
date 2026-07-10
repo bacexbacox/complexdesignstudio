@@ -1,7 +1,7 @@
 <!--
   ServiceCard.svelte — Card service individual
   Animasi hover terinspirasi lessestudio.com:
-  - Normal: Gambar dengan rounded corners, dot-grid icon di bottom-left
+  - Normal: Gambar dengan rounded corners, title kategori di top-left
   - Hover: Image zoom + blur, dark overlay fade-in, service tags muncul sebagai pills
 -->
 <script lang="ts">
@@ -14,21 +14,22 @@
 	 * Nama file tidak uniform (ada spasi, kapitalisasi berbeda), jadi butuh mapping manual
 	 */
 	const imageMap: Record<string, string> = {
-		'website-development': 'web development.webp',
-		'web-mobile-application': 'webapp.webp',
-		'digital-marketing': 'digital marketing.webp',
-		'ux-design': 'ux.webp',
-		'creative-design': 'Design.webp',
-		'branding-product': 'brand identity.webp'
+		'website-development': 'website-development-complexdesignstudio.webp',
+		'mobile-application': 'web-and-mobile-applications-complexdesignstudio.webp',
+		'digital-marketing': 'digitak-marketing-complexdesignstudio.webp',
+		'ux-design': 'user-experience-design-complexdesignstudio.webp',
+		'creative-design': 'creative-design-complexdesignstudio.webp',
+		'branding-product': 'branding-product-complexdesignstudio.webp'
 	};
 
-	const imageSrc = `/images/service/${imageMap[service.slug] ?? 'web development.webp'}`;
+	const imageSrc = $derived(
+		`/images/service/${imageMap[service.slug] ?? 'website-development-complexdesignstudio.webp'}`
+	);
 </script>
 
 <a
 	href="/portfolio/{service.slug}"
 	class="service-card group"
-	style="animation-delay: {index * 100}ms"
 	aria-label="Lihat portofolio {service.title}"
 >
 	<!-- Background image layer — zoom + blur on hover -->
@@ -43,19 +44,10 @@
 		/>
 	</div>
 
-	<!-- Dot-grid icon dekoratif di bottom-left (hilang saat hover) -->
-	<div class="dot-icon" aria-hidden="true">
-		<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<circle cx="4" cy="4" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="18" cy="4" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="32" cy="4" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="4" cy="18" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="18" cy="18" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="32" cy="18" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="4" cy="32" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="18" cy="32" r="2.5" fill="white" opacity="0.8"/>
-			<circle cx="32" cy="32" r="2.5" fill="white" opacity="0.8"/>
-		</svg>
+	<!-- Visible category title -->
+	<div class="title-panel">
+		<span class="title-kicker">Explore</span>
+		<h2>{service.title}</h2>
 	</div>
 
 	<!-- Hover overlay: dark overlay + service tags + "View Service" link -->
@@ -86,19 +78,6 @@
 		color: #ffffff;
 		border-radius: 12px;
 		aspect-ratio: 4 / 5;
-		opacity: 0;
-		animation: cardReveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-	}
-
-	@keyframes cardReveal {
-		from {
-			opacity: 0;
-			transform: translateY(30px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
 	}
 
 	@media (min-width: 768px) {
@@ -135,25 +114,49 @@
 		object-position: center top;
 	}
 
-	/* === Dot Icon — bottom-left, fades out on hover === */
-	.dot-icon {
+	/* === Category Title === */
+	.title-panel {
 		position: absolute;
-		bottom: 16px;
 		left: 16px;
-		z-index: 2;
-		opacity: 0.9;
-		transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		top: 16px;
+		z-index: 4;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		text-shadow: 0 1px 18px rgba(0, 0, 0, 0.35);
+	}
+
+	.title-panel::before {
+		content: '';
+		width: 52px;
+		height: 3px;
+		background: #ef1d26;
+		border-radius: 999px;
+	}
+
+	.title-kicker {
+		font-size: 10px;
+		font-weight: 500;
+		line-height: 1;
+		color: rgba(255, 255, 255, 0.72);
+		text-transform: uppercase;
+	}
+
+	.title-panel h2 {
+		max-width: 12ch;
+		margin: 0;
+		font-size: clamp(1.45rem, 3vw, 2.5rem);
+		font-weight: 500;
+		line-height: 0.98;
+		color: #ffffff;
 	}
 
 	@media (min-width: 768px) {
-		.dot-icon {
-			bottom: 20px;
+		.title-panel {
+			top: 24px;
 			left: 20px;
 		}
-	}
-
-	.service-card:hover .dot-icon {
-		opacity: 0;
 	}
 
 	/* === Hover Overlay === */

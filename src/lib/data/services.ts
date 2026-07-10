@@ -5,7 +5,8 @@ export const services: Service[] = [
     id: '1',
     slug: 'website-development',
     title: 'Website Development',
-    description: '',
+    description:
+      'We design and develop fast, scalable websites and web applications that help businesses operate better, connect with customers, and grow online.',
     icon: '',
     items: [
       'Web Applications',
@@ -18,9 +19,10 @@ export const services: Service[] = [
   },
   {
     id: '2',
-    slug: 'web-mobile-application',
-    title: 'Web & Mobile Applications',
-    description: '',
+    slug: 'mobile-application',
+    title: 'Mobile Application',
+    description:
+      'We build reliable iOS and Android applications with thoughtful user experiences, secure integrations, and the flexibility to support your business goals.',
     icon: '',
     items: [
       'iOS & Android Apps',
@@ -28,21 +30,22 @@ export const services: Service[] = [
       'API Development',
       'Booking & Scheduling',
       'LMS & Education Platforms',
-      'Payments Systems'
+      'Payment Systems'
     ]
   },
   {
     id: '3',
     slug: 'digital-marketing',
     title: 'Digital Marketing',
-    description: '',
+    description:
+      'We grow brands through SEO, paid campaigns, content, social media, and market insights that turn digital attention into measurable business opportunities.',
     icon: '',
     items: [
-      'SEO (Search Engine Optimize)',
+      'SEO (Search Engine Optimization)',
       'SEM (Search Engine Marketing)',
       'Competitor & Market Research',
       'Social Media Plan Management',
-      'Social Media Ads plan',
+      'Social Media Ad Campaigns',
       'Content Platforms'
     ]
   },
@@ -50,7 +53,8 @@ export const services: Service[] = [
     id: '4',
     slug: 'ux-design',
     title: 'User Experience Design',
-    description: '',
+    description:
+      'We create user-centered digital experiences through research, information architecture, wireframes, prototypes, and interface systems that are easy to use.',
     icon: '',
     items: [
       'UX / UI Kit Design',
@@ -63,7 +67,8 @@ export const services: Service[] = [
     id: '5',
     slug: 'creative-design',
     title: 'Creative Design',
-    description: '',
+    description:
+      'We create distinctive visual assets, illustrations, and creative communication that make brands easier to recognize, understand, and remember.',
     icon: '',
     items: [
       'Design Brand Identity',
@@ -76,14 +81,15 @@ export const services: Service[] = [
     id: '6',
     slug: 'branding-product',
     title: 'Branding Product',
-    description: '',
+    description:
+      'We build cohesive product brands through strategy, identity, packaging, stationery, apparel, and memorable physical touchpoints.',
     icon: '',
     items: [
       'Packaging',
       'Souvenir',
       'Stationery',
       'Apparel',
-      'Life style'
+      'Lifestyle Products'
     ]
   }
 ];

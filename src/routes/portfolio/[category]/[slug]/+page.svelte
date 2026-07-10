@@ -1,12 +1,12 @@
 <script lang="ts">
-  let { data } = $props();
+	import SeoHead from '$lib/components/shared/SeoHead.svelte';
+	import ProjectDetail from '$lib/components/sections/portfolio/ProjectDetail.svelte';
+
+	let { data } = $props();
 </script>
 
-<svelte:head>
-  <title>Project: {data.slug} - Complex Design Studio</title>
-</svelte:head>
+<SeoHead meta={data.meta} />
 
-<section class="min-h-screen pt-32 pb-16 padding-global">
-  <h1>Project: {data.slug}</h1>
-  <p>Category: {data.category}</p>
-</section>
+<main class="min-h-screen bg-[#FAFAFA] pt-32 md:pt-40">
+	<ProjectDetail project={data.project} />
+</main>

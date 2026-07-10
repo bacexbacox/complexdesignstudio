@@ -91,14 +91,14 @@
 			style="width: {currentWidth}; height: {currentHeight}; border-radius: {currentRadius};"
 		>
 			<div class="relative h-full w-full overflow-hidden">
-				<img
-					src="/images/pages/home/serviceslide.gif"
-					alt="Complex Design Studio — services showcase animation"
+				<video
+					src="/images/pages/home/animasi-porto-complex.mp4"
 					class="h-full w-full object-cover"
-					loading="eager"
-					width="800"
-					height="600"
-				/>
+					autoplay
+					loop
+					muted
+					playsinline
+				></video>
 			</div>
 		</div>
 	</div>
