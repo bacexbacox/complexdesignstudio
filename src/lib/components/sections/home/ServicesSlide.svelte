@@ -92,13 +92,23 @@
 		>
 			<div class="relative h-full w-full overflow-hidden">
 				<video
-					src="/images/pages/home/animasi-porto-complex.mp4"
 					class="h-full w-full object-cover"
 					autoplay
 					loop
 					muted
 					playsinline
-				></video>
+				>
+					<source
+						media="(max-width: 767px)"
+						src="/images/pages/home/mobileslide-porto.mp4"
+						type="video/mp4"
+					/>
+					<source
+						media="(min-width: 768px)"
+						src="/images/pages/home/animasi-porto-complex.mp4"
+						type="video/mp4"
+					/>
+				</video>
 			</div>
 		</div>
 	</div>
