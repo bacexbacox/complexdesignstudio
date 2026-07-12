@@ -1,10 +1,14 @@
 <script lang="ts">
 	const items = [
 		{ label: 'INSTAGRAM', href: 'https://instagram.com/complexdesignstudio', target: '_blank' },
-		{ label: 'LINKEDIN', href: '#', target: '_blank' },
+		{ label: 'LINKEDIN', href: 'https://www.linkedin.com/in/complex-design-studio-6170b8418', target: '_blank' },
 		{ label: 'ComplexDesign@2026', href: '/', target: '' },
 		{ label: 'MAIL', href: 'mailto:admin@complexdesignstudio.com', target: '' },
-		{ label: 'WHATSAPP', href: '#', target: '_blank' }
+		{
+			label: '+62 851 1133 1688',
+			href: 'https://wa.me/6285111331688?text=Halloo.%21%20selamat%20datang%20to%20Complex%20Design%20Studio',
+			target: '_blank'
+		}
 	];
 </script>
 
