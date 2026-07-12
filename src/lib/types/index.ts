@@ -19,6 +19,7 @@ export interface PortfolioProject {
   images: string[];
   tags: string[];
   year: number;
+  serviceLabel?: string;
   url?: string;
 }
 

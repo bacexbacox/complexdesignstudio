@@ -71,6 +71,24 @@ export const projects: PortfolioProject[] = [
     tags: ['Android Apps'],
     year: 2017
   },
+  {
+    id: '5',
+    slug: 'bsm-priority-mobile',
+    categorySlug: 'mobile-application',
+    title: 'BSM PRIORITY — MOBILE APP',
+    client: 'BANK SYARIAH MANDIRI',
+    description: '“Layanan finansial premium dalam satu genggaman.”\nThis was the primary focus and guiding principle for Complex Design in developing the BSM Priority mobile application. The application was designed to provide Priority customers with convenient access to various services and information through their mobile devices.\nWhile maintaining the elegant and premium identity of BSM Priority, we translated the website experience into a mobile application that is more compact, intuitive, and user-friendly. The entire interface and navigation were carefully designed to deliver a consistent user experience across Android, iOS, and RIM BlackBerry platforms.\n\nTechnical\nThis mobile application project was developed simultaneously with the BSM Priority website, featuring almost identical functionalities. We utilized a single shared database with the website, where the application sends API (Application Programming Interface) requests to the server. The server then processes database queries and returns the data in JSON format for display within the application.\nIn 2016, API integration and the use of JSON format to connect websites with mobile applications were still considered relatively new technologies. The implementation of these technologies demonstrated Complex Design\'s capability to build integrated and efficient digital systems while adopting modern development practices of the time.',
+    clientLogo: '/images/portfolio/apps-mobile-applications/bsm-priority-mobile/logo-mobile-mandirisyariahpriority-complexdesignstudio.webp',
+    coverImage: '/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-a.webp',
+    images: [
+      '/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-a.webp',
+      '/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-b.webp',
+      '/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-c.webp'
+    ],
+    tags: ['ANDROID, IOS & RIM BLACKBERRY APPS'],
+    year: 2016,
+    serviceLabel: 'APPS & MOBILE APPLICATIONS'
+  },
 
   // ==========================================
   // WEBSITE DEVELOPMENT

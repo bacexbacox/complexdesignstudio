@@ -52,7 +52,7 @@
 					<span class="w-24 font-medium text-gray-900 md:w-32">SERVICE</span>
 					<span class="mr-4 text-gray-400">:</span>
 					<span class="flex-1 text-gray-600 uppercase"
-						>{project.categorySlug.replaceAll('-', ' ')}</span
+						>{project.serviceLabel ?? project.categorySlug.replaceAll('-', ' ')}</span
 					>
 				</div>
 				<div class="flex">
