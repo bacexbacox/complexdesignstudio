@@ -690,9 +690,9 @@
 		position: fixed;
 		inset: 0;
 		z-index: 1998;
-		background: rgba(0, 0, 0, 0.25);
-		backdrop-filter: blur(6px);
-		-webkit-backdrop-filter: blur(6px);
+		background: rgba(5, 4, 10, 0.58);
+		backdrop-filter: blur(18px) saturate(0.8);
+		-webkit-backdrop-filter: blur(18px) saturate(0.8);
 		pointer-events: auto;
 		cursor: pointer;
 	}
@@ -702,9 +702,9 @@
 		position: fixed;
 		inset: 0;
 		z-index: 1999;
-		background: rgba(8, 6, 16, 0.55);
-		backdrop-filter: blur(24px) saturate(1.4);
-		-webkit-backdrop-filter: blur(24px) saturate(1.4);
+		background: rgba(8, 7, 15, 0.76);
+		backdrop-filter: blur(32px) saturate(0.9);
+		-webkit-backdrop-filter: blur(32px) saturate(0.9);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -777,7 +777,7 @@
 		width: 100%;
 		text-align: center;
 		padding: 8px 24px;
-		color: rgba(255, 255, 255, 0.85);
+		color: #ffffff;
 		text-decoration: none;
 		font-size: clamp(22px, 6.4vw, 32px);
 		font-weight: 300;
@@ -785,6 +785,7 @@
 		border-radius: 12px;
 		transition: all 0.25s ease;
 		position: relative;
+		text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
 	}
 
 	:global(.mobile-nav-link::after) {
@@ -823,7 +824,7 @@
 		gap: 10px;
 		width: 100%;
 		padding: 10px 20px;
-		color: rgba(255, 255, 255, 0.45);
+		color: rgba(255, 255, 255, 0.78);
 		text-decoration: none;
 		font-size: 13px;
 		font-weight: 400;
@@ -847,7 +848,18 @@
 
 	:global(.mobile-service-num) {
 		font-size: 11px;
-		color: rgba(255, 255, 255, 0.25);
+		color: rgba(255, 255, 255, 0.55);
+	}
+
+	/* Fallback saat browser tidak mendukung backdrop-filter. */
+	@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+		:global(.mobile-overlay) {
+			background: rgba(5, 4, 10, 0.86);
+		}
+
+		:global(.mobile-panel) {
+			background: rgba(8, 7, 15, 0.94);
+		}
 	}
 
 	/* === Responsive (Tablet & Mobile) === */
