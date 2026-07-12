@@ -28,7 +28,7 @@
 			ariaLabel: 'Email Complex Design Studio'
 		},
 		{
-			label: '+62 851 1133 1688',
+			label: 'WHATSAPP',
 			href: whatsappUrl,
 			external: true,
 			ariaLabel: 'WhatsApp Complex Design Studio di +62 851 1133 1688'
