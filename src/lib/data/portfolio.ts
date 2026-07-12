@@ -83,11 +83,11 @@ export const projects: PortfolioProject[] = [
     client: 'Bank Syariah Mandiri',
     description: 'Bank Syariah Mandiri entrusted Complex Design as the vendor to plan the website development for Bank Syariah Mandiri Priority, commonly known as BSM PRIORITY.\nThe website was built with a Smooth Experience concept, featuring a Brown Elegant theme. It includes features such as a Financial Check-up, Zakat Calculator, Merchant Program, E-magazine, and features offering services every month that regular customers do not have.\nOur team provided maximum service for Bank Syariah Mandiri by implementing the most advanced and modern engine and features at that time. We prioritized user experience by creating a Super Responsive Website and developing APKs that can be downloaded from the Play Store and App Store.',
     clientLogo: '/images/portfolio/website-development/bsmpriority/logo-mandirisyariahpriority-complexdesignstudio.webp',
-    coverImage: '/images/portfolio/website-development/bsmpriority/1-bsmpriority--complexdesignstudio.webp',
+    coverImage: '/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-a.webp',
     images: [
-      '/images/portfolio/website-development/bsmpriority/1-bsmpriority--complexdesignstudio.webp',
+      '/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-a.webp',
       'https://www.youtube.com/embed/AkiPAxX7MYY',
-      '/images/portfolio/website-development/bsmpriority/2-bsmpriorityplaystore-complexdesignstudio.webp'
+      '/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-b.webp'
     ],
     tags: ['WEBSITE APPLICATION & MOBILE APP'],
     year: 2016
