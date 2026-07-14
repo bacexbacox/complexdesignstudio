@@ -111,6 +111,23 @@ export const projects: PortfolioProject[] = [
     year: 2016
   },
   {
+    id: '5',
+    slug: 'bank-syariah-mandiri',
+    categorySlug: 'website-development',
+    title: 'BANK SYARIAH MANDIRI — MAIN WEBSITE',
+    client: 'Bank Syariah Mandiri',
+    description: 'Complex Design and Bank Syariah Mandiri continued their collaboration after we successfully earned the trust to develop the Bank Syariah Mandiri Priority website, also known as BSM Priority. We were then appointed as the vendor responsible for handling the maintenance of Bank Syariah Mandiri’s main website. The daily work contract between Bank Syariah Mandiri and Complex Design included updating various slider features (daily), updating website pages (weekly), fixing bugs based on reports, preparing traffic reports and SEO reports, performing database backups and database optimization, as well as managing and inputting content. Every process was carried out according to a structured schedule, supported by well-organized work reports to ensure that the website remained secure, optimal, and accessible at all times.\nAt that time, Bank Syariah Mandiri was the largest bank syariah in Indonesia. Being trusted to manage the maintenance of Bank Syariah Mandiri’s main website became an important experience for Complex Design in managing a corporate website with a large volume of content and traffic. Bank Syariah Mandiri has since merged with two other bank syariah BUMN, BRI Syariah and BNI Syariah, to become Bank Syariah Indonesia, or BSI. The merger officially took effect on 1 February 2021.',
+    coverImage: '/images/portfolio/website-development/bank-syariah-mandiri/madirisyariah-complexdesign-project-a.webp',
+    images: [
+      '/images/portfolio/website-development/bank-syariah-mandiri/madirisyariah-complexdesign-project-a.webp',
+      '/images/portfolio/website-development/bank-syariah-mandiri/howwework-maintenance-bank-mandri syariah -complexdesign.webp',
+      '/images/portfolio/website-development/bank-syariah-mandiri/bsm-SEO-complexdesign.webp'
+    ],
+    tags: ['WEBSITE MAINTENANCE', 'SEO'],
+    year: 2016,
+    serviceLabel: 'WEBSITE DEVELOPMENT'
+  },
+  {
     id: '2',
     slug: 'plano-ide',
     categorySlug: 'website-development',
