@@ -333,6 +333,25 @@ export const projects: PortfolioProject[] = [
     tags: ['Structural Dieline, Layouting, Mock-up, Production'],
     year: 2026,
     serviceLabel: 'Branding Product'
+  },
+  {
+    id: '2',
+    slug: 'iflex-indonesia',
+    categorySlug: 'branding-product',
+    title: 'IFLEX INDONESIA',
+    client: 'iFlex Indonesia',
+    description: '1. PROJECT SUMMARY\nIn an exclusive collaboration project with iFlex Indonesia (under the national Wonderful Indonesia campaign), our company was entrusted with designing and producing a premium packaging solution (Premium Gift Hardbox) for the "Tan Baron Tea" product. The main challenge of this project was creating packaging that not only carries strong visual aesthetic value to represent the brand identity, but also delivers a sustainability aspect. Our innovative solution was a functional box structure that can be repurposed into an exclusive tissue box once the main product inside has been used up.\nKEY PRODUCT SPECIFICATIONS:\nProduct Category: Rigid / Hardbox packaging with dual functional features (Gift Box & Tissue Box).\nClient: iFlex Indonesia - Wonderful Indonesia (Brand: Tan Baron Tea).\nSpecial Feature: Oval die-cut opening on top with magnetic closure/pull-ribbon, precision structure for functional re-use.\nVisual Theme: Fresh natural bottle-green and lime-green tones with a dynamic, modern wave/circular graphic pattern.\n2. WORKFLOW & PRODUCTION MANAGEMENT PROCESS (END-TO-END WORKFLOW)\nWe apply strict, integrated operational standards from upstream to downstream to ensure the final product\'s precision matches the client\'s requirements:\nStage 1: Structural Engineering & Box Construction The process begins with structurally designing the die-cut pattern (dieline). We calculate the board material thickness to ensure strong mechanical durability as a gift box, while also having proportional dimensions when repurposed as a standard tissue box. On the top lid, a precise oval/elliptical die-cut pattern is created as the tissue pull-out channel.\nStage 2: Graphic Design & Layout Mapping (Graphic Layout & Pre-Press) Once the structure is approved, our design team applies the visual assets and logos of iFlex Indonesia and Wonderful Indonesia into the print layout (layouting). This stage involves meticulous color adjustment to ensure gradient transitions and curved organic line elements print perfectly on every side of the box. The "Tan Baron Tea" text layout is positioned to remain proportional both when the box is closed and when it is used as a tissue box.\nStage 3: Pre-Press Process & Mockup Approval (Mockup Approval & Quality Control) In line with our work standardization (as stated in the company\'s SPK/work-order instruction sheet), we first produce a physical 1:1 scale mockup for the client\'s sign-off. The review process covers SPK Detail checks, color proofing, Print FA Preview, requesting sign-off approval of the print plate, as well as die/cutting-die verification before moving to mass production.\nStage 4: Mass Production & Premium Finishing (Mass Production & Finishing) The production process uses high-quality offset printing machines to maintain accurate reproduction of the distinctive corporate green. The printed sheets are laminated with a premium-quality Doff/Matte layer to create an elegant impression, a smooth soft touch, and freedom from artificial light reflection. The final process involves manual assembly (hand-crafted gluing) of the outer sheet onto a thick rigid board to ensure corner strength and long-term durability.\n3. VALUE ADDED & COMPETITIVE ADVANTAGE (VALUE PROPOSITION)\nEco-Friendly Design (Sustainable & Upcycling Design): Delivers a packaging solution that is not immediately discarded but instead becomes a useful desktop interior decoration, extending consumers\' interaction time with the brand (brand recall).\nRigid Durability: The use of premium materials ensures the product inside remains safe throughout the logistics and gift-delivery distribution process.\nHigh Print Accuracy & Precision: Strict control over the pre-press workflow guarantees consistent graphic color output.',
+    clientLogo: '/images/portfolio/branding-product/iflex-indonesia/logo-iflex-indonesia-complex-design.png',
+    coverImage: '/images/portfolio/branding-product/iflex-indonesia/iflex-complex-design-a.webp',
+    images: [
+      '/images/portfolio/branding-product/iflex-indonesia/iflex-complex-design-a.webp',
+      '/images/portfolio/branding-product/iflex-indonesia/iflex-complex-design-b.webp',
+      '/images/portfolio/branding-product/iflex-indonesia/struktur-box-iflex-indonesia-complex-design-c.webp',
+      '/images/portfolio/branding-product/iflex-indonesia/struktur-tutup-box-iflex-indonesia-complex-design-d.webp'
+    ],
+    tags: ['Hard Box Tissue : Designing & Building a Box Structure, Layouting, Production'],
+    year: 2025,
+    serviceLabel: 'Branding Product'
   }
 ];
 
