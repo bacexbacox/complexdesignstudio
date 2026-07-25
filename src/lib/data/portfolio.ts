@@ -352,6 +352,27 @@ export const projects: PortfolioProject[] = [
     tags: ['Hard Box Tissue : Designing & Building a Box Structure, Layouting, Production'],
     year: 2025,
     serviceLabel: 'Branding Product'
+  },
+  {
+    id: '3',
+    slug: 'dricha',
+    categorySlug: 'branding-product',
+    title: 'Drica (skin care)',
+    client: 'Dricha',
+    description: 'In the premium cosmetics industry, packaging is not merely a protective vessel - it is the first representation of aesthetic value, brand identity, and the quality of the formula inside. This project focused on developing exclusive Hardbox packaging for the cosmetics brand Dricha, covering two of its flagship products from the future-facing series: Future Glow White Cream and Future Glow Guardian Sunscreen. The main challenge of this project was translating the "Skincare From The Future" vision into a physical form that is sturdy, functional, and possesses top-tier visual appeal. To achieve this, we were entrusted with the entire pre-production cycle - from structural print engineering (dieline) and precision graphic layout, through to production mock-up (physical sample) fabrication with complex finishing techniques - to ensure absolute accuracy before mass production begins.\n\nSCOPE OF WORK & TECHNICAL DETAIL\n\nA. Structural Engineering & Dieline Development\nA crucial first step involved designing a highly precise dieline construction for two different box structures:\n\nMain Container Structure (Inner Hardbox): Uses a cross-folding base system with precision internal fold-locking tabs. This structure is built from thick rigid board laminated with special premium paper to create a sturdy, protective effect and deliver a memorable unboxing experience when pulled out of its sleeve.\n\nOuter Sleeve Structure: A vertical box structure with a side-glued seam, featuring a special die-cut hole on the White Cream model and an angular asymmetric cut-out (v-shape) at the base of the Guardian Sunscreen sleeve, which exposes the gold inner box beneath in striking contrast.\n\nB. Layout Design & Print Readiness (Pre-Press Assembly)\nWe comprehensively arranged the placement of graphic elements, legal information, and product information on the layout in line with cosmetics-industry standards, including:\n\nFront Face: Placement of the Dricha logo, product naming (Future Glow series), and protection claims (such as SPF 50+ PA++++ on the Sunscreen product) following the gold ink guide.\n\nSide & Back Faces: Detailed organization of legal text, covering the Usage Description, Instructions for Use, Full Ingredient Composition, Manufacturing Information (PT Tekno Biow Inovasi), barcode, the official Indonesian Halal logo with certification number, and the BPOM RI registration number (NA18241702684).\n\nFINISHING SPECIFICATIONS & MOCK-UP PRODUCTION\n\nTo deliver a physical representation that is 100% accurate to the final mass-production result, we produced a physical sample (production mock-up) applying a combination of three premium finishing techniques:\n\nMatte Lamination (Doff): Applied across the entire silver-grey outer sleeve surface. Delivers a smooth textured effect, anti-glare finish, and protects the paper surface from scratches and fingerprints.\n\nHot Stamp / Foil Stamping (Gold): Applied using shimmering gold foil on key elements - the Dricha logo, the "FUTURE GLOW" product title text, and the entire futuristic circuit-graphic pathway on the side panels of the packaging. Creates a high-contrast metallic shine against the matte base.\n\nEmboss (Raised Texture): Applied in precise register with the hot stamp on the Dricha logo and main text. The print result carries a tangible raised dimension when touched, reinforcing the tactile, premium impression of the packaging.\n\nVALUE ADDED FOR THE COMPANY PORTFOLIO\n\nThe successful completion of this Dricha packaging project demonstrates our company\'s capability to execute high-complexity, High-End Packaging products. Our ability to align futuristic design aesthetics with the mechanical precision of box folding proves that we do more than simply design graphics - we deliver a comprehensive, safe, appealing packaging manufacturing solution that is ready for mass distribution in the global beauty industry.',
+    clientLogo: '/images/portfolio/branding-product/dricha/logo-dricha-complex-design.png',
+    coverImage: '/images/portfolio/branding-product/dricha/dricha-box-premium-complex-design-a.webp',
+    images: [
+      '/images/portfolio/branding-product/dricha/dricha-box-premium-complex-design-a.webp',
+      '/images/portfolio/branding-product/dricha/dricha-pengerjaan-box-b.webp',
+      '/images/portfolio/branding-product/dricha/dricha-struktur-sleeve1-complex-design-c.webp',
+      '/images/portfolio/branding-product/dricha/dricha-struktur-sleeve2-complex-desig-d.webp',
+      '/images/portfolio/branding-product/dricha/dricha-struktur-box1-complex-design-e.webp',
+      '/images/portfolio/branding-product/dricha/dricha-struktur-box2-complex-design-f.webp'
+    ],
+    tags: ['Box Packaging : Structural Dieline,, Layouting, Mock-up, Production'],
+    year: 2026,
+    serviceLabel: 'Branding Product'
   }
 ];
 
