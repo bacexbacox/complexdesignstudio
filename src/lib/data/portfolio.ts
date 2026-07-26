@@ -406,8 +406,10 @@ export const projects: PortfolioProject[] = [
       '/images/portfolio/branding-product/Mindonat/mailer-softbox-mindonat-complex-design-a.webp',
       '/images/portfolio/branding-product/Mindonat/mailer-slidingbox-mindonat-complex-design-b.webp',
       '/images/portfolio/branding-product/Mindonat/mailerbox-mindonat-complex-design-c.webp',
-      '/images/portfolio/branding-product/Mindonat/struktur-takeawaybox-mindonat-complex-design-d.webp',
-      '/images/portfolio/branding-product/Mindonat/struktur-skat-takeawaybox-mindonat-complex-design-e.webp'
+      '/images/portfolio/branding-product/Mindonat/produk-mailer-softbox-mindonat-complex-design-d.webp',
+      '/images/portfolio/branding-product/Mindonat/produk-mailer-softbox-mindonat-complex-design-e.webp',
+      '/images/portfolio/branding-product/Mindonat/struktur-skat-takeawaybox-mindonat-complex-design-f.webp',
+      '/images/portfolio/branding-product/Mindonat/struktur-takeawaybox-mindonat-complex-design-g.webp'
     ],
     tags: ['Structure Box : Structural Dieline, Layouting, Mock-up, Production'],
     year: 2026,
