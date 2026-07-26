@@ -3,7 +3,7 @@
 
 	let { project }: { project: PortfolioProject } = $props();
 
-	const formattedDescription = $derived(project.description.replace(/\n/g, '<br/><br/>'));
+	const formattedDescription = $derived(project.description.replace(/\n+/g, '<br/>'));
 </script>
 
 <div class="mx-auto w-full max-w-[1440px] px-4 pt-12 pb-24 md:px-8 lg:px-16">
