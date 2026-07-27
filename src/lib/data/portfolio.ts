@@ -434,6 +434,26 @@ export const projects: PortfolioProject[] = [
     tags: ['Gift Merchandise & Premium Apparel Workshirt Pack : Digital Painting, Workshirt Manufacturing, & Custom Rigid Box Production'],
     year: 2026,
     serviceLabel: 'Branding Product'
+  },
+  {
+    id: '7',
+    slug: 'exclusive-wedding-souvenir-allumere-perfume',
+    categorySlug: 'branding-product',
+    title: 'Exclusive Wedding Souvenir (ALLUMERE PERFUME)',
+    client: 'Allumere Perfume',
+    description: 'In the premium packaging industry, packaging is not merely product protection - it is the primary medium for conveying aesthetic messaging, brand value, and emotional impression. In this project, the owner of the perfume brand Allumere entrusted us with creating exclusive souvenir packaging for VIP guests at their wedding. The main challenge of this project was blending the luxury identity of a wedding held at a prestigious venue (Raffles Hotel Jakarta) with the character of the Allumere perfume brand. We took full, comprehensive responsibility for the client\'s needs, covering structural engineering, graphic and visual design, prototyping and mockup, as well as mass production and finishing.\n\nPACKAGING ENGINEERING & STRUCTURE\n\nA. Main Box Structure & Inner Divider\nBase Box: A folding box structure with extra reinforcement at the corners, featuring a top-bottom opening and a dedicated hole at the base as a channel for the ribbon handle.\nInner Tray / Custom Divider: A precision tray with 2 arch cutouts specifically designed to hold 2 perfume spray bottles securely in place without shifting during transport.\n\nB. Outer Sleeve & Ribbons\nOuter Sleeve with Window Cutout: An outer sleeve with 2 vertical transparent die-cut windows, allowing recipients to see the perfume product directly without opening the packaging.\nGold Satin Ribbon Handle: A sturdily attached royal-gold satin ribbon handle, functioning like a practical, elegant mini gift bag.\n\nVISUAL DESIGN CONCEPT & AESTHETICS\n\nThe graphic design was crafted to radiate a romantic-luxury aura through an elegant minimalist approach. It features a soft warm cream marble texture with fine gold veining, the "FK" (Faiz & Khansa) monogram framed in a classic European-style gold ornate frame, and gold foil print accents. The front panel features THE WEDDING OF FAIZ & KHANSA, the event date, and the reception venue (9 August 2026, Raffles Hotel, Jakarta). The back panel tells the story of the perfume variants given as gifts: Bianca, "A soft whisper of romance and warmth," and Blaise, "An elegant touch of confidence and grace," alongside the event hashtag #KhanSaIDoFaiz, a thank-you message, and production credits.\n\nPROJECT WORK STAGES\n\na. Consultation & Structural Concept: Analyzing the bottle dimensions, selecting a safe and aesthetic packaging type, and creating the dieline for the box, divider, and sleeve.\nb. Graphic Design & Layouting: Merging Allumere branding with Faiz & Khansa wedding elements while adjusting bleed and cutting margins.\nc. Prototyping / Mockup Production: Producing an initial 1:1 sample to test bottle fit, structural strength, and die-cut window precision.\nd. Mass Printing & Finishing: Precision offset color printing, matte lamination, gold foil stamping/embossing, die-cutting, folding, and ribbon assembly.\ne. Quality Control (QC): Inspecting box durability, print cleanliness, and the precision of every souvenir unit before handover.\n\nOUR SERVICE ADVANTAGES\n\nThis project reaffirms our company\'s strength in providing a One-Stop Custom Packaging Solution: end-to-end service from structural research and visual design to physical mock-ups and mass manufacturing; high-precision customization tailored to the client\'s product; premium finishing and craftsmanship; and trusted execution for premium beauty and perfume brands such as Allumere.',
+    clientLogo: '/images/portfolio/branding-product/allumere-perfume/logo-allumere-complex-design.jpg',
+    coverImage: '/images/portfolio/branding-product/allumere-perfume/souvenir-faiz-complex-design-a.webp',
+    images: [
+      '/images/portfolio/branding-product/allumere-perfume/souvenir-faiz-complex-design-a.webp',
+      '/images/portfolio/branding-product/allumere-perfume/souvenir-faiz-complex-design-b.webp',
+      '/images/portfolio/branding-product/allumere-perfume/struktur-sleeve-faiz-complex-design-c.webp',
+      '/images/portfolio/branding-product/allumere-perfume/struktur-box-faiz-complex-design-d.webp',
+      '/images/portfolio/branding-product/allumere-perfume/struktur-skat-faiz-complex-design-e.webp'
+    ],
+    tags: ['Mini Box Parfum : Structure, Design, Mockup & Production'],
+    year: 2026,
+    serviceLabel: 'Branding Product'
   }
 ];
 
