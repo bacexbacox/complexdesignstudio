@@ -441,12 +441,19 @@ const sabyanProject = projects.find((project) => project.slug === 'sabyan-gambus
 if (sabyanProject) {
   sabyanProject.description = sabyanProject.description.replace(
     'COMPONENT DETAILS & PRODUCT SPECIFICATIONS',
-    'COMPONENT DETAILS & PRODUCT SPECIFICATIONS\nThis project was made as a single exclusive piece and is not reproduced or sold by us, Complex Design, and Zaadul Muslim (ZM).'
+    '<strong class="font-semibold text-gray-800">This project was made as a single exclusive piece and is not reproduced or sold by us, Complex Design, and Zaadul Muslim (ZM).</strong>\nCOMPONENT DETAILS & PRODUCT SPECIFICATIONS'
   );
 }
 
 export const getProjectsByCategory = (category: string) =>
-  projects.filter((p) => p.categorySlug === category);
+  projects
+    .filter((p) => p.categorySlug === category)
+    .sort((a, b) => {
+      if (category !== 'branding-product') return 0;
+      if (a.slug === 'sabyan-gambus-gift-merchandise') return -1;
+      if (b.slug === 'sabyan-gambus-gift-merchandise') return 1;
+      return 0;
+    });
 
 export const getProjectBySlug = (category: string, slug: string) =>
   projects.find((p) => p.categorySlug === category && p.slug === slug);
