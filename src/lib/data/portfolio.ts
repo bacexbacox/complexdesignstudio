@@ -437,6 +437,14 @@ export const projects: PortfolioProject[] = [
   }
 ];
 
+const sabyanProject = projects.find((project) => project.slug === 'sabyan-gambus-gift-merchandise');
+if (sabyanProject) {
+  sabyanProject.description = sabyanProject.description.replace(
+    'COMPONENT DETAILS & PRODUCT SPECIFICATIONS',
+    'COMPONENT DETAILS & PRODUCT SPECIFICATIONS\nThis project was made as a single exclusive piece and is not reproduced or sold by us, Complex Design, and Zaadul Muslim (ZM).'
+  );
+}
+
 export const getProjectsByCategory = (category: string) =>
   projects.filter((p) => p.categorySlug === category);
 
