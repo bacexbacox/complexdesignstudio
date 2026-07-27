@@ -4,7 +4,7 @@
 	let { project }: { project: PortfolioProject } = $props();
 
 	const formattedDescription = $derived(
-		['mindonut-premium-packaging', 'midnight-forest', 'dricha'].includes(project.slug)
+		['mindonut-premium-packaging', 'midnight-forest', 'dricha', 'sabyan-gambus-gift-merchandise'].includes(project.slug)
 			? project.description.replace(/\n+/g, '\n').replace(/\n/g, '<br/><br/>')
 			: project.description.replace(/\n/g, '<br/><br/>')
 	);

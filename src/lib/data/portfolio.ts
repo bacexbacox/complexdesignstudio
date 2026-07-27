@@ -414,6 +414,26 @@ export const projects: PortfolioProject[] = [
     tags: ['Structure Box : Structural Dieline, Layouting, Mock-up, Production'],
     year: 2026,
     serviceLabel: 'Branding Product'
+  },
+  {
+    id: '6',
+    slug: 'sabyan-gambus-gift-merchandise',
+    categorySlug: 'branding-product',
+    title: 'Sabyan Gambus (Gift Merchandise)',
+    client: 'Sabyan Gambus',
+    description: 'This project is a creative collaboration producing an exclusive gift merchandise set specially designed for the music group Sabyan Gambus (Zaadul Muslim / ZM). Our company held full responsibility from the visual concept exploration and digital illustration stages through to apparel manufacturing and premium-quality custom rigid packaging box production. This project blends local/religious cultural value with a modern retrowave / synthwave aesthetic touch, creating a product that is not only functional but also carries strong artistic and collectible value.\n\nCOMPONENT DETAILS & PRODUCT SPECIFICATIONS\n\nA. Custom Workshirt / Premium Work Shirt ("Zaadul Muslim / ZM")\nConcept & Design: A tactical/streetwear-style workshirt in deep black, designed to be durable, masculine, yet still elegant.\nEmbroidery Detail (Patches): Right chest: An emblem-shaped embroidered patch reading "BE HERE OR BE BLIND FOREVER - SINCE 1991," in olive-green with a gold-yellow border. Left chest: A geometric embroidered logo patch "ZM - ZAADUL MUSLIM" combining blue, white, and red in a retro-racing style. Embroidery craftsmanship uses high-density computer embroidery techniques to ensure the lettering is sharp, neat, and long-lasting.\nFeatures & Material: Cotton Drill / Tropical Premium fabric that is cool, tightly woven, and comfortable for both indoor and outdoor activities; double chest pockets with button flaps; and double-stitch construction in critical areas for extra durability.\n\nB. Digital Poster Illustration & Artwork (Retrowave Style)\nArt Concept: A combination of digital painting technique with a Retrowave / Cyberpunk Synthwave visual aesthetic in an 80s/90s style.\nCharacter Illustration: Digital portraits of Sabyan Gambus members (Nissa Sabyan & Ayus Sabyan), drawn with close attention to expression detail, clothing folds, and lighting.\nVisual Concept & Effects: Glowing neon-style typography with a chrome/metallic effect reading "Sabyan" in futuristic Arabic/Latin script. The background features a night-city cyberpunk landscape, starry sky, neon-lit architecture, and a quote border line, using deep navy, purple, and magenta light-effect tones. Dominant magenta, electric blue, neon purple, and deep midnight-blue accents deliver an 80s nostalgic yet futuristic feel.\n\nC. Exclusive Hardbox Packaging & Inner Artwork Print\nPackaging Concept: An exclusive Magnetic Hardbox / Premium Gift Box made from thick material, delivering a luxurious, sturdy impression designed to create a memorable unboxing experience.\nOuter Cover Design: A matte-black (doff finish) base color with sharp printed artwork on the main lid featuring a gold Garuda symbol perched atop a ribbon bearing the brand slogan, the typography "Zaadul Muslim - ZM Workshirt - Finest Made," and the printed slogan "LOCAL WISDOM" on the side of the box.\nInterior Design: Inside the box lid, a full-color digital Retrowave Sabyan artwork print is precisely mounted, greeting the recipient before they access the shirt product inside.\n\nVALUE ADDED & PRODUCT ADVANTAGES\n\nA. Integrated End-to-End Creative Solution: We develop the concept from raw ideas and provide a comprehensive solution - from art direction and digital illustration through to garment manufacturing and packaging production - handled internally to ensure consistency in color and quality.\n\nB. Exclusivity & Brand Identity: Applying a retrowave style to a nasyid/gambus music group creates a fresh, modern contrast positioning that strongly appeals to younger audiences without losing the core identity of the Zaadul Muslim brand.\n\nC. A Stunning Unboxing Experience: Transforming simple packaging into a highly collectible work-of-art medium.\n\nD. Industry Quality Standards: From embroidery thread density and print color accuracy through to sturdy hardbox structure, every detail is produced to international merchandise standards.',
+    clientLogo: '/images/portfolio/branding-product/Sabyan/logo-sabyan-complex-design.png',
+    coverImage: '/images/portfolio/branding-product/Sabyan/gift-sabyan-poster-complex-design-a.webp',
+    images: [
+      '/images/portfolio/branding-product/Sabyan/gift-sabyan-poster-complex-design-a.webp',
+      '/images/portfolio/branding-product/Sabyan/sabyan-poster-complex-design-b.webp',
+      '/images/portfolio/branding-product/Sabyan/box-workshirt-complex-design-c.webp',
+      '/images/portfolio/branding-product/Sabyan/bordir-workshirt-complex-design-d.webp',
+      '/images/portfolio/branding-product/Sabyan/workshirt-sabyan-complex-design-e.webp'
+    ],
+    tags: ['Gift Merchandise & Premium Apparel Workshirt Pack : Digital Painting, Workshirt Manufacturing, & Custom Rigid Box Production'],
+    year: 2026,
+    serviceLabel: 'Branding Product'
   }
 ];
 
