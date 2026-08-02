@@ -3,7 +3,9 @@
 
 	let { project }: { project: PortfolioProject } = $props();
 
-	const formattedDescription = $derived(project.description.replace(/\n+/g, '\n').replace(/\n/g, '<br/><br/>'));
+	const formattedDescription = $derived(
+		project.description.replace(/\n+/g, '\n').replace(/\n/g, '<br/><br/>')
+	);
 </script>
 
 <div class="mx-auto w-full max-w-[1440px] px-4 pt-12 pb-24 md:px-8 lg:px-16">
@@ -36,7 +38,12 @@
 					<span class="w-24 font-medium text-gray-900 md:w-32">PROJECT</span>
 					<span class="mr-4 text-gray-400">:</span>
 					{#if project.url}
-						<a href={project.url} target="_blank" rel="noopener noreferrer" class="flex-1 font-medium text-gray-800 uppercase hover:text-gray-600 hover:underline underline-offset-4 transition-all">
+						<a
+							href={project.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex-1 font-medium text-gray-800 uppercase underline-offset-4 transition-all hover:text-gray-600 hover:underline"
+						>
 							{project.title}
 						</a>
 					{:else}

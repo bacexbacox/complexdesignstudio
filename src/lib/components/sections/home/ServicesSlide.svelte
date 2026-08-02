@@ -91,13 +91,7 @@
 			style="width: {currentWidth}; height: {currentHeight}; border-radius: {currentRadius};"
 		>
 			<div class="relative h-full w-full overflow-hidden">
-				<video
-					class="h-full w-full object-cover"
-					autoplay
-					loop
-					muted
-					playsinline
-				>
+				<video class="h-full w-full object-cover" autoplay loop muted playsinline>
 					<source
 						media="(max-width: 767px)"
 						src="/images/pages/home/mobile-apps-portofolio.mp4"

@@ -21,12 +21,12 @@ export const prerender = false;
 
 Gunakan `@sveltejs/adapter-auto` untuk development. Untuk deployment production, sesuaikan:
 
-| Platform deploy | Adapter |
-|---|---|
-| Vercel | `@sveltejs/adapter-vercel` |
-| Netlify | `@sveltejs/adapter-netlify` |
-| Cloudflare Pages | `@sveltejs/adapter-cloudflare` |
-| VPS / Node server | `@sveltejs/adapter-node` |
+| Platform deploy   | Adapter                        |
+| ----------------- | ------------------------------ |
+| Vercel            | `@sveltejs/adapter-vercel`     |
+| Netlify           | `@sveltejs/adapter-netlify`    |
+| Cloudflare Pages  | `@sveltejs/adapter-cloudflare` |
+| VPS / Node server | `@sveltejs/adapter-node`       |
 
 **Konfirmasi ke user platform mana yang digunakan sebelum menulis konfigurasi adapter.**
 

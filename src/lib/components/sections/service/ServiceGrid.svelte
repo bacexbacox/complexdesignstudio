@@ -22,12 +22,12 @@
 
 	// Arah masuk per card (translateX, translateY) dalam px saat progress = 0 (tersembunyi)
 	const ENTRANCE_DIRECTIONS: { x: number; y: number }[] = [
-		{ x: -500, y: 0 },     // Kiri
-		{ x: 0, y: -400 },     // Atas
-		{ x: 500, y: 0 },      // Kanan
-		{ x: -400, y: 400 },   // Kiri-bawah
-		{ x: 0, y: 400 },      // Bawah
-		{ x: 400, y: 400 },    // Kanan-bawah
+		{ x: -500, y: 0 }, // Kiri
+		{ x: 0, y: -400 }, // Atas
+		{ x: 500, y: 0 }, // Kanan
+		{ x: -400, y: 400 }, // Kiri-bawah
+		{ x: 0, y: 400 }, // Bawah
+		{ x: 400, y: 400 } // Kanan-bawah
 	];
 
 	$effect(() => {
@@ -46,7 +46,7 @@
 
 			// === EXIT ZONE (keluar ke atas) ===
 			// Card mulai menghilang saat top card di 10% viewport, selesai jauh di atas layar (-60%)
-			const exitStart = viewportHeight * 0.10;
+			const exitStart = viewportHeight * 0.1;
 			const exitEnd = viewportHeight * -1.5;
 
 			cells.forEach((cell, i) => {
@@ -95,7 +95,7 @@
 	});
 </script>
 
-<section bind:this={sectionRef} class="padding-global pb-16 md:pb-24 lg:pb-32 overflow-hidden">
+<section bind:this={sectionRef} class="padding-global overflow-hidden pb-16 md:pb-24 lg:pb-32">
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
 		{#each services as service, index (service.id)}
 			<!-- card-cell: wrapper statis untuk mengukur posisi asli card di viewport -->

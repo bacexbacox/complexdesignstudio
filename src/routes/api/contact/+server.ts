@@ -54,13 +54,22 @@ export const POST = async ({ request }) => {
 			hasInvalidService ||
 			selectedServicesTitles.length === 0
 		) {
-			return json({ success: false, message: 'Please provide valid contact details and project information.' }, { status: 400 });
+			return json(
+				{
+					success: false,
+					message: 'Please provide valid contact details and project information.'
+				},
+				{ status: 400 }
+			);
 		}
 
 		// 1. Verify reCAPTCHA
 		const secretKey = env.RECAPTCHA_SECRET_KEY;
 		if (!secretKey || !recaptchaToken) {
-			return json({ success: false, message: 'reCAPTCHA verification is unavailable.' }, { status: 503 });
+			return json(
+				{ success: false, message: 'reCAPTCHA verification is unavailable.' },
+				{ status: 503 }
+			);
 		}
 
 		const recaptchaRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
@@ -72,7 +81,10 @@ export const POST = async ({ request }) => {
 		const recaptchaScore = recaptchaData.score ?? 0;
 
 		if (!recaptchaData.success || recaptchaScore < 0.5) {
-			return json({ success: false, message: 'reCAPTCHA verification failed. Are you a bot?' }, { status: 400 });
+			return json(
+				{ success: false, message: 'reCAPTCHA verification failed. Are you a bot?' },
+				{ status: 400 }
+			);
 		}
 
 		const safeFirstName = escapeHtml(firstName);
@@ -148,7 +160,10 @@ export const POST = async ({ request }) => {
 
 		// 4. Send Email via Nodemailer (aaPanel Custom SMTP)
 		if (!env.SMTP_USER || !env.SMTP_PASS) {
-			return json({ success: false, message: 'Contact service is temporarily unavailable.' }, { status: 503 });
+			return json(
+				{ success: false, message: 'Contact service is temporarily unavailable.' },
+				{ status: 503 }
+			);
 		}
 
 		const transporter = nodemailer.createTransport({
@@ -171,15 +186,18 @@ export const POST = async ({ request }) => {
 			to: env.SMTP_USER, // Receive inquiry on the same email (or change to your preferred receiving address)
 			replyTo: email, // Click 'Reply' to respond directly to the client's email
 			subject: `New Inquiry from ${firstName} ${lastName}`, // Subject line
-			html: htmlTemplate, // HTML body
+			html: htmlTemplate // HTML body
 		});
 
-		return json({ 
-			success: true, 
-			message: `Awesome! Thanks for reaching out, ${firstName}! We've got your message loud and clear. Our team is already on it, and you can expect a reply within 24 hours. Chat soon!` 
+		return json({
+			success: true,
+			message: `Awesome! Thanks for reaching out, ${firstName}! We've got your message loud and clear. Our team is already on it, and you can expect a reply within 24 hours. Chat soon!`
 		});
 	} catch (error: any) {
 		console.error('Contact submission error:', error);
-		return json({ success: false, message: 'Unable to send your message right now. Please try again later.' }, { status: 500 });
+		return json(
+			{ success: false, message: 'Unable to send your message right now. Please try again later.' },
+			{ status: 500 }
+		);
 	}
 };

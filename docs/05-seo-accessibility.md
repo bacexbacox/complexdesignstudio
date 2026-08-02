@@ -3,10 +3,11 @@
 SEO dan Aksesibilitas bukan fitur tambahan. Setiap halaman yang dibuat wajib sudah memenuhi standar ini sebelum dianggap selesai.
 
 ### Check List Aksesibilitas (a11y)
+
 - **Aria Labels:** Semua elemen interaktif (tombol, link icon) yang tidak memiliki teks wajib menggunakan atribut `aria-label` yang deskriptif.
 - **Semantic HTML:** Gunakan tag HTML5 yang tepat (`<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`). Hindari penggunaan `<div>` jika ada tag yang lebih relevan.
 - **Form Labels:** Setiap elemen form wajib memiliki `<label>` yang terhubung dengan `id` input yang relevan.
-- **Jangan abaikan warning:** Svelte memiliki *a11y warnings* bawaan compiler. **JANGAN PERNAH men-disable warning a11y**. Selesaikan peringatan tersebut.
+- **Jangan abaikan warning:** Svelte memiliki _a11y warnings_ bawaan compiler. **JANGAN PERNAH men-disable warning a11y**. Selesaikan peringatan tersebut.
 
 ### Struktur Meta per Halaman
 
@@ -17,21 +18,22 @@ Setiap route wajib punya file `meta.ts` atau data meta di `+page.ts`/`+page.serv
 import type { SeoMeta } from '$lib/types';
 
 export const load = () => {
-  const meta: SeoMeta = {
-    title: 'Complex Design Studio — Web & App Development Agency',
-    description: 'Kami membangun web dan aplikasi yang berdampak. Web development, mobile apps, UI/UX design, dan digital marketing untuk bisnis Anda.',
-    canonical: 'https://complexdesignstudio.com/',
-    ogImage: '/og/home.jpg',
-    noIndex: false,
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Complex Design Studio',
-      url: 'https://complexdesignstudio.com',
-      description: '...'
-    }
-  };
-  return { meta };
+	const meta: SeoMeta = {
+		title: 'Complex Design Studio — Web & App Development Agency',
+		description:
+			'Kami membangun web dan aplikasi yang berdampak. Web development, mobile apps, UI/UX design, dan digital marketing untuk bisnis Anda.',
+		canonical: 'https://complexdesignstudio.com/',
+		ogImage: '/og/home.jpg',
+		noIndex: false,
+		jsonLd: {
+			'@context': 'https://schema.org',
+			'@type': 'Organization',
+			name: 'Complex Design Studio',
+			url: 'https://complexdesignstudio.com',
+			description: '...'
+		}
+	};
+	return { meta };
 };
 ```
 
@@ -42,35 +44,35 @@ Jangan tulis `<svelte:head>` berulang di setiap halaman. Gunakan satu komponen r
 ```svelte
 <!-- src/lib/components/shared/SeoHead.svelte -->
 <script lang="ts">
-  import type { SeoMeta } from '$lib/types';
-  let { meta }: { meta: SeoMeta } = $props();
+	import type { SeoMeta } from '$lib/types';
+	let { meta }: { meta: SeoMeta } = $props();
 </script>
 
 <svelte:head>
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <link rel="canonical" href={meta.canonical} />
+	<title>{meta.title}</title>
+	<meta name="description" content={meta.description} />
+	<link rel="canonical" href={meta.canonical} />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
-  <meta property="og:image" content={meta.ogImage ?? '/og/default.jpg'} />
-  <meta property="og:url" content={meta.canonical} />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Complex Design Studio" />
+	<!-- Open Graph -->
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:image" content={meta.ogImage ?? '/og/default.jpg'} />
+	<meta property="og:url" content={meta.canonical} />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Complex Design Studio" />
 
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={meta.title} />
-  <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image" content={meta.ogImage ?? '/og/default.jpg'} />
+	<!-- Twitter / X Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={meta.title} />
+	<meta name="twitter:description" content={meta.description} />
+	<meta name="twitter:image" content={meta.ogImage ?? '/og/default.jpg'} />
 
-  {#if meta.noIndex}
-    <meta name="robots" content="noindex, nofollow" />
-  {/if}
-  {#if meta.jsonLd}
-    {@html `<script type="application/ld+json">${JSON.stringify(meta.jsonLd)}<\/script>`}
-  {/if}
+	{#if meta.noIndex}
+		<meta name="robots" content="noindex, nofollow" />
+	{/if}
+	{#if meta.jsonLd}
+		{@html `<script type="application/ld+json">${JSON.stringify(meta.jsonLd)}<\/script>`}
+	{/if}
 </svelte:head>
 ```
 
@@ -78,8 +80,8 @@ Penggunaan di setiap halaman cukup satu baris:
 
 ```svelte
 <script lang="ts">
-  import SeoHead from '$lib/components/shared/SeoHead.svelte';
-  let { data } = $props();
+	import SeoHead from '$lib/components/shared/SeoHead.svelte';
+	let { data } = $props();
 </script>
 
 <SeoHead meta={data.meta} />
@@ -91,40 +93,44 @@ Penggunaan di setiap halaman cukup satu baris:
 import { projects } from '$lib/data/portfolio';
 
 export const GET = () => {
-  const baseUrl = 'https://complexdesignstudio.com';
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+	const baseUrl = 'https://complexdesignstudio.com';
+	const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
 
-  const staticRoutes = [
-    { path: '/',           priority: '1.0', changefreq: 'weekly'  },
-    { path: '/service',    priority: '0.9', changefreq: 'monthly' },
-    { path: '/portfolio',  priority: '0.9', changefreq: 'weekly'  },
-    { path: '/contact',    priority: '0.7', changefreq: 'yearly'  },
-  ];
+	const staticRoutes = [
+		{ path: '/', priority: '1.0', changefreq: 'weekly' },
+		{ path: '/service', priority: '0.9', changefreq: 'monthly' },
+		{ path: '/portfolio', priority: '0.9', changefreq: 'weekly' },
+		{ path: '/contact', priority: '0.7', changefreq: 'yearly' }
+	];
 
-  const portfolioRoutes = projects.map(p => ({
-    path: `/portfolio/${p.categorySlug}/${p.slug}`,
-    priority: '0.8',
-    changefreq: 'monthly',
-  }));
+	const portfolioRoutes = projects.map((p) => ({
+		path: `/portfolio/${p.categorySlug}/${p.slug}`,
+		priority: '0.8',
+		changefreq: 'monthly'
+	}));
 
-  const allRoutes = [...staticRoutes, ...portfolioRoutes];
+	const allRoutes = [...staticRoutes, ...portfolioRoutes];
 
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+	const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allRoutes.map(r => `  <url>
+${allRoutes
+	.map(
+		(r) => `  <url>
     <loc>${baseUrl}${r.path}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
-  </url>`).join('\n')}
+  </url>`
+	)
+	.join('\n')}
 </urlset>`;
 
-  return new Response(xml, {
-    headers: {
-      'Content-Type': 'text/xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600'
-    }
-  });
+	return new Response(xml, {
+		headers: {
+			'Content-Type': 'text/xml; charset=utf-8',
+			'Cache-Control': 'public, max-age=3600'
+		}
+	});
 };
 ```
 
@@ -132,15 +138,15 @@ ${allRoutes.map(r => `  <url>
 
 ```ts
 export const GET = () => {
-  const body = `User-agent: *
+	const body = `User-agent: *
 Allow: /
 Disallow: /api/
 
 Sitemap: https://complexdesignstudio.com/sitemap.xml`;
 
-  return new Response(body, {
-    headers: { 'Content-Type': 'text/plain' }
-  });
+	return new Response(body, {
+		headers: { 'Content-Type': 'text/plain' }
+	});
 };
 ```
 

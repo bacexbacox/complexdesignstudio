@@ -55,19 +55,20 @@ src/
 
 Agent wajib mengikuti aturan ini sebelum membuat atau memindahkan komponen:
 
-| Kondisi | Taruh di |
-|---|---|
-| Dipakai **1 halaman saja** | `sections/[nama-halaman]/` |
-| Dipakai **2+ halaman** | `shared/` |
-| Murni UI, tanpa logic bisnis | `ui/` |
-| Struktur global (selalu tampil) | `layout/` |
+| Kondisi                         | Taruh di                   |
+| ------------------------------- | -------------------------- |
+| Dipakai **1 halaman saja**      | `sections/[nama-halaman]/` |
+| Dipakai **2+ halaman**          | `shared/`                  |
+| Murni UI, tanpa logic bisnis    | `ui/`                      |
+| Struktur global (selalu tampil) | `layout/`                  |
 
 **Jangan antisipasi duluan.** Buat komponen di `sections/[page]/` terlebih dahulu. Pindahkan ke `shared/` hanya ketika komponen tersebut benar-benar dibutuhkan di halaman lain — bukan sebelumnya.
 
 ### Aturan Pembuatan Halaman (Routes)
 
-Untuk menjaga *maintainability*, semua halaman baru wajib mengikuti aturan struktural berikut:
-1. **File Route sebagai Perakit (Assembler):** File `+page.svelte` di dalam folder `src/routes/` **HANYA** boleh berfungsi untuk merakit komponen. DILARANG KERAS menulis ratusan baris kode *markup* (HTML/Tailwind) murni di dalam `+page.svelte`.
+Untuk menjaga _maintainability_, semua halaman baru wajib mengikuti aturan struktural berikut:
+
+1. **File Route sebagai Perakit (Assembler):** File `+page.svelte` di dalam folder `src/routes/` **HANYA** boleh berfungsi untuk merakit komponen. DILARANG KERAS menulis ratusan baris kode _markup_ (HTML/Tailwind) murni di dalam `+page.svelte`.
 2. **Ekstraksi Komponen Section:** Setiap bagian visual dari suatu halaman (contoh: Hero, Fitur, Testimoni) wajib dibuat sebagai komponen terpisah di dalam `src/lib/components/sections/[nama-halaman]/`.
 3. **Kebersihan Kode:** File `+page.svelte` hanya boleh berisi import komponen section, `<SeoHead>`, dan pemanggilan tag komponen secara berurutan yang disuplai dengan data/props dari `+page.ts` / `+page.server.ts`.
 
@@ -80,8 +81,8 @@ Parameter `[category]` adalah slug dari kategori utama service (bukan sub-servic
 ```ts
 // src/routes/portfolio/[category]/[slug]/+page.ts
 export const load = ({ params }) => {
-  // params.category = "type-project"   → contoh: mobile-application
-  // params.slug     = "name-project"   → contoh: nama-client-atau-project
+	// params.category = "type-project"   → contoh: mobile-application
+	// params.slug     = "name-project"   → contoh: nama-client-atau-project
 };
 ```
 

@@ -14,14 +14,14 @@
 		'/images/about/logoassetclient/logo-kementerian-luar-negeri-complex-design-studio.png',
 		'/images/about/logoassetclient/logo-kemenparekraf-complex-design-studio.png'
 	];
-	
+
 	// Tidak perlu diduplikasi jika tidak ingin ada pengulangan
 	const displayLogos = logos;
 </script>
 
-<section class="py-16 md:py-24 overflow-hidden">
+<section class="overflow-hidden py-16 md:py-24">
 	<div class="padding-global mb-10 text-center">
-		<h2 class="text-sm md:text-base font-medium text-neutral-500 uppercase tracking-widest">
+		<h2 class="text-sm font-medium tracking-widest text-neutral-500 uppercase md:text-base">
 			Trusted By
 		</h2>
 		<div class="slide-hint" aria-hidden="true">
@@ -39,28 +39,30 @@
 		Container dengan efek terpotong (fade to transparent) di sisi kiri & kanan.
 		Menggunakan CSS mask-image linear-gradient.
 	-->
-	<div 
-		class="relative w-full mx-auto"
+	<div
+		class="relative mx-auto w-full"
 		style="mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);"
 	>
 		<!-- Scrollable wrapper -->
-		<div 
-			class="flex items-center gap-12 md:gap-20 overflow-x-auto snap-x snap-mandatory px-[15vw] pb-4 hide-scrollbar" 
+		<div
+			class="hide-scrollbar flex snap-x snap-mandatory items-center gap-12 overflow-x-auto px-[15vw] pb-4 md:gap-20"
 			style="scrollbar-width: none; -ms-overflow-style: none;"
 		>
 			<!-- Fallback untuk menyembunyikan scrollbar di webkit -->
 			<style>
-				.hide-scrollbar::-webkit-scrollbar { display: none; }
+				.hide-scrollbar::-webkit-scrollbar {
+					display: none;
+				}
 			</style>
-			
+
 			{#each displayLogos as logo, i}
-				<div 
-					class="shrink-0 snap-center w-40 md:w-56 h-20 md:h-28 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer"
+				<div
+					class="flex h-20 w-40 shrink-0 cursor-pointer snap-center items-center justify-center opacity-60 grayscale transition-opacity duration-300 hover:opacity-100 hover:grayscale-0 md:h-28 md:w-56"
 				>
-					<img 
-						src={logo} 
+					<img
+						src={logo}
 						alt={`Client Logo ${i}`}
-						class="w-full h-full object-contain"
+						class="h-full w-full object-contain"
 						loading="lazy"
 					/>
 				</div>

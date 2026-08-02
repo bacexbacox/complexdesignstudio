@@ -57,16 +57,16 @@
 	let card2Opacity = $derived(1 - card2Progress * 1.3);
 
 	// Card 3: BUMN/Goverment — delay 0.50, jarak 130px ke kanan
-	let card3Progress = $derived(staggerProgress(scrollProgress, 0.50));
+	let card3Progress = $derived(staggerProgress(scrollProgress, 0.5));
 	let card3Translate = $derived(card3Progress * 130);
 	let card3Opacity = $derived(1 - card3Progress * 1.3);
 </script>
 
 <!-- Cards Section -->
-<div bind:this={sectionRef} class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div bind:this={sectionRef} class="grid grid-cols-2 gap-4 lg:grid-cols-4">
 	<!-- Card 1: Project Delivery — slides LEFT first -->
 	<div
-		class="lg:col-span-2 will-change-transform"
+		class="will-change-transform lg:col-span-2"
 		style="transform: translateX({card1Translate}px); opacity: {Math.max(0, card1Opacity)};"
 	>
 		<CardCounting number="200+" label="Project Delivery" class="h-full" />
@@ -74,7 +74,7 @@
 
 	<!-- Card 2: Years of Industriy — slides RIGHT with slight delay -->
 	<div
-		class="col-start-1 lg:col-start-auto will-change-transform"
+		class="col-start-1 will-change-transform lg:col-start-auto"
 		style="transform: translateX({card2Translate}px); opacity: {Math.max(0, card2Opacity)};"
 	>
 		<CardCounting number="15+" label="Years of Industry" class="h-full" />
@@ -82,7 +82,7 @@
 
 	<!-- Card 3: BUMN/Goverment — slides RIGHT with more delay -->
 	<div
-		class="col-start-2 row-start-1 row-span-2 lg:col-start-auto lg:row-start-auto lg:row-span-1 will-change-transform"
+		class="col-start-2 row-span-2 row-start-1 will-change-transform lg:col-start-auto lg:row-span-1 lg:row-start-auto"
 		style="transform: translateX({card3Translate}px); opacity: {Math.max(0, card3Opacity)};"
 	>
 		<CardCounting number="20+" label="BUMN/Goverment" class="h-full" />

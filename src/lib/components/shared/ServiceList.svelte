@@ -15,16 +15,16 @@
 
 	// Arah masuk per service (translateX, translateY) dalam px saat progress = 0 (tersembunyi)
 	const ENTRANCE_DIRECTIONS: { x: number; y: number }[] = [
-		{ x: -200, y: 0 },     // Kiri
-		{ x: 0, y: -140 },     // Atas
-		{ x: 200, y: 0 },      // Kanan
-		{ x: -140, y: 140 },   // Kiri-bawah
-		{ x: 0, y: 140 },      // Bawah
-		{ x: 140, y: 140 },    // Kanan-bawah
+		{ x: -200, y: 0 }, // Kiri
+		{ x: 0, y: -140 }, // Atas
+		{ x: 200, y: 0 }, // Kanan
+		{ x: -140, y: 140 }, // Kiri-bawah
+		{ x: 0, y: 140 }, // Bawah
+		{ x: 140, y: 140 } // Kanan-bawah
 	];
 
 	// Delay stagger per service — jarak besar agar terlihat satu per satu
-	const STAGGER_DELAYS = [0, 0.12, 0.24, 0.36, 0.48, 0.60];
+	const STAGGER_DELAYS = [0, 0.12, 0.24, 0.36, 0.48, 0.6];
 
 	$effect(() => {
 		if (!sectionRef) return;
@@ -38,7 +38,7 @@
 			// Animasi mulai saat section baru masuk viewport bawah,
 			// selesai saat section hampir sampai atas — range lebih panjang = lebih lambat
 			const triggerStart = viewportHeight * 0.95;
-			const triggerEnd = viewportHeight * 0.10;
+			const triggerEnd = viewportHeight * 0.1;
 			const rawProgress = (triggerStart - rect.top) / (triggerStart - triggerEnd);
 			scrollProgress = Math.max(0, Math.min(1, rawProgress));
 		};
@@ -82,24 +82,25 @@
 	}
 </script>
 
-<section class="w-full padding-global py-12 md:py-20 lg:py-28 flex flex-col items-center overflow-hidden">
+<section
+	class="padding-global flex w-full flex-col items-center overflow-hidden py-12 md:py-20 lg:py-28"
+>
 	<div
 		bind:this={sectionRef}
-		class="w-full max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-12 lg:gap-x-16 lg:gap-y-16"
+		class="mx-auto grid w-full max-w-6xl grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 lg:gap-x-16 lg:gap-y-16"
 	>
 		{#each services as service, i}
 			<div
-				class="flex flex-col items-center md:items-start gap-3 md:gap-4 text-center md:text-left will-change-transform"
+				class="flex flex-col items-center gap-3 text-center will-change-transform md:items-start md:gap-4 md:text-left"
 				style={getItemStyle(i)}
 			>
-				<h3 class="text-sm md:text-base text-black">{service.title} :</h3>
-				<ul class="flex flex-col items-center md:items-start gap-1">
+				<h3 class="text-sm text-black md:text-base">{service.title} :</h3>
+				<ul class="flex flex-col items-center gap-1 md:items-start">
 					{#each service.items as item}
-						<li class="text-xs md:text-base text-gray-700">{item}</li>
+						<li class="text-xs text-gray-700 md:text-base">{item}</li>
 					{/each}
 				</ul>
 			</div>
 		{/each}
 	</div>
 </section>
-

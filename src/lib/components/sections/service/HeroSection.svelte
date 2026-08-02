@@ -32,15 +32,15 @@
 
 <section
 	bind:this={sectionEl}
-	class="min-h-[70vh] md:min-h-[80vh] flex flex-col justify-end padding-global pb-12 md:pb-20 lg:pb-28 pt-32 md:pt-40"
+	class="padding-global flex min-h-[70vh] flex-col justify-end pt-32 pb-12 md:min-h-[80vh] md:pt-40 md:pb-20 lg:pb-28"
 >
 	<!-- Row atas: Judul "Service" kiri + deskripsi kanan -->
-	<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-12 mb-10 md:mb-16">
-		<div
-			class="overflow-hidden"
-		>
+	<div
+		class="mb-10 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between md:gap-12"
+	>
+		<div class="overflow-hidden">
 			<h1
-				class="text-[clamp(3rem,8vw,7rem)] font-medium leading-[0.95] tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
+				class="text-[clamp(3rem,8vw,7rem)] leading-[0.95] font-medium tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 				style="transform: translateY({isVisible ? '0%' : '110%'})"
 			>
 				Service
@@ -48,10 +48,10 @@
 		</div>
 
 		<div
-			class="ml-auto max-w-xs text-right transition-all duration-700 delay-300 md:max-w-[280px] lg:max-w-[320px]"
+			class="ml-auto max-w-xs text-right transition-all delay-300 duration-700 md:max-w-[280px] lg:max-w-[320px]"
 			style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '16px'})"
 		>
-			<p class="text-xs md:text-sm text-neutral-500 font-light leading-relaxed">
+			<p class="text-xs leading-relaxed font-light text-neutral-500 md:text-sm">
 				Strategy defines the foundation of a brand. Through research, analysis, and strategic
 				thinking, we clarify positioning, messaging, and long-term direction.
 			</p>
@@ -60,10 +60,12 @@
 
 	<!-- Tagline besar di bawah -->
 	<div
-		class="transition-all duration-900 delay-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+		class="transition-all delay-500 duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 		style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '32px'})"
 	>
-		<p class="text-2xl md:text-4xl lg:text-[3.5vw] font-medium leading-[1.15] tracking-tight text-center max-w-4xl mx-auto">
+		<p
+			class="mx-auto max-w-4xl text-center text-2xl leading-[1.15] font-medium tracking-tight md:text-4xl lg:text-[3.5vw]"
+		>
 			Below are some case projects from our journey and growth process.
 		</p>
 	</div>
