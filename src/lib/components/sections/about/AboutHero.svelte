@@ -6,6 +6,15 @@
 	let sectionEl: HTMLElement | undefined = $state();
 	let isVisible = $state(false);
 
+	const title = 'About';
+	const intro =
+		'We are a collective of designers, developers, and strategists. We blend creativity with technology to build digital experiences that matter.';
+	const headline = 'Driven by innovation, crafted with precision. We bring your vision to life.';
+	const descriptions = [
+		'Complex Design was founded in 2015, built on the support of several teams united by a shared vision and mission. While our individual skill sets differ from one another, it is precisely this diversity that allows us to complement each other, adapt, and keep pace with the evolving Digital World.',
+		'We operate on a solid and legitimate legal foundation under the auspices of PT Nikmat Agra Solusi. Over the years, we have grown and evolved into a professional agency that has provided extensive support to government institutions, State-Owned Enterprises (BUMN), and several major national corporations across Indonesia — while also helping to empower Small and Medium Enterprises (UMKM) in their growth journey.'
+	];
+
 	$effect(() => {
 		if (!sectionEl) return;
 
@@ -38,7 +47,7 @@
 				class="text-[clamp(3rem,8vw,7rem)] leading-[0.95] font-medium tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 				style="transform: translateY({isVisible ? '0%' : '110%'})"
 			>
-				About
+				{title}
 			</h1>
 		</div>
 
@@ -47,8 +56,7 @@
 			style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '16px'})"
 		>
 			<p class="text-xs leading-relaxed font-light text-neutral-500 md:text-sm">
-				We are a collective of designers, developers, and strategists. We blend creativity with
-				technology to build digital experiences that matter.
+				{intro}
 			</p>
 		</div>
 	</div>
@@ -61,25 +69,15 @@
 		<p
 			class="mx-auto mb-10 max-w-4xl text-center text-2xl leading-[1.15] font-medium tracking-tight md:mb-14 md:text-4xl lg:text-[3.5vw]"
 		>
-			Driven by innovation, crafted with precision. We bring your vision to life.
+			{headline}
 		</p>
 
 		<div
 			class="mx-auto max-w-3xl space-y-6 text-center text-sm leading-relaxed font-light text-neutral-500 md:text-base"
 		>
-			<p>
-				Complex Design was founded in 2015, built on the support of several teams united by a shared
-				vision and mission. While our individual skill sets differ from one another, it is precisely
-				this diversity that allows us to complement each other, adapt, and keep pace with the
-				evolving Digital World.
-			</p>
-			<p>
-				We operate on a solid and legitimate legal foundation under the auspices of PT Nikmat Agra
-				Solusi. Over the years, we have grown and evolved into a professional agency that has
-				provided extensive support to government institutions, State-Owned Enterprises (BUMN), and
-				several major national corporations across Indonesia — while also helping to empower Small
-				and Medium Enterprises (UMKM) in their growth journey.
-			</p>
+			{#each descriptions as description}
+				<p>{description}</p>
+			{/each}
 		</div>
 	</div>
 </section>

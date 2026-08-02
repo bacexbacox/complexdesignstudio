@@ -17,11 +17,12 @@
 
 			<div class="flex w-full flex-col gap-6 md:w-1/2">
 				<p class="max-w-md text-sm text-gray-500 italic">
-					{description ||
+					{intro ||
+						description ||
 						'Strategy defines the foundation of a brand. Through research, analysis, and strategic thinking, we clarify positioning, messaging, and long term direction.'}
 				</p>
 				<h2 class="text-xl leading-relaxed font-medium md:text-3xl">
-					{intro ||
+					{(intro && description) ||
 						'Complex is a design and technology studio. We build digital products, from concept to production.'}
 				</h2>
 			</div>
