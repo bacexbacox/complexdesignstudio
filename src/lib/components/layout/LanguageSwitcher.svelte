@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { deLocalizeHref, getLocale, localizeHref, type Locale } from '$lib/paraglide/runtime';
 
 	const currentLocale = getLocale();
 	const targetLocale: Locale = currentLocale === 'en' ? 'id' : 'en';
-	const currentHref = $derived(`${page.url.pathname}${page.url.search}${page.url.hash}`);
+	const currentHref = $derived(
+		browser ? `${page.url.pathname}${page.url.search}${page.url.hash}` : page.url.pathname
+	);
 	const targetHref = $derived(
 		localizeHref(deLocalizeHref(currentHref), { locale: targetLocale }).replace(
 			/^\/id\/([?#]|$)/,
