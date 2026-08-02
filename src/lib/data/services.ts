@@ -24,7 +24,9 @@ export const services: Service[] = [
 		slug: 'mobile-application',
 		title: 'Mobile Application',
 		description:
-			'We build reliable iOS and Android applications with thoughtful user experiences, secure integrations, and the flexibility to support your business goals.',
+			"We build reliable iOS and Android applications, starting with a well-thought-out user experience. Everything is carefully put together — from strategy to file structure to database — then it's just a matter of reaching out to us for the next step.",
+		intro:
+			"Maybe it's time the world found out — Complex Design Studio has a track record that's more than enough for building world-class mobile apps: secure, fast, flexible, and cost-effective for your business goals.",
 		icon: '',
 		items: [
 			'iOS & Android Apps',
