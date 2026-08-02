@@ -5,6 +5,7 @@
   - Hover: Image zoom + blur, dark overlay fade-in, service tags muncul sebagai pills
 -->
 <script lang="ts">
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import type { Service } from '$lib/types';
 
 	let { service, index = 0 }: { service: Service; index?: number } = $props();
@@ -28,7 +29,7 @@
 </script>
 
 <a
-	href="/portfolio/{service.slug}"
+	href={localizeHref(`/portfolio/${service.slug}`)}
 	class="service-card group"
 	aria-label="Lihat portofolio {service.title}"
 >

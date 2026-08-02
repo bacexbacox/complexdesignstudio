@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { services } from '$lib/data/services';
+	import { m } from '$lib/paraglide/messages';
 	import { slide } from 'svelte/transition';
 
 	let formData = $state({
@@ -38,37 +39,37 @@
 		errors.services = '';
 
 		if (!formData.firstName.trim()) {
-			errors.firstName = 'First Name is required';
+			errors.firstName = m.contact_error_first_name();
 			isValid = false;
 		}
 		if (!formData.lastName.trim()) {
-			errors.lastName = 'Last Name is required';
+			errors.lastName = m.contact_error_last_name();
 			isValid = false;
 		}
 		if (!formData.email.trim()) {
-			errors.email = 'Email is required';
+			errors.email = m.contact_error_email_required();
 			isValid = false;
 		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-			errors.email = 'Invalid email format';
+			errors.email = m.contact_error_email_invalid();
 			isValid = false;
 		}
 		if (!formData.phone.trim()) {
-			errors.phone = 'Phone Number is required';
+			errors.phone = m.contact_error_phone_required();
 			isValid = false;
 		} else {
 			// Remove all non-digit characters for length checking
 			const justNumbers = formData.phone.replace(/\D/g, '');
 			if (justNumbers.length < 6) {
-				errors.phone = 'Phone Number must contain at least 6 digits';
+				errors.phone = m.contact_error_phone_invalid();
 				isValid = false;
 			}
 		}
 		if (!formData.message.trim()) {
-			errors.message = 'Project Details are required';
+			errors.message = m.contact_error_project();
 			isValid = false;
 		}
 		if (formData.services.length === 0) {
-			errors.services = 'Please select at least one service';
+			errors.services = m.contact_error_services();
 			isValid = false;
 		}
 
@@ -123,7 +124,7 @@
 
 			if (response.ok && result.success) {
 				submitSuccess = true;
-				submitMessage = result.message;
+				submitMessage = m.contact_success_message();
 				// Reset form
 				formData = {
 					firstName: '',
@@ -135,12 +136,12 @@
 				};
 			} else {
 				submitSuccess = false;
-				submitMessage = result.message || 'An error occurred while sending your message.';
+				submitMessage = m.contact_error_send();
 			}
 		} catch (error) {
 			console.error('Submission error:', error);
 			submitSuccess = false;
-			submitMessage = 'System error occurred. Please try again.';
+			submitMessage = m.contact_error_system();
 		} finally {
 			isSubmitting = false;
 		}
@@ -180,15 +181,14 @@
 				class="text-3xl leading-[1.1] font-medium tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)] md:text-5xl lg:text-[64px]"
 				style="transform: translateY({isVisible ? '0%' : '110%'})"
 			>
-				Talk to our support Team
+				{m.contact_heading()}
 			</h1>
 		</div>
 		<div
 			class="flex flex-col gap-2 text-sm font-light text-neutral-500 transition-all delay-300 duration-700"
 			style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '16px'})"
 		>
-			<p>Have a project in mind? We'd love to hear about it.</p>
-			<p>Fill out the form and our team will get back to you within 24 hours.</p>
+			<p>{m.contact_left_description()}</p>
 		</div>
 
 		<div
@@ -204,7 +204,7 @@
 				>
 			</div>
 			<div>
-				<p class="mb-1 font-medium text-neutral-900">Workshop</p>
+				<p class="mb-1 font-medium text-neutral-900">{m.contact_workshop()}</p>
 				<address class="text-neutral-500 not-italic">
 					Perum Taman Aries<br />
 					JL. Aries Elok II Blok F 11 no 22<br />
@@ -221,6 +221,10 @@
 		class="transition-all delay-700 duration-700 lg:col-span-7"
 		style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '24px'})"
 	>
+		<p class="mb-10 max-w-2xl text-sm leading-relaxed font-light text-neutral-500 md:text-base">
+			{m.contact_right_description()}
+		</p>
+
 		{#if submitSuccess}
 			<div
 				class="flex flex-col items-center gap-6 rounded-3xl border border-neutral-200 bg-neutral-50 p-8 text-center text-neutral-800 md:p-12"
@@ -239,14 +243,14 @@
 						<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
-				<h3 class="text-2xl font-medium tracking-tight">Message Received!</h3>
+				<h3 class="text-2xl font-medium tracking-tight">{m.contact_success_title()}</h3>
 				<p class="max-w-md leading-relaxed text-neutral-600">{submitMessage}</p>
 				<button
 					type="button"
 					class="mt-4 rounded-full bg-black px-8 py-4 font-medium text-white transition-colors hover:bg-neutral-800"
 					onclick={() => (submitSuccess = false)}
 				>
-					Send Another Message
+					{m.contact_send_another()}
 				</button>
 			</div>
 		{:else}
@@ -264,7 +268,7 @@
 				<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
 					<div class="relative flex flex-col gap-2">
 						<label for="firstName" class="text-sm font-medium text-neutral-700"
-							>First Name <span class="text-red-500">*</span></label
+							>{m.contact_first_name()} <span class="text-red-500">*</span></label
 						>
 						<input
 							type="text"
@@ -283,7 +287,7 @@
 					</div>
 					<div class="relative flex flex-col gap-2">
 						<label for="lastName" class="text-sm font-medium text-neutral-700"
-							>Last Name <span class="text-red-500">*</span></label
+							>{m.contact_last_name()} <span class="text-red-500">*</span></label
 						>
 						<input
 							type="text"
@@ -304,7 +308,7 @@
 				<div class="mt-2 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
 					<div class="relative flex flex-col gap-2">
 						<label for="email" class="text-sm font-medium text-neutral-700"
-							>Email Address <span class="text-red-500">*</span></label
+							>{m.contact_email()} <span class="text-red-500">*</span></label
 						>
 						<input
 							type="email"
@@ -321,7 +325,7 @@
 					</div>
 					<div class="relative flex flex-col gap-2">
 						<label for="phone" class="text-sm font-medium text-neutral-700"
-							>Phone Number <span class="text-red-500">*</span></label
+							>{m.contact_phone()} <span class="text-red-500">*</span></label
 						>
 						<input
 							type="tel"
@@ -341,7 +345,7 @@
 				<!-- Services Interested In -->
 				<div class="relative mt-6 flex flex-col gap-4">
 					<p class="text-sm font-medium text-neutral-700">
-						Services are interested in <span class="text-red-500">*</span>
+						{m.contact_services_label()} <span class="text-red-500">*</span>
 					</p>
 					<!-- 3-3 Grid for Services -->
 					<div class="grid grid-cols-2 gap-x-4 gap-y-4 md:gap-x-8">
@@ -384,13 +388,13 @@
 				<!-- Message -->
 				<div class="relative mt-6 flex flex-col gap-2">
 					<label for="message" class="text-sm font-medium text-neutral-700"
-						>Project Details <span class="text-red-500">*</span></label
+						>{m.contact_project_details()} <span class="text-red-500">*</span></label
 					>
 					<textarea
 						id="message"
 						bind:value={formData.message}
 						rows="4"
-						placeholder="Tell us about your project, goals, and timeline..."
+						placeholder={m.contact_project_placeholder()}
 						class="w-full resize-none border-b bg-transparent py-3 transition-colors placeholder:text-neutral-400 focus:outline-none {errors.message
 							? 'border-red-500 text-red-900 focus:border-red-500'
 							: 'border-neutral-300 focus:border-black'}"
@@ -428,9 +432,9 @@
 									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 								></path>
 							</svg>
-							Sending...
+							{m.contact_sending()}
 						{:else}
-							Send Message
+							{m.contact_send()}
 							<svg
 								class="h-4 w-4"
 								viewBox="0 0 24 24"
@@ -443,14 +447,15 @@
 						{/if}
 					</button>
 					<p class="mt-4 text-xs font-light text-neutral-400">
-						This site is protected by reCAPTCHA and the Google
+						{m.contact_recaptcha_intro()}
 						<a href="https://policies.google.com/privacy" class="underline hover:text-neutral-600"
-							>Privacy Policy</a
+							>{m.contact_privacy_policy()}</a
 						>
-						and
+						{m.contact_and()}
 						<a href="https://policies.google.com/terms" class="underline hover:text-neutral-600"
-							>Terms of Service</a
-						> apply.
+							>{m.contact_terms_service()}</a
+						>
+						{m.contact_recaptcha_suffix()}
 					</p>
 				</div>
 			</form>

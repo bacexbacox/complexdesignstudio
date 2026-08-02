@@ -1,5 +1,8 @@
 <!-- Navbar.svelte - Komponen navigasi utama dengan mega menu services dan smooth scroll -->
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+	import { localizeHref } from '$lib/paraglide/runtime';
+	import LanguageSwitcher from '$lib/components/layout/LanguageSwitcher.svelte';
 	import { fade, slide } from 'svelte/transition';
 	import { cubicOut, quintOut } from 'svelte/easing';
 
@@ -12,14 +15,47 @@
 
 	// Data navigasi utama
 	const navItems = [
-		{ label: 'Services', href: '/service', hasMegaMenu: true },
-		{ label: 'About', href: '/about', hasMegaMenu: false },
-		{ label: 'Contact', href: '/contact', hasMegaMenu: false }
+		{ key: 'services', label: 'Services', href: '/service', hasMegaMenu: true },
+		{ key: 'about', label: 'About', href: '/about', hasMegaMenu: false },
+		{ key: 'contact', label: 'Contact', href: '/contact', hasMegaMenu: false }
 	];
+
+	function getDesktopNavLabel(key: string): string {
+		switch (key) {
+			case 'services':
+				return m.nav_services();
+			case 'about':
+				return m.nav_about();
+			case 'contact':
+				return m.nav_contact();
+			default:
+				return key;
+		}
+	}
+
+	function getServiceNavTitle(key: string): string {
+		switch (key) {
+			case 'website-development':
+				return m.nav_service_website_development();
+			case 'mobile-application':
+				return m.nav_service_mobile_application();
+			case 'digital-marketing':
+				return m.nav_service_digital_marketing();
+			case 'ux-design':
+				return m.nav_service_ux_design();
+			case 'creative-design':
+				return m.nav_service_creative_design();
+			case 'branding-product':
+				return m.nav_service_branding_product();
+			default:
+				return key;
+		}
+	}
 
 	// Data layanan untuk mega menu dengan gambar asli
 	const services = [
 		{
+			key: 'website-development',
 			title: 'Web Development',
 			count: 6,
 			href: '/portfolio/website-development',
@@ -27,6 +63,7 @@
 			icon: '💻'
 		},
 		{
+			key: 'mobile-application',
 			title: 'Mobile Application',
 			count: 6,
 			href: '/portfolio/mobile-application',
@@ -34,6 +71,7 @@
 			icon: '📱'
 		},
 		{
+			key: 'digital-marketing',
 			title: 'Digital Marketing',
 			count: 6,
 			href: '/portfolio/digital-marketing',
@@ -41,6 +79,7 @@
 			icon: '🛒'
 		},
 		{
+			key: 'ux-design',
 			title: 'User Experience Design',
 			count: 4,
 			href: '/portfolio/ux-design',
@@ -48,6 +87,7 @@
 			icon: '📐'
 		},
 		{
+			key: 'creative-design',
 			title: 'Creative Design',
 			count: 4,
 			href: '/portfolio/creative-design',
@@ -55,6 +95,7 @@
 			icon: '🎨'
 		},
 		{
+			key: 'branding-product',
 			title: 'Branding Product',
 			count: 5,
 			href: '/portfolio/branding-product',
@@ -149,13 +190,15 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <!-- Logo Utama (Fixed di kiri atas) -->
-<a href="/" class="global-logo" aria-label="Complex Design Studio Home">
+<a href={localizeHref('/')} class="global-logo" aria-label="Complex Design Studio Home">
 	<img
 		src="/images/global/logo-complex-design-studio.svg"
 		alt="Complex Design Studio Logo"
 		class="logo-image"
 	/>
 </a>
+
+<LanguageSwitcher />
 
 <!-- Nav container utama (Pill Navigation) -->
 <nav bind:this={navElement} class="navbar-wrapper" aria-label="Main navigation">
@@ -166,7 +209,7 @@
 			{#each navItems as item}
 				<li role="none">
 					<a
-						href={item.href}
+						href={localizeHref(item.href)}
 						role="menuitem"
 						class="nav-link"
 						class:active={activeMenu === item.label}
@@ -182,7 +225,7 @@
 						aria-expanded={item.hasMegaMenu ? isMegaMenuOpen : undefined}
 						aria-haspopup={item.hasMegaMenu ? 'true' : undefined}
 					>
-						{item.label}
+						{getDesktopNavLabel(item.key)}
 					</a>
 				</li>
 			{/each}
@@ -219,7 +262,7 @@
 				<div class="service-col">
 					{#each leftCol as service, colIndex}
 						<a
-							href={service.href}
+							href={localizeHref(service.href)}
 							class="service-card"
 							role="menuitem"
 							style="flex-grow: {getFlexGrow(service.globalIndex)}"
@@ -238,11 +281,11 @@
 							<!-- Content -->
 							<div class="service-content">
 								<span class="service-icon">{service.icon}</span>
-								<h3 class="service-title">{service.title}</h3>
+								<h3 class="service-title">{getServiceNavTitle(service.key)}</h3>
 							</div>
 
 							<!-- Count -->
-							<span class="service-count">/{service.count} services</span>
+							<span class="service-count">/{service.count} {m.nav_service_count()}</span>
 						</a>
 					{/each}
 				</div>
@@ -251,7 +294,7 @@
 				<div class="service-col">
 					{#each rightCol as service, colIndex}
 						<a
-							href={service.href}
+							href={localizeHref(service.href)}
 							class="service-card"
 							role="menuitem"
 							style="flex-grow: {getFlexGrow(service.globalIndex)}"
@@ -270,11 +313,11 @@
 							<!-- Content -->
 							<div class="service-content">
 								<span class="service-icon">{service.icon}</span>
-								<h3 class="service-title">{service.title}</h3>
+								<h3 class="service-title">{getServiceNavTitle(service.key)}</h3>
 							</div>
 
 							<!-- Count -->
-							<span class="service-count">/{service.count} services</span>
+							<span class="service-count">/{service.count} {m.nav_service_count()}</span>
 						</a>
 					{/each}
 				</div>
@@ -317,7 +360,7 @@
 		<nav class="mobile-nav" aria-label="Mobile navigation">
 			<!-- Logo centered di atas nav links -->
 			<a
-				href="/"
+				href={localizeHref('/')}
 				class="mobile-logo"
 				aria-label="Complex Design Studio — Back to Home"
 				onclick={() => (isMobileMenuOpen = false)}
@@ -331,7 +374,7 @@
 			</a>
 			{#each navItems as item, i}
 				<a
-					href={item.href}
+					href={localizeHref(item.href)}
 					class="mobile-nav-link"
 					in:fade={{ delay: 80 + i * 60, duration: 300 }}
 					onclick={(e) => {
@@ -342,7 +385,7 @@
 						}
 					}}
 				>
-					{item.label}
+					{getDesktopNavLabel(item.key)}
 				</a>
 			{/each}
 
@@ -352,13 +395,13 @@
 			<!-- Services sub-menu -->
 			{#each services as service, i}
 				<a
-					href={service.href}
+					href={localizeHref(service.href)}
 					class="mobile-service-link"
 					in:fade={{ delay: 360 + i * 40, duration: 280 }}
 					onclick={() => (isMobileMenuOpen = false)}
 				>
 					<span class="mobile-service-icon">{service.icon}</span>
-					<span class="mobile-service-name">{service.title}</span>
+					<span class="mobile-service-name">{getServiceNavTitle(service.key)}</span>
 					<span class="mobile-service-num">/{service.count}</span>
 				</a>
 			{/each}

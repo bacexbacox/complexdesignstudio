@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { services } from '$lib/data/services';
+import { localizeService, services } from '$lib/data/services';
+import { getLocale } from '$lib/paraglide/runtime';
 import { getProjectsByCategory } from '$lib/data/portfolio';
 import type { SeoMeta } from '$lib/types';
 
@@ -9,11 +10,13 @@ export const entries = () => services.map((service) => ({ category: service.slug
 export const load: PageLoad = ({ params }) => {
 	const categorySlug = params.category;
 
-	const service = services.find((s) => s.slug === categorySlug);
+	const sourceService = services.find((s) => s.slug === categorySlug);
 
-	if (!service) {
+	if (!sourceService) {
 		throw error(404, 'Portfolio category not found');
 	}
+
+	const service = localizeService(sourceService, getLocale());
 
 	const categoryProjects = getProjectsByCategory(categorySlug);
 

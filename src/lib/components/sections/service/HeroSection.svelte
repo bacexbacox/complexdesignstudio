@@ -4,17 +4,14 @@
   lalu tagline besar di bawah (center-aligned)
 -->
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+
 	/**
 	 * Intersection Observer untuk animasi masuk elemen
 	 * Menggunakan $effect agar observer di-cleanup saat komponen unmount
 	 */
 	let sectionEl: HTMLElement | undefined = $state();
 	let isVisible = $state(false);
-
-	const title = 'Service';
-	const intro =
-		'Strategy defines the foundation of a brand. Through research, analysis, and strategic thinking, we clarify positioning, messaging, and long-term direction.';
-	const headline = 'Below are some case projects from our journey and growth process.';
 
 	$effect(() => {
 		if (!sectionEl) return;
@@ -48,7 +45,7 @@
 				class="text-[clamp(3rem,8vw,7rem)] leading-[0.95] font-medium tracking-tight transition-transform duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 				style="transform: translateY({isVisible ? '0%' : '110%'})"
 			>
-				{title}
+				{m.service_hero_title()}
 			</h1>
 		</div>
 
@@ -57,7 +54,7 @@
 			style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '16px'})"
 		>
 			<p class="text-xs leading-relaxed font-light text-neutral-500 md:text-sm">
-				{intro}
+				{m.service_hero_right()}
 			</p>
 		</div>
 	</div>
@@ -70,7 +67,7 @@
 		<p
 			class="mx-auto max-w-4xl text-center text-2xl leading-[1.15] font-medium tracking-tight md:text-4xl lg:text-[3.5vw]"
 		>
-			{headline}
+			{m.service_hero_center()}
 		</p>
 	</div>
 </section>

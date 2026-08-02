@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
 	import CardCounting from './CardCounting.svelte';
 
 	/**
@@ -69,7 +70,7 @@
 		class="will-change-transform lg:col-span-2"
 		style="transform: translateX({card1Translate}px); opacity: {Math.max(0, card1Opacity)};"
 	>
-		<CardCounting number="200+" label="Project Delivery" class="h-full" />
+		<CardCounting number="200+" label={m.home_stats_project_delivery()} class="h-full" />
 	</div>
 
 	<!-- Card 2: Years of Industriy — slides RIGHT with slight delay -->
@@ -77,7 +78,7 @@
 		class="col-start-1 will-change-transform lg:col-start-auto"
 		style="transform: translateX({card2Translate}px); opacity: {Math.max(0, card2Opacity)};"
 	>
-		<CardCounting number="15+" label="Years of Industry" class="h-full" />
+		<CardCounting number="15+" label={m.home_stats_years_industry()} class="h-full" />
 	</div>
 
 	<!-- Card 3: BUMN/Goverment — slides RIGHT with more delay -->
@@ -85,6 +86,6 @@
 		class="col-start-2 row-span-2 row-start-1 will-change-transform lg:col-start-auto lg:row-span-1 lg:row-start-auto"
 		style="transform: translateX({card3Translate}px); opacity: {Math.max(0, card3Opacity)};"
 	>
-		<CardCounting number="20+" label="BUMN/Goverment" class="h-full" />
+		<CardCounting number="20+" label={m.home_stats_government()} class="h-full" />
 	</div>
 </div>

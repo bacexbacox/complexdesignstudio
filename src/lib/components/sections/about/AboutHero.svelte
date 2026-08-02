@@ -3,17 +3,18 @@
   Meniru layout dari halaman Service sesuai permintaan user.
 -->
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+
 	let sectionEl: HTMLElement | undefined = $state();
 	let isVisible = $state(false);
 
-	const title = 'About';
-	const intro =
-		'We are a collective of designers, developers, and strategists. We blend creativity with technology to build digital experiences that matter.';
-	const headline = 'Driven by innovation, crafted with precision. We bring your vision to life.';
-	const descriptions = [
-		'Complex Design was founded in 2015, built on the support of several teams united by a shared vision and mission. While our individual skill sets differ from one another, it is precisely this diversity that allows us to complement each other, adapt, and keep pace with the evolving Digital World.',
-		'We operate on a solid and legitimate legal foundation under the auspices of PT Nikmat Agra Solusi. Over the years, we have grown and evolved into a professional agency that has provided extensive support to government institutions, State-Owned Enterprises (BUMN), and several major national corporations across Indonesia — while also helping to empower Small and Medium Enterprises (UMKM) in their growth journey.'
-	];
+	const title = $derived(m.about_hero_title());
+	const intro = $derived(m.about_hero_right());
+	const headline = $derived(m.about_hero_center_primary());
+	const descriptions = $derived([
+		m.about_hero_center_secondary(),
+		m.about_hero_center_tertiary()
+	]);
 
 	$effect(() => {
 		if (!sectionEl) return;

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+
 	/**
 	 * Scroll-driven Parallax Translate Animation
 	 *
@@ -54,8 +56,8 @@
 		style="transform: translateX({leftTranslate}px); opacity: {Math.max(0, contentOpacity)};"
 	>
 		<h1 class="text-3xl leading-[1.1] font-medium tracking-tight md:text-5xl lg:text-[64px]">
-			Let our team do the heavy thinking to formulate your brand's strategy, architecture, and
-			design <span class="text-neutral-400">while you focus on running your business.</span>
+			{m.home_hero_heading_primary()}
+			<span class="text-neutral-400"> {m.home_hero_heading_muted()}</span>
 		</h1>
 	</div>
 
@@ -65,12 +67,10 @@
 		style="transform: translateX({rightTranslate}px); opacity: {Math.max(0, contentOpacity)};"
 	>
 		<p class="max-w-[400px] lg:max-w-none">
-			Complex Design is a space where diverse skills from talented hands are forged into a single
-			mind, a single purpose, one that always produces complex, quality work.
+			{m.home_hero_description_primary()}
 		</p>
 		<p class="max-w-[400px] lg:max-w-none">
-			We are committed to showcasing our excellence to the world, helping your brand reach the top
-			and empowering UMKM (Indonesian Small and Medium Enterprises) toward success.
+			{m.home_hero_description_secondary()}
 		</p>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import type { PortfolioProject } from '$lib/types';
 
 	let { project }: { project: PortfolioProject } = $props();
@@ -78,7 +79,7 @@
 			<div class="mt-12 flex pb-8">
 				<a
 					class="group flex w-fit items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-6 py-3 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-100"
-					href="/portfolio/{project.categorySlug}"
+					href={localizeHref(`/portfolio/${project.categorySlug}`)}
 				>
 					<svg
 						class="h-4 w-4 rotate-180 transition-transform duration-300 group-hover:-translate-x-1"

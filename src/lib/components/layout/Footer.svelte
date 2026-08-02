@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { localizeHref } from '$lib/paraglide/runtime';
+
 	const whatsappMessage = 'Halloo.!\nselamat datang to Complex Design Studio';
 	const whatsappUrl = `https://wa.me/6285111331688?text=${encodeURIComponent(whatsappMessage)}`;
 
@@ -44,7 +46,7 @@
 		>
 			{#each items as item}
 				<a
-					href={item.href}
+					href={item.href.startsWith('/') ? localizeHref(item.href) : item.href}
 					target={item.external ? '_blank' : undefined}
 					rel={item.external ? 'noopener noreferrer' : undefined}
 					aria-label={item.ariaLabel}

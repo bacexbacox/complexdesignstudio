@@ -3,6 +3,8 @@
   Fitur: Scrollable horizontal, efek fade di ujung kiri & kanan.
 -->
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+
 	// Asset logo client
 	const logos = [
 		'/images/about/logoassetclient/logo-bebasperantara-complex-design-studio.png',
@@ -22,10 +24,10 @@
 <section class="overflow-hidden py-16 md:py-24">
 	<div class="padding-global mb-10 text-center">
 		<h2 class="text-sm font-medium tracking-widest text-neutral-500 uppercase md:text-base">
-			Trusted By
+			{m.about_trusted_by()}
 		</h2>
 		<div class="slide-hint" aria-hidden="true">
-			<span class="slide-hint__text">slide to more</span>
+			<span class="slide-hint__text">{m.about_slide_hint()}</span>
 			<span class="slide-hint__track">
 				<span class="slide-hint__arrow slide-hint__arrow--left"></span>
 				<span class="slide-hint__line"></span>

@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { localizeHref } from '$lib/paraglide/runtime';
 	import type { PortfolioProject } from '$lib/types';
 
 	let { project } = $props<{ project: PortfolioProject }>();
 </script>
 
 <a
-	href={`/portfolio/${project.categorySlug}/${project.slug}`}
+	href={localizeHref(`/portfolio/${project.categorySlug}/${project.slug}`)}
 	class="group flex flex-col items-start gap-6 sm:flex-row md:gap-8"
 >
 	<!-- Image Box -->

@@ -1,3 +1,10 @@
+export interface ServiceLocalization {
+	title?: string;
+	description: string;
+	intro?: string;
+	items?: string[];
+}
+
 export interface Service {
 	id: string;
 	slug: string;
@@ -6,6 +13,7 @@ export interface Service {
 	intro?: string;
 	icon: string;
 	items: string[];
+	localizations?: Partial<Record<'en' | 'id', ServiceLocalization>>;
 }
 
 export interface PortfolioProject {

@@ -3,11 +3,13 @@
   Menampilkan grid kartu anggota tim dengan foto, nama, deskripsi, dan social links.
 -->
 <script lang="ts">
+	import { m } from '$lib/paraglide/messages';
+
 	/** Data anggota tim */
 	interface TeamMember {
 		name: string;
 		role: string;
-		description: string;
+		description: () => string;
 		image: string;
 		socials: {
 			facebook?: string;
@@ -23,8 +25,7 @@
 		{
 			name: 'Taufik Ridha',
 			role: 'Lead Developer',
-			description:
-				'Full-stack engineer passionate about scalable architecture and cutting-edge web technology.',
+			description: () => m.about_team_taufik_description(),
 			image: '/images/about/Team/complexdesign-taufikridha.webp',
 			socials: {
 				linkedin: 'https://www.linkedin.com/in/taufiqridha/',
@@ -34,8 +35,7 @@
 		{
 			name: 'Ahmad Danzo',
 			role: 'Creative Design',
-			description:
-				'Creative mind behind the stunning visuals and brand identities that define our work.',
+			description: () => m.about_team_ahmad_description(),
 			image: '/images/about/Team/complexdesign-ahmaddanzo.webp',
 			socials: {
 				linkedin: 'https://www.linkedin.com/in/ahmad-abdul-soleh-ab589b363/',
@@ -47,8 +47,7 @@
 		{
 			name: 'Ian Danan',
 			role: 'Social Media Planner',
-			description:
-				'Strategic thinker who crafts engaging social media campaigns that drive growth and visibility.',
+			description: () => m.about_team_ian_description(),
 			image: '/images/about/Team/complexdesign-iandanan.webp',
 			socials: {
 				instagram: 'https://www.instagram.com/kibokribo/',
@@ -58,8 +57,7 @@
 		{
 			name: 'Andrian Tarigan',
 			role: 'Business Development',
-			description:
-				'Builds meaningful partnerships and drives business growth through strategic client relationships.',
+			description: () => m.about_team_andrian_description(),
 			image: '/images/about/Team/complexdesign-andriantarigan.webp',
 			socials: {
 				linkedin: 'https://linkedin.com/in/andriantarigan',
@@ -98,11 +96,10 @@
 		style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '24px'})"
 	>
 		<h2 class="mb-3 text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl lg:text-5xl">
-			Meet The Team
+			{m.about_team_title()}
 		</h2>
 		<p class="mx-auto mb-5 max-w-md text-sm font-light text-neutral-500 md:text-base">
-			The team below is who will rack their brains to design the strategy, architecture, design,
-			in-depth research, and positioning so your brand can compete.
+			{m.about_team_intro()}
 		</p>
 		<!-- Accent line -->
 		<div class="mx-auto h-[3px] w-12 rounded-full bg-[#E30613]"></div>
@@ -150,7 +147,7 @@
 
 					<!-- Deskripsi singkat -->
 					<p class="mb-5 text-xs leading-relaxed font-light text-neutral-500 md:text-sm">
-						{member.description}
+						{member.description()}
 					</p>
 
 					<!-- Social icons -->
