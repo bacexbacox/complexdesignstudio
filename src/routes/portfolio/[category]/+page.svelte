@@ -12,6 +12,7 @@
   <PortfolioHero 
     title={data.service.title} 
     description={data.service.description} 
+    intro={data.service.intro}
   />
   
   <PortfolioGrid projects={data.projects} />

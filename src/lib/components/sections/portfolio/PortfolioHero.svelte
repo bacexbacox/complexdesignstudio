@@ -1,5 +1,9 @@
 <script lang="ts">
-  let { title, description } = $props<{ title: string; description: string }>();
+  let { title, description, intro } = $props<{
+    title: string;
+    description: string;
+    intro?: string;
+  }>();
 </script>
 
 <section class="padding-global pt-32 pb-16 md:pt-40 md:pb-20">
@@ -16,7 +20,8 @@
           {description || "Strategy defines the foundation of a brand. Through research, analysis, and strategic thinking, we clarify positioning, messaging, and long term direction."}
         </p>
         <h2 class="text-xl md:text-3xl font-medium leading-relaxed">
-          Complex is a design and technology studio. We build digital products, from concept to production.
+          {intro ||
+            'Complex is a design and technology studio. We build digital products, from concept to production.'}
         </h2>
       </div>
     </div>

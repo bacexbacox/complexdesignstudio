@@ -6,7 +6,9 @@ export const services: Service[] = [
     slug: 'website-development',
     title: 'Website Development',
     description:
-      'We design and develop fast, scalable websites and web applications that help businesses operate better, connect with customers, and grow online.',
+      'However small the idea — even just a scribble on paper — we can still turn it into something real, while keeping the standard: fast, scalable, precise, professional. The raw material can be simple; the result won\'t be.',
+    intro:
+      'Complex Design Studio builds digital products using the latest technology — Next.js, Laravel, Golang, and Flutter — or WordPress and Shopify CMS when that\'s the right fit.',
     icon: '',
     items: [
       'Web Applications',
