@@ -5,7 +5,7 @@
 	 * Staggered Scroll-driven Parallax untuk Stats Cards
 	 * Setiap card punya delay offset berbeda agar gerakan terlihat bertahap & natural.
 	 * - Card 1 (Project Delivery): bergerak duluan ke kiri, jarak terjauh
-	 * - Card 2 (Years in Industri): delay sedikit, ke kanan, jarak sedang
+	 * - Card 2 (Years of Industriy): delay sedikit, ke kanan, jarak sedang
 	 * - Card 3 (BUMN/Goverment): delay lebih lama, ke kanan, jarak paling pendek
 	 */
 
@@ -51,7 +51,7 @@
 	let card1Translate = $derived(-card1Progress * 140);
 	let card1Opacity = $derived(1 - card1Progress * 1.3);
 
-	// Card 2: Years in Industri — delay 0.25, jarak 100px ke kanan
+	// Card 2: Years of Industriy — delay 0.25, jarak 100px ke kanan
 	let card2Progress = $derived(staggerProgress(scrollProgress, 0.25));
 	let card2Translate = $derived(card2Progress * 100);
 	let card2Opacity = $derived(1 - card2Progress * 1.3);
@@ -72,12 +72,12 @@
 		<CardCounting number="200+" label="Project Delivery" class="h-full" />
 	</div>
 
-	<!-- Card 2: Years in Industri — slides RIGHT with slight delay -->
+	<!-- Card 2: Years of Industriy — slides RIGHT with slight delay -->
 	<div
 		class="col-start-1 lg:col-start-auto will-change-transform"
 		style="transform: translateX({card2Translate}px); opacity: {Math.max(0, card2Opacity)};"
 	>
-		<CardCounting number="15+" label="Years in Industri" class="h-full" />
+		<CardCounting number="15+" label="Years of Industriy" class="h-full" />
 	</div>
 
 	<!-- Card 3: BUMN/Goverment — slides RIGHT with more delay -->
@@ -88,4 +88,3 @@
 		<CardCounting number="20+" label="BUMN/Goverment" class="h-full" />
 	</div>
 </div>
-
