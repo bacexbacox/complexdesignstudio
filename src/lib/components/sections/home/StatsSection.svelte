@@ -77,7 +77,7 @@
 		class="col-start-1 lg:col-start-auto will-change-transform"
 		style="transform: translateX({card2Translate}px); opacity: {Math.max(0, card2Opacity)};"
 	>
-		<CardCounting number="15+" label="Years of Industriy" class="h-full" />
+		<CardCounting number="15+" label="Years of Industry" class="h-full" />
 	</div>
 
 	<!-- Card 3: BUMN/Goverment — slides RIGHT with more delay -->
