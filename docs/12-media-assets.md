@@ -3,6 +3,7 @@
 Semua aset statis (gambar, video, font) wajib disimpan di dalam folder `/static/` dan dikelompokkan secara ketat untuk menjaga keteraturan seiring berjalannya project.
 
 ### Struktur Direktori yang Wajib Diikuti:
+
 ```text
 static/
 ├── images/
@@ -21,9 +22,10 @@ static/
 ```
 
 ### Aturan Penanganan Media:
-1. **Format Modern:** Gunakan format `.webp` atau `.avif` untuk semua foto/gambar raster. DILARANG menggunakan `.png` atau `.jpg` untuk kebutuhan *production*, kecuali merupakan *fallback* yang mutlak.
-2. **Vektor:** Gunakan format `.svg` untuk logo perusahaan, ikon, dan ilustrasi *flat*.
+
+1. **Format Modern:** Gunakan format `.webp` atau `.avif` untuk semua foto/gambar raster. DILARANG menggunakan `.png` atau `.jpg` untuk kebutuhan _production_, kecuali merupakan _fallback_ yang mutlak.
+2. **Vektor:** Gunakan format `.svg` untuk logo perusahaan, ikon, dan ilustrasi _flat_.
 3. **Penamaan File SEO:** Nama file wajib menggunakan format `kebab-case` yang mengandung deskripsi/keyword SEO.
    - ✅ Benar: `jasa-pembuatan-website-jakarta.webp`
    - ❌ Salah: `IMG_001.webp` atau `banner_1.jpg`
-4. **Lazy Loading:** Seluruh *media* yang berada di bawah *fold* layar wajib diberi atribut `loading="lazy"`. Atribut `loading="eager"` hanya boleh digunakan untuk *Hero Image* di bagian paling atas halaman.
+4. **Lazy Loading:** Seluruh _media_ yang berada di bawah _fold_ layar wajib diberi atribut `loading="lazy"`. Atribut `loading="eager"` hanya boleh digunakan untuk _Hero Image_ di bagian paling atas halaman.

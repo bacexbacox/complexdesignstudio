@@ -6,7 +6,7 @@
 - **Jaga kebersihan markup**: Jika class string terlalu panjang (>10 class), pecah ke komponen Svelte terpisah atau gunakan `@apply` di CSS module.
 - **Dark mode**: Siapkan struktur untuk `dark:` prefix sejak awal jika diperlukan.
 - **Animasi (Tailwind vs Svelte)**:
-  - Gunakan `transition-*` dan `animate-*` dari Tailwind **HANYA** untuk *state* mikro interaksi sederhana (misalnya efek *hover*, perubahan warna, atau *focus state*).
-  - **WAJIB** gunakan Svelte *built-in transitions* (`in:fade`, `out:fly`, `animate:flip`, dll.) untuk elemen yang secara fisik ditambahkan atau dihilangkan dari DOM (misalnya elemen di dalam block `{#if}`). Hindari melakukan animasi kemunculan elemen murni menggunakan Tailwind classes untuk performa yang optimal.
+  - Gunakan `transition-*` dan `animate-*` dari Tailwind **HANYA** untuk _state_ mikro interaksi sederhana (misalnya efek _hover_, perubahan warna, atau _focus state_).
+  - **WAJIB** gunakan Svelte _built-in transitions_ (`in:fade`, `out:fly`, `animate:flip`, dll.) untuk elemen yang secara fisik ditambahkan atau dihilangkan dari DOM (misalnya elemen di dalam block `{#if}`). Hindari melakukan animasi kemunculan elemen murni menggunakan Tailwind classes untuk performa yang optimal.
 
 ---

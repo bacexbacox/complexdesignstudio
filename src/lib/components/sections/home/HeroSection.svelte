@@ -1,7 +1,7 @@
 <script lang="ts">
 	/**
 	 * Scroll-driven Parallax Translate Animation
-	 * 
+	 *
 	 * Menghitung scroll progress berdasarkan posisi hero section di viewport.
 	 * - Left content: translateX ke kiri + fade out saat scroll ke bawah
 	 * - Right content: translateX ke kanan + fade out saat scroll ke bawah
@@ -46,33 +46,31 @@
 
 <div
 	bind:this={heroRef}
-	class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start mt-8 text-center lg:text-left"
+	class="mt-8 grid grid-cols-1 items-start gap-8 text-center lg:grid-cols-12 lg:gap-16 lg:text-left"
 >
 	<!-- Left side: heading — slides left on scroll -->
 	<div
-		class="lg:col-span-8 will-change-transform"
+		class="will-change-transform lg:col-span-8"
 		style="transform: translateX({leftTranslate}px); opacity: {Math.max(0, contentOpacity)};"
 	>
-		<h1 class="text-3xl md:text-5xl lg:text-[64px] font-medium leading-[1.1] tracking-tight">
+		<h1 class="text-3xl leading-[1.1] font-medium tracking-tight md:text-5xl lg:text-[64px]">
 			Let our team do the heavy thinking to formulate your brand's strategy, architecture, and
-			design <span class="text-neutral-400"
-				>while you focus on running your business.</span
-			>
+			design <span class="text-neutral-400">while you focus on running your business.</span>
 		</h1>
 	</div>
 
 	<!-- Right side: descriptions — slides right on scroll -->
 	<div
-		class="lg:col-span-4 flex flex-col gap-6 text-sm text-neutral-500 font-light lg:mt-4 items-center lg:items-start will-change-transform"
+		class="flex flex-col items-center gap-6 text-sm font-light text-neutral-500 will-change-transform lg:col-span-4 lg:mt-4 lg:items-start"
 		style="transform: translateX({rightTranslate}px); opacity: {Math.max(0, contentOpacity)};"
 	>
 		<p class="max-w-[400px] lg:max-w-none">
-			Complex Design is a space where diverse skills from talented hands are forged into a
-			single mind, a single purpose, one that always produces complex, quality work.
+			Complex Design is a space where diverse skills from talented hands are forged into a single
+			mind, a single purpose, one that always produces complex, quality work.
 		</p>
 		<p class="max-w-[400px] lg:max-w-none">
-			We are committed to showcasing our excellence to the world, helping your brand reach the
-			top and empowering UMKM (Indonesian Small and Medium Enterprises) toward success.
+			We are committed to showcasing our excellence to the world, helping your brand reach the top
+			and empowering UMKM (Indonesian Small and Medium Enterprises) toward success.
 		</p>
 	</div>
 </div>

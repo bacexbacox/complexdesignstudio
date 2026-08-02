@@ -54,10 +54,7 @@
 	<div class="hover-overlay">
 		<div class="tags-container">
 			{#each service.items as item, i}
-				<span
-					class="tag"
-					style="transition-delay: {i * 40 + 80}ms"
-				>
+				<span class="tag" style="transition-delay: {i * 40 + 80}ms">
 					{item}
 				</span>
 			{/each}

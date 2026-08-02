@@ -65,8 +65,12 @@
 
 	// Accordion: pisahkan services menjadi 2 kolom independen
 	// Kolom kiri: index 0, 2, 4 — Kolom kanan: index 1, 3, 5
-	const leftCol = $derived(services.filter((_, i) => i % 2 === 0).map((s, ci) => ({ ...s, globalIndex: ci * 2 })));
-	const rightCol = $derived(services.filter((_, i) => i % 2 !== 0).map((s, ci) => ({ ...s, globalIndex: ci * 2 + 1 })));
+	const leftCol = $derived(
+		services.filter((_, i) => i % 2 === 0).map((s, ci) => ({ ...s, globalIndex: ci * 2 }))
+	);
+	const rightCol = $derived(
+		services.filter((_, i) => i % 2 !== 0).map((s, ci) => ({ ...s, globalIndex: ci * 2 + 1 }))
+	);
 
 	// Hitung flex-grow berdasarkan apakah ada card yang di-hover di kolom yang sama
 	function getFlexGrow(globalIndex: number): number {
@@ -146,15 +150,15 @@
 
 <!-- Logo Utama (Fixed di kiri atas) -->
 <a href="/" class="global-logo" aria-label="Complex Design Studio Home">
-	<img src="/images/global/logo-complex-design-studio.svg" alt="Complex Design Studio Logo" class="logo-image" />
+	<img
+		src="/images/global/logo-complex-design-studio.svg"
+		alt="Complex Design Studio Logo"
+		class="logo-image"
+	/>
 </a>
 
 <!-- Nav container utama (Pill Navigation) -->
-<nav
-	bind:this={navElement}
-	class="navbar-wrapper"
-	aria-label="Main navigation"
->
+<nav bind:this={navElement} class="navbar-wrapper" aria-label="Main navigation">
 	<!-- Navbar bar -->
 	<div class="navbar-bar">
 		<!-- Desktop navigation -->
@@ -200,11 +204,7 @@
 	<!-- Mega Menu - Services dropdown -->
 	{#if isMegaMenuOpen}
 		<!-- Backdrop tak kasat mata untuk mendeteksi kursor keluar -->
-		<div
-			class="mega-menu-backdrop-desktop"
-			onmouseenter={closeMegaMenu}
-			aria-hidden="true"
-		></div>
+		<div class="mega-menu-backdrop-desktop" onmouseenter={closeMegaMenu} aria-hidden="true"></div>
 
 		<div
 			class="mega-menu"
@@ -281,7 +281,6 @@
 			</div>
 		</div>
 	{/if}
-
 </nav>
 
 <!-- Mobile Menu Overlay (Fullscreen Popup) -->
@@ -303,13 +302,14 @@
 		aria-label="Navigation menu"
 	>
 		<!-- Close button (X) — absolute top-right -->
-		<button
-			class="mobile-close"
-			onclick={toggleMobileMenu}
-			aria-label="Close navigation menu"
-		>
+		<button class="mobile-close" onclick={toggleMobileMenu} aria-label="Close navigation menu">
 			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-				<path d="M4 4L16 16M16 4L4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+				<path
+					d="M4 4L16 16M16 4L4 16"
+					stroke="currentColor"
+					stroke-width="1.5"
+					stroke-linecap="round"
+				/>
 			</svg>
 		</button>
 
@@ -391,7 +391,9 @@
 		display: flex;
 		align-items: center;
 		text-decoration: none;
-		transition: transform 0.3s var(--transition-smooth), opacity 0.3s ease;
+		transition:
+			transform 0.3s var(--transition-smooth),
+			opacity 0.3s ease;
 	}
 
 	.global-logo:hover {
@@ -722,7 +724,9 @@
 		text-decoration: none;
 		opacity: 0.9;
 		margin-bottom: 32px;
-		transition: opacity 0.25s ease, transform 0.25s ease;
+		transition:
+			opacity 0.25s ease,
+			transform 0.25s ease;
 	}
 
 	:global(.mobile-logo:hover) {

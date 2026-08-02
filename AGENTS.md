@@ -104,7 +104,6 @@ Jika build, deploy, atau adapter
 -> docs/02-rendering-adapter.md
 -> docs/09-performance.md
 
-
 Jika mengerjakan animasi / transition / motion
 
 -> docs/01-svelte-standards.md
@@ -124,7 +123,6 @@ Jika review kode
 -> docs/05-seo-accessibility.md
 -> docs/09-performance.md
 -> docs/10-agent-workflow.md
-
 
 ## Global Rules
 

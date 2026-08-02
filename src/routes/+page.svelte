@@ -11,7 +11,7 @@
 <SeoHead meta={data.meta} />
 
 <!-- Hero Section -->
-<section class="padding-global flex min-h-screen flex-col pt-32 pb-16 md:pt-[11vw] overflow-hidden">
+<section class="padding-global flex min-h-screen flex-col overflow-hidden pt-32 pb-16 md:pt-[11vw]">
 	<div class="flex w-full flex-col gap-16 md:gap-24">
 		<HeroSection />
 		<StatsSection />

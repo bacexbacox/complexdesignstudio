@@ -8,7 +8,7 @@ export const entries = () =>
 
 export const load: PageLoad = ({ params }) => {
 	const project = getProjectBySlug(params.category, params.slug);
-	
+
 	if (!project) {
 		throw error(404, 'Project tidak ditemukan');
 	}

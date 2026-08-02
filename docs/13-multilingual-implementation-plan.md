@@ -8,16 +8,16 @@ Target SEO adalah agar Google dapat memilih versi Indonesia untuk pencarian dan 
 
 ## Kontrak URL
 
-| Halaman | English | Bahasa Indonesia |
-| --- | --- | --- |
-| Home | `/` | `/id` |
-| Services | `/service` | `/id/service` |
-| About | `/about` | `/id/about` |
-| Contact | `/contact` | `/id/contact` |
-| Kategori portfolio | `/portfolio/{category}` | `/id/portfolio/{category}` |
-| Detail portfolio | `/portfolio/{category}/{slug}` | `/id/portfolio/{category}/{slug}` |
-| Portfolio index sementara | `/portfolio` -> `/service` | `/id/portfolio` -> `/id/service` |
-| Contact API | `/api/contact` | Tetap `/api/contact` |
+| Halaman                   | English                        | Bahasa Indonesia                  |
+| ------------------------- | ------------------------------ | --------------------------------- |
+| Home                      | `/`                            | `/id`                             |
+| Services                  | `/service`                     | `/id/service`                     |
+| About                     | `/about`                       | `/id/about`                       |
+| Contact                   | `/contact`                     | `/id/contact`                     |
+| Kategori portfolio        | `/portfolio/{category}`        | `/id/portfolio/{category}`        |
+| Detail portfolio          | `/portfolio/{category}/{slug}` | `/id/portfolio/{category}/{slug}` |
+| Portfolio index sementara | `/portfolio` -> `/service`     | `/id/portfolio` -> `/id/service`  |
+| Contact API               | `/api/contact`                 | Tetap `/api/contact`              |
 
 Aturan:
 
@@ -90,7 +90,7 @@ complex-frontend/
 6. Ubah `src/app.html` menjadi:
 
 ```html
-<html lang="%lang%" dir="%dir%">
+<html lang="%lang%" dir="%dir%"></html>
 ```
 
 Hasil yang wajib:
@@ -98,9 +98,9 @@ Hasil yang wajib:
 ```html
 <!-- /service -->
 <html lang="en">
-
-<!-- /id/service -->
-<html lang="id">
+	<!-- /id/service -->
+	<html lang="id"></html>
+</html>
 ```
 
 ## Content layer
@@ -182,27 +182,21 @@ Setiap halaman EN dan ID memiliki canonical ke dirinya sendiri, serta set `hrefl
 Contoh untuk halaman services English (`/service`):
 
 ```html
-<link rel="canonical" href="https://complexdesignstudio.com/service">
+<link rel="canonical" href="https://complexdesignstudio.com/service" />
 
-<link rel="alternate" hreflang="en"
-  href="https://complexdesignstudio.com/service">
-<link rel="alternate" hreflang="id"
-  href="https://complexdesignstudio.com/id/service">
-<link rel="alternate" hreflang="x-default"
-  href="https://complexdesignstudio.com/service">
+<link rel="alternate" hreflang="en" href="https://complexdesignstudio.com/service" />
+<link rel="alternate" hreflang="id" href="https://complexdesignstudio.com/id/service" />
+<link rel="alternate" hreflang="x-default" href="https://complexdesignstudio.com/service" />
 ```
 
 Contoh untuk halaman services Indonesia (`/id/service`):
 
 ```html
-<link rel="canonical" href="https://complexdesignstudio.com/id/service">
+<link rel="canonical" href="https://complexdesignstudio.com/id/service" />
 
-<link rel="alternate" hreflang="en"
-  href="https://complexdesignstudio.com/service">
-<link rel="alternate" hreflang="id"
-  href="https://complexdesignstudio.com/id/service">
-<link rel="alternate" hreflang="x-default"
-  href="https://complexdesignstudio.com/service">
+<link rel="alternate" hreflang="en" href="https://complexdesignstudio.com/service" />
+<link rel="alternate" hreflang="id" href="https://complexdesignstudio.com/id/service" />
+<link rel="alternate" hreflang="x-default" href="https://complexdesignstudio.com/service" />
 ```
 
 Aturan SEO:
