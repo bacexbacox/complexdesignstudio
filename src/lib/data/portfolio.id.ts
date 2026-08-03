@@ -89,6 +89,72 @@ PT GMT sendiri merupakan perusahaan pelopor yang memperkenalkan teknologi kubus 
 
 Perusahaan ini memiliki rekam jejak yang solid dalam membantu berbagai Badan Usaha Milik Negara (BUMN), instansi pemerintah pusat, hingga pemerintah daerah. Mereka secara aktif terlibat dalam pembangunan infrastruktur teknologi strategis, seperti instalasi sistem kamera pengawas (CCTV) jalan tol dan penyediaan basis data server nasional.
 
-Dalam proyek ini, kami bertanggung jawab mengelola ekosistem penjualan produk secara menyeluruh, baik di marketplace maupun platform media sosial. Cakupan kerja rutin dan terstruktur yang kami jalankan meliputi pembaruan katalog produk secara berkala, manajemen pesanan masuk, optimasi kampanye iklan (SEM/Ads), perancangan aset visual (banner), hingga pengelolaan konten feed media sosial yang menarik dan konsisten.`
+			Dalam proyek ini, kami bertanggung jawab mengelola ekosistem penjualan produk secara menyeluruh, baik di marketplace maupun platform media sosial. Cakupan kerja rutin dan terstruktur yang kami jalankan meliputi pembaruan katalog produk secara berkala, manajemen pesanan masuk, optimasi kampanye iklan (SEM/Ads), perancangan aset visual (banner), hingga pengelolaan konten feed media sosial yang menarik dan konsisten.`
+	},
+	'creative-design/peci-merah': {
+		description: `Didorong oleh visi bersama untuk menjaga identitas budaya di tengah derasnya arus digitalisasi, Complex Design bersama beberapa rekan media di Jakarta menjalin kolaborasi strategis untuk membangun dan mengembangkan PeciMerah.com. Portal berita ini dirancang sebagai pusat informasi yang lengkap—tidak hanya menyajikan berita terkini dan isu-isu daerah, tapi juga mengangkat kearifan lokal, pelestarian budaya Betawi, dan realita sosial masyarakat urban. Kolaborasi ini bertujuan menjembatani nilai-nilai tradisional dengan gaya komunikasi visual yang segar, edukatif, dan modern, sehingga bisa lebih dekat dengan generasi masa kini.
+
+1. Inti Kolaborasi
+Complex Design berperan sebagai mitra strategis dalam mentransformasi identitas visual dan komunikasi publik PeciMerah.com (Portal Rakyat Betawi). Lewat pendekatan naturalis-modern, tim berhasil memadukan akurasi data jurnalistik dengan estetika digital art, sehingga daya tarik visual bagi pembaca meningkat tanpa menghilangkan akar budaya lokalnya.
+
+2. Empat Pilar Layanan Utama
+• Rebranding Visual: Memodernkan identitas (logo) agar lebih ikonik, berwibawa, dan adaptif, tanpa kehilangan esensi "Peci Merah".
+• Ilustrasi Jurnalistik & Komik: Menciptakan karakter orisinal (seperti "Bang Ocim") dan strip komik ("Kampung Tigasuku") untuk menyampaikan kritik sosial dan budaya secara interaktif.
+• Infografis Berbasis Data: Menyederhanakan data yang kompleks (misalnya statistik stadion atau kebijakan publik) menjadi visual yang akurat dan mudah dicerna.
+• Aset Media & Berita: Merancang grafis responsif untuk mendukung liputan isu-isu daerah dan nasional.
+
+3. Sorotan Portofolio (Studi Kasus)
+Karya-karya yang dihasilkan mencakup beragam tema dengan dampak yang nyata:
+• Olahraga: Infografis teknis dan terstruktur untuk Jakarta International Stadium (JIS) selama Piala Dunia U-17 FIFA.
+• Politik: Desain publikasi untuk Debat Calon Wakil Presiden 2024, dengan mengedepankan netralitas media dan standar komunikasi publik yang kredibel.
+• Sosial/Kemanusiaan: Materi kampanye donor darah yang persuasif, berkolaborasi dengan Palang Merah Indonesia (PMI) untuk mendorong partisipasi masyarakat.
+• Ekonomi/Sektor Publik: Grafis transparansi untuk program Sembako Murah, guna memperjelas penyaluran bantuan dari pemerintah daerah.
+
+4. Keunggulan Teknis
+Setiap proyek dikerjakan dengan standar tertinggi, didukung penuh oleh tiga kompetensi inti: penguasaan Vector Design untuk aset yang adaptif di berbagai skala, Digital Art untuk ilustrasi dan storyboard manual-digital, serta Komunikasi Editorial yang mampu menerjemahkan naskah atau data mentah menjadi tata letak informasi yang jelas, tegas, dan terstruktur.`
+	},
+	'creative-design/kemenparekraf': {
+		description: `Mengerjakan proyek ini benar-benar menjadi pengalaman yang luar biasa. Lewat penerapan teknik ilustrasi lukisan, tim Complex Design merasa sangat bangga bisa berkontribusi menghadirkan sebuah mahakarya yang merepresentasikan penghormatan mendalam kami terhadap sosok revolusioner, Alfred Russel Wallace—tokoh penting yang memetakan keanekaragaman hayati di seluruh Nusantara, khususnya wilayah Sulawesi.
+
+METODOLOGI & TAHAPAN PENGERJAAN
+Untuk menghadirkan buku panduan yang benar-benar komprehensif, kami menerapkan alur kerja terstruktur yang terbagi dalam tiga fase utama:
+• Fase 1: Riset & Kurasi Data Tekstual: Mengolah data survei lapangan mentah untuk secara cermat menyaring poin-poin itinerary penting, koordinat destinasi utama, hingga mengkatalogkan fauna endemik di setiap wilayah transit.
+• Fase 2: Produksi Ilustrasi Custom (In-house): Menciptakan ratusan aset ilustrasi digital bernilai seni tinggi untuk membangun identitas visual yang premium, meliputi:
+  o Tokoh Sejarah: Rekonstruksi wajah Alfred Russel Wallace secara detail.
+  o Fauna Endemik: Ilustrasi satwa langka yang memukau dan akurat secara anatomi, mulai dari Tarsius (menonjolkan matanya yang besar), Macaca (menggambarkan gestur alaminya), burung Maleo dan Bidadari (menampilkan warna bulu yang eksotis), Anoa & Babi Rusa, hingga Kupu-kupu Raja.
+• Fase 3: Desain, Infografis & Layouting:
+  o Peta 3D Isometrik: Merancang peta navigasi wisata yang memvisualisasikan jalur udara, darat, dan laut secara menyeluruh (mencakup Sulawesi Utara, Gorontalo, Maluku Utara, Sulawesi Selatan, dan Kepulauan Selayar).
+  o Tipografi & Layouting: Menerapkan sistem grid yang presisi untuk menyeimbangkan teks naratif dan sejarah dengan elemen ilustrasi secara sempurna, sehingga keterbacaannya tetap optimal.
+
+HASIL AKHIR & NILAI UTAMA
+Proyek ini berhasil menghadirkan sebuah mahakarya buku panduan wisata edutainment eksklusif berskala nasional, dengan palet warna earthy tone yang secara autentik merepresentasikan kealamian Wallacea.
+
+Buku ini mendefinisikan ulang standar publikasi instansi pemerintah—mengubahnya dari format yang kaku menjadi buku panduan yang praktis dan sangat layak dikoleksi, baik oleh wisatawan domestik maupun mancanegara. Pencapaian ini secara langsung membuktikan kekuatan tim ilustrator kami dalam menerjemahkan konsep-konsep ilmiah yang abstrak menjadi aset visual komersial yang premium. Lebih dari itu, keberhasilan proyek ini sekaligus membuktikan kapabilitas unggul Complex Design dalam membangun dan mengangkat industri kreatif di Indonesia.`
+	},
+	'creative-design/illustrator': {
+		description: `Di era digital yang serba dinamis seperti sekarang, identitas visual yang unik dan punya karakter kuat menjadi kunci utama untuk menarik perhatian audiens. Kami menyediakan jasa ilustrasi potret custom dan desain grafis profesional, dengan keahlian mendalam di ranah Estetika Vintage, Retro, dan Klasik. Kami memadukan unsur nostalgia masa lalu dengan teknik eksekusi modern yang presisi, untuk menciptakan karya visual yang ikonik, khas, dan benar-benar timeless. Setiap proyek yang kami tangani bukan sekadar mengubah foto mentah menjadi grafis digital, melainkan sebuah proses kurasi mendalam terhadap karakter, ekspresi emosi, dan pembentukan suasana tematik yang disesuaikan dengan visi eksklusif masing-masing klien.
+
+1. Poster Film
+Kami mengubah konsep cerita, sinopsis, dan penokohan menjadi mahakarya poster teatrikal dan sinematik. Lewat eksplorasi palet warna yang berani dan penerapan tipografi yang ekspresif, kami menghidupkan berbagai sub-genre retro populer:
+• 80s Synthwave & Cyberpunk Style: Menampilkan warna neon elektrik yang kontras (perpaduan magenta, ungu, dan biru elektrik) dengan latar lanskap kota metropolitan di malam hari, siluet sunset bergaris (sunset grid), dan kendaraan retro-futuristik. Sangat cocok untuk poster film aksi, sci-fi, atau kebutuhan visual perayaan komunitas tertentu.
+• Classic Movie & Pop Art Poster: Menghadirkan gaya komik Barat klasik pertengahan abad ke-20, lengkap dengan efek titik halftone dan tekstur kertas yang usang atau lusuh. Hasilnya memberi kesan autentik, seolah dicetak dari mesin koran zaman dulu atau poster fisik dari masa lampau.
+
+2. Album Artwork
+Visual pendukung sampul album adalah representasi langsung dari karya musik itu sendiri. Kami sangat ahli dalam merangkum nuansa audio dan pesan lirik ke dalam format ilustrasi visual estetik, baik untuk sampul album fisik (vinyl, CD, kaset) maupun media streaming digital:
+• Vintage Woodcut & Textured Style: Menonjolkan sapuan garis bertekstur kasar dan tegas, menyerupai cetakan woodcut tradisional atau sablon manual konvensional. Gaya ini sangat diminati oleh musisi indie, folk, dan rock, serta mereka yang menciptakan lagu-lagu legendaris bernuansa Nusantara, yang ingin menonjolkan nilai seni tinggi, storytelling yang intim, dan suasana melankolis yang dalam.
+• Vector Pop Portrait: Desain potret minimalis dengan detail shading berlapis yang bersih, modern, namun tetap elegan. Gaya seni ini sangat efektif untuk menonjolkan kekuatan ekspresi wajah musisi atau tokoh utama sebagai daya tarik utama sampul album.
+
+3. Custom Gifting & Karikatur
+Kami melayani pembuatan ilustrasi wajah personal berskala premium untuk berbagai kebutuhan perayaan, mulai dari hadiah pernikahan, ulang tahun, perpisahan, hingga suvenir eksklusif untuk mitra korporat:
+• Romantic Vintage Portrait: Mengabadikan momen terindah pasangan dengan latar bertema petualangan romantis klasik—seperti berkendara motor vintage berdua menyusuri jalan pesisir saat senja, atau berdiri di dek kapal dengan pemandangan laut lepas yang panoramik.
+• Corporate & Professional Appreciation Art: Ilustrasi karikatur dengan proporsi yang pas, dipadukan dengan latar detail gedung kantor, instansi, atau lembaga pendidikan terkait. Pendekatan visual ini dirancang untuk tetap terasa hangat namun mempertahankan nuansa profesional yang formal, lengkap dengan ornamen seragam resmi, teks apresiasi, dan sentuhan tekstur kertas kanvas halus yang siap cetak dan dipajang dalam bingkai.
+• Family & Community Fun Vector: Ilustrasi karikatur ekspresif dengan modifikasi proporsi "big head mode" yang dinamis. Gaya ini sangat digemari untuk menangkap kehangatan dan kebersamaan keluarga besar atau komunitas saat bepergian, berlibur, atau berkumpul bersama.
+
+Karakteristik Estetika & Keunggulan Teknis
+Setiap karya ilustrasi yang dihasilkan studio kami melewati standar kontrol kualitas yang ketat demi memastikan kepuasan klien, meliputi:
+• Tekstur Klasik yang Autentik: Penerapan efek digital khusus, termasuk sapuan kuas alami, bercak korosi, serat kayu, dan pori-pori kertas kanvas tua, untuk memberi kedalaman organik pada karya digital.
+• Tipografi Retro Custom: Pemilihan dan modifikasi font bergaya vintage yang dilakukan secara cermat, disesuaikan khusus untuk menyempurnakan harmoni desain secara keseluruhan.
+• Akurasi Karakter Subjek: Menjamin kemiripan anatomi wajah subjek asli tetap terjaga secara presisi, meskipun dikemas dalam gaya artistik tertentu atau distorsi karikatur.
+• Format Print-Ready Skala Besar: Semua file akhir diserahkan dalam format High-Resolution dan vector berlapis, untuk memastikan hasil cetak tetap tajam luar biasa dan tidak pecah pada media cetak berskala besar.`
 	}
 } satisfies Record<string, PortfolioTranslation>;
