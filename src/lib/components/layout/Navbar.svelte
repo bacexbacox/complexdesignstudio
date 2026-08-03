@@ -33,25 +33,6 @@
 		}
 	}
 
-	function getServiceNavTitle(key: string): string {
-		switch (key) {
-			case 'website-development':
-				return m.nav_service_website_development();
-			case 'mobile-application':
-				return m.nav_service_mobile_application();
-			case 'digital-marketing':
-				return m.nav_service_digital_marketing();
-			case 'ux-design':
-				return m.nav_service_ux_design();
-			case 'creative-design':
-				return m.nav_service_creative_design();
-			case 'branding-product':
-				return m.nav_service_branding_product();
-			default:
-				return key;
-		}
-	}
-
 	// Data layanan untuk mega menu dengan gambar asli
 	const services = [
 		{
@@ -281,11 +262,11 @@
 							<!-- Content -->
 							<div class="service-content">
 								<span class="service-icon">{service.icon}</span>
-								<h3 class="service-title">{getServiceNavTitle(service.key)}</h3>
+								<h3 class="service-title">{service.title}</h3>
 							</div>
 
 							<!-- Count -->
-							<span class="service-count">/{service.count} {m.nav_service_count()}</span>
+							<span class="service-count">/{service.count} services</span>
 						</a>
 					{/each}
 				</div>
@@ -313,11 +294,11 @@
 							<!-- Content -->
 							<div class="service-content">
 								<span class="service-icon">{service.icon}</span>
-								<h3 class="service-title">{getServiceNavTitle(service.key)}</h3>
+								<h3 class="service-title">{service.title}</h3>
 							</div>
 
 							<!-- Count -->
-							<span class="service-count">/{service.count} {m.nav_service_count()}</span>
+							<span class="service-count">/{service.count} services</span>
 						</a>
 					{/each}
 				</div>
