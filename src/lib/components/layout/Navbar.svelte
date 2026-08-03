@@ -401,7 +401,7 @@
 					onclick={() => (isMobileMenuOpen = false)}
 				>
 					<span class="mobile-service-icon">{service.icon}</span>
-					<span class="mobile-service-name">{getServiceNavTitle(service.key)}</span>
+					<span class="mobile-service-name">{service.title}</span>
 					<span class="mobile-service-num">/{service.count}</span>
 				</a>
 			{/each}

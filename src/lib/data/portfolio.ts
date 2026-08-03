@@ -1,4 +1,5 @@
 import type { PortfolioProject } from '$lib/types';
+import { portfolioId } from '$lib/data/portfolio.id';
 
 export const projects: PortfolioProject[] = [
 	// ==========================================
@@ -525,7 +526,14 @@ if (sabyanProject) {
 	);
 }
 
-export const getProjectsByCategory = (category: string) =>
+function localizeProject(project: PortfolioProject, locale: 'en' | 'id'): PortfolioProject {
+	if (locale !== 'id') return project;
+
+	const translation = portfolioId[`${project.categorySlug}/${project.slug}` as keyof typeof portfolioId];
+	return translation ? { ...project, ...translation } : project;
+}
+
+export const getProjectsByCategory = (category: string, locale: 'en' | 'id' = 'en') =>
 	projects
 		.filter((p) => p.categorySlug === category)
 		.sort((a, b) => {
@@ -533,7 +541,10 @@ export const getProjectsByCategory = (category: string) =>
 			if (a.slug === 'sabyan-gambus-gift-merchandise') return -1;
 			if (b.slug === 'sabyan-gambus-gift-merchandise') return 1;
 			return 0;
-		});
+		})
+		.map((project) => localizeProject(project, locale));
 
-export const getProjectBySlug = (category: string, slug: string) =>
-	projects.find((p) => p.categorySlug === category && p.slug === slug);
+export const getProjectBySlug = (category: string, slug: string, locale: 'en' | 'id' = 'en') => {
+	const project = projects.find((p) => p.categorySlug === category && p.slug === slug);
+	return project ? localizeProject(project, locale) : undefined;
+};

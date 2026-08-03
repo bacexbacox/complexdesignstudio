@@ -1,13 +1,14 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 import { getProjectBySlug, projects } from '$lib/data/portfolio';
+import { getLocale } from '$lib/paraglide/runtime';
 import type { SeoMeta } from '$lib/types';
 
 export const entries = () =>
 	projects.map((project) => ({ category: project.categorySlug, slug: project.slug }));
 
 export const load: PageLoad = ({ params }) => {
-	const project = getProjectBySlug(params.category, params.slug);
+	const project = getProjectBySlug(params.category, params.slug, getLocale());
 
 	if (!project) {
 		throw error(404, 'Project tidak ditemukan');

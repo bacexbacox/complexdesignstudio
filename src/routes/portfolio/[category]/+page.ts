@@ -18,7 +18,7 @@ export const load: PageLoad = ({ params }) => {
 
 	const service = localizeService(sourceService, getLocale());
 
-	const categoryProjects = getProjectsByCategory(categorySlug);
+	const categoryProjects = getProjectsByCategory(categorySlug, getLocale());
 
 	const meta: SeoMeta = {
 		title: `${service.title} Portfolio - Complex Design Studio`,
