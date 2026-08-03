@@ -67,15 +67,20 @@
 <div bind:this={sectionRef} class="grid grid-cols-2 gap-4 lg:grid-cols-4">
 	<!-- Card 1: Project Delivery — slides LEFT first -->
 	<div
-		class="stats-parallax will-change-transform lg:col-span-2"
+		class="will-change-transform lg:col-span-2"
 		style="transform: translateX({card1Translate}px); opacity: {Math.max(0, card1Opacity)};"
 	>
-		<CardCounting number="200+" label={m.home_stats_project_delivery()} class="h-full" />
+		<CardCounting
+			number="200+"
+			label={m.home_stats_project_delivery()}
+			class="h-full"
+			numberClass="!text-[48px] md:!text-[80px] lg:!text-[120px]"
+		/>
 	</div>
 
 	<!-- Card 2: Years of Industriy — slides RIGHT with slight delay -->
 	<div
-		class="stats-parallax col-start-1 will-change-transform lg:col-start-auto"
+		class="col-start-1 will-change-transform lg:col-start-auto"
 		style="transform: translateX({card2Translate}px); opacity: {Math.max(0, card2Opacity)};"
 	>
 		<CardCounting number="15+" label={m.home_stats_years_industry()} class="h-full" />
@@ -83,20 +88,9 @@
 
 	<!-- Card 3: BUMN/Goverment — slides RIGHT with more delay -->
 	<div
-		class="stats-parallax col-start-2 row-span-2 row-start-1 will-change-transform lg:col-start-auto lg:row-span-1 lg:row-start-auto"
+		class="col-start-2 row-span-2 row-start-1 will-change-transform lg:col-start-auto lg:row-span-1 lg:row-start-auto"
 		style="transform: translateX({card3Translate}px); opacity: {Math.max(0, card3Opacity)};"
 	>
 		<CardCounting number="20+" label={m.home_stats_government()} class="h-full" />
 	</div>
 </div>
-
-<style>
-	/* Keep the stat cards fully visible on narrow screens. The desktop parallax
-	 * offsets are large enough to move the first card's counter outside the viewport. */
-	@media (max-width: 1023px) {
-		.stats-parallax {
-			transform: none !important;
-			opacity: 1 !important;
-		}
-	}
-</style>
