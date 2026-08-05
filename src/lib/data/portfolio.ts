@@ -208,6 +208,25 @@ export const projects: PortfolioProject[] = [
 		tags: ['SaaS Platforms'],
 		year: 2023
 	},
+	{
+		id: '6',
+		slug: 'wrp-lawyers',
+		categorySlug: 'website-development',
+		title: 'WRPLAWYERS.CO.ID (LAWFIRM)',
+		client: 'WRP Lawyers',
+		description:
+			"Law firm websites are actually one of our specialties - we've built quite a few for legal practices across Indonesia, and clients keep coming back to us for it. For WRP, we crafted a design concept built around trust and credibility, paired with premium visual assets that give the site a polished, serious feel without losing warmth.\n\nThe site runs on WordPress, with a clean, minimalist, and formal design language - neutral tones and confident typography that make the firm feel established and trustworthy at first glance. WRP specifically asked for a simple, no-frills page structure, so we kept the navigation as lean as possible: visitors can find what matters most - the firm's profile, legal services, and the partner team - without digging through layers of pages.\nWRP Lawyers is a Jakarta-based law firm with a long track record in the legal world, founded by legal experts including Rinto Harsa Wardhana, Sylvia, and Reza Prianda. Their guiding philosophy, \"The Firm With A Human Touch,\" reflects a practice that's not just professionally solid, but personal and responsive to every client's needs.",
+		clientLogo: '/images/portfolio/website-development/wrp-lawyers/logo_wrplawyers-complexdesign.jpg',
+		coverImage: '/images/portfolio/website-development/wrp-lawyers/wrp-lawyers-complex-design-homepage-a.webp',
+		images: [
+			'/images/portfolio/website-development/wrp-lawyers/wrp-lawyers-complex-design-homepage-a.webp',
+			'/images/portfolio/website-development/wrp-lawyers/wrp-lawyers-complex-design-about-b.webp',
+			'/images/portfolio/website-development/wrp-lawyers/wrp-lawyers-complex-design-ourpeople-c.webp',
+			'/images/portfolio/website-development/wrp-lawyers/wrp-lawyers-complex-design-seo-d.webp'
+		],
+		tags: ['Web Design & CMS'],
+		year: 2022
+	},
 
 	// ==========================================
 	// USER EXPERIENCE DESIGN

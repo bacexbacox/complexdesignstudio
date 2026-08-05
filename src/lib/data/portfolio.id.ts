@@ -42,6 +42,13 @@ Proyek ini lahir dari kesadaran kami akan kesulitan masyarakat dalam memasarkan 
 
 Teknologi di balik pembuatan website dan aplikasi ini terbilang sangat kompleks. Kami berfokus menyuguhkan halaman frontend dan dashboard dengan pengalaman pengguna (user experience) yang nyaman, intuitif, serta memiliki performa yang sangat cepat.`
 	},
+	'website-development/wrp-lawyers': {
+		description: `Di beberapa portofolio kami, kami sudah sangat sering membantu dan dipercaya untuk pembuatan website lawyer/lawfirm di Indonesia. Kami membantu membuatkan konsep desain yang profesional, kredibel, dan mudah dinavigasi, dilengkapi dengan penggunaan aset-aset gambar premium yang mencerminkan citra hukum yang serius namun tetap approachable.
+
+Pembuatan website lawfirm ini menggunakan CMS WordPress dengan desain yang clean, minimalis, dan formal - mengedepankan tone warna netral serta tipografi yang tegas untuk membangun kesan profesional dan terpercaya di mata calon klien. Konsep kali ini dibuat dengan halaman-halaman yang simple sesuai dengan permintaan WRP sendiri, oleh karena itu navigasi dirancang seringkas mungkin agar pengunjung dapat langsung menemukan informasi penting - seperti profil firma, layanan hukum, dan tim partner - tanpa harus menelusuri terlalu banyak halaman.
+
+WRP Lawyers adalah sebuah lawfirm yang berdomisili di Jakarta, merupakan lawfirm yang sudah malang melintang di dunia hukum, dibentuk oleh beberapa pakar hukum seperti Rinto Harsa Wardhana, Sylvia, dan Reza Prianda. Mereka mengusung filosofi "The Firm With A Human Touch," menghadirkan layanan hukum yang tidak hanya andal secara profesional, tetapi juga personal dan responsif terhadap kebutuhan setiap klien.`
+	},
 	'mobile-application/poltracking': {
 		description: `Hasama Indonesia berhasil mengembangkan sebuah aplikasi modern yang dirancang khusus untuk memfasilitasi berbagai survei berskala nasional. Saat ini, aplikasi tersebut secara eksklusif hanya dimiliki dan beroperasi penuh untuk kebutuhan Poltracking Indonesia.
 
