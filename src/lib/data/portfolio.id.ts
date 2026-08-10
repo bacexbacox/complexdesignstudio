@@ -5,17 +5,21 @@ type PortfolioTranslation = Pick<PortfolioProject, 'description'>;
 export const portfolioId = {
 	'website-development/bank-syariah-mandiri': {
 		description:
-			'Complex Design dan Bank Syariah Mandiri terus menjalin kerja sama setelah kami berhasil dan dipercaya untuk membuat website Bank Syariah Mandiri Priority atau BSM Priority. Kami kemudian menjadi vendor yang menangani maintenance website utama Bank Syariah Mandiri. Kontrak tugas harian Bank Syariah Mandiri dengan Complex Design meliputi update berbagai fitur slider (daily), update halaman (weekly), fix bugs berdasarkan laporan, traffic report, SEO report, backup database, optimasi database, serta pengelolaan dan input konten. Setiap proses dilakukan secara terjadwal dengan laporan kerja yang rapi untuk memastikan website tetap aman, optimal, dan selalu dapat diakses dengan baik.\nBank Syariah Mandiri merupakan bank syariah terbesar di Indonesia pada saat itu. Kepercayaan untuk menangani maintenance website utama Bank Syariah Mandiri menjadi salah satu pengalaman penting bagi Complex Design dalam mengelola website perusahaan dengan jumlah konten dan traffic yang besar. Saat ini, Bank Syariah Mandiri telah bergabung dengan dua bank syariah BUMN lainnya, yaitu BRI Syariah dan BNI Syariah, menjadi Bank Syariah Indonesia atau BSI. Penggabungan tersebut resmi berlaku pada 1 Februari 2021.'
+			'"Studi kasus portofolio yang diarsipkan. Halaman ini bukan portal perbankan, tidak menyediakan layanan keuangan, dan tidak pernah meminta kredensial rekening maupun menawarkan unduhan aplikasi."\n\nComplex Design dan Bank Syariah Mandiri terus menjalin kerja sama setelah kami berhasil dan dipercaya untuk membuat website Bank Syariah Mandiri Priority atau BSM Priority. Kami kemudian menjadi vendor yang menangani maintenance website utama Bank Syariah Mandiri. Kontrak tugas harian Bank Syariah Mandiri dengan Complex Design meliputi update berbagai fitur slider (daily), update halaman (weekly), fix bugs berdasarkan laporan, traffic report, SEO report, backup database, optimasi database, serta pengelolaan dan input konten. Setiap proses dilakukan secara terjadwal dengan laporan kerja yang rapi untuk memastikan website tetap aman, optimal, dan selalu dapat diakses dengan baik.\nBank Syariah Mandiri merupakan bank syariah terbesar di Indonesia pada saat itu. Kepercayaan untuk menangani maintenance website utama Bank Syariah Mandiri menjadi salah satu pengalaman penting bagi Complex Design dalam mengelola website perusahaan dengan jumlah konten dan traffic yang besar. Saat ini, Bank Syariah Mandiri telah bergabung dengan dua bank syariah BUMN lainnya, yaitu BRI Syariah dan BNI Syariah, menjadi Bank Syariah Indonesia atau BSI. Penggabungan tersebut resmi berlaku pada 1 Februari 2021.'
 	},
 	'website-development/bsmpriority': {
-		description: `Bank Syariah Mandiri mempercayakan Complex Design sebagai vendor untuk merencanakan pembuatan website Bank Syariah Mandiri Priority, atau yang biasa disebut BSM Priority.
+		description: `"Studi kasus portofolio yang diarsipkan. Halaman ini bukan portal perbankan, tidak menyediakan layanan keuangan, dan tidak pernah meminta kredensial rekening maupun menawarkan unduhan aplikasi."
+
+Bank Syariah Mandiri mempercayakan Complex Design sebagai vendor untuk merencanakan pembuatan website Bank Syariah Mandiri Priority, atau yang biasa disebut BSM Priority.
 
 Website ini dibuat dengan konsep Smooth Experience dan mengusung tema Brown Elegant. Di dalamnya terdapat fitur-fitur seperti Financial Check-up, Kalkulator Zakat, Program Merchant, E-magazine, serta fitur khusus yang menyuguhkan layanan eksklusif bulanan yang tidak dimiliki oleh nasabah reguler.
 
 Tim kami memberikan layanan maksimal untuk Bank Syariah Mandiri dengan menerapkan engine dan fitur mutakhir yang paling modern saat itu. Pengalaman pengguna (user experience) menjadi prioritas kami dengan membangun website yang Super Responsive serta menyediakan aplikasi (APK) yang dapat diunduh di Play Store dan App Store.`
 	},
 	'ux-design/bsm-pawning': {
-		description: `Lagi dan lagi, Bank Syariah Mandiri (BSM) memberikan kepercayaannya kepada kami untuk berkolaborasi dengan divisi baru mereka pada saat itu, yaitu BSM Pawning Division. Divisi ini dibentuk khusus untuk memfasilitasi berbagai layanan terkait emas, mulai dari transaksi jual beli, gadai, cicilan, hingga investasi.
+		description: `"Studi kasus portofolio yang diarsipkan. Halaman ini bukan portal perbankan, tidak menyediakan layanan keuangan, dan tidak pernah meminta kredensial rekening maupun menawarkan unduhan aplikasi."
+
+Lagi dan lagi, Bank Syariah Mandiri (BSM) memberikan kepercayaannya kepada kami untuk berkolaborasi dengan divisi baru mereka pada saat itu, yaitu BSM Pawning Division. Divisi ini dibentuk khusus untuk memfasilitasi berbagai layanan terkait emas, mulai dari transaksi jual beli, gadai, cicilan, hingga investasi.
 
 Kami dipercaya untuk merancang konsep antarmuka dan pengalaman pengguna (UI/UX) untuk aplikasi mobile mereka yang berbasis Android dan iOS. Kami sangat bangga berhasil memenangkan pitching proyek ini dan terpilih di antara sekian banyak kompetitor tangguh yang berpartisipasi.
 
@@ -72,7 +76,9 @@ Kehadiran platform ini memberikan kemudahan akses secara penuh bagi pengguna men
 Dengan mengusung konsep kontribusi berbasis komunitas dari para pendidik secara nasional, HIVAL dilengkapi dengan fitur analitik pintar yang secara spesifik membantu siswa memetakan kelemahan akademik mereka setelah mengerjakan tryout. Selain itu, integrasi fitur 'Kelas Online' publik maupun privat serta Notifikasi Real-time memungkinkan pengguna untuk terhubung secara dinamis, menjadikannya solusi pendidikan digital yang komprehensif, adaptif, dan sangat relevan untuk kebutuhan belajar modern.`
 	},
 	'mobile-application/bsm-priority-mobile': {
-		description: `“Layanan finansial premium dalam satu genggaman.”
+		description: `"Studi kasus portofolio yang diarsipkan. Halaman ini bukan portal perbankan, tidak menyediakan layanan keuangan, dan tidak pernah meminta kredensial rekening maupun menawarkan unduhan aplikasi."
+
+“Layanan finansial premium dalam satu genggaman.”
 
 Itulah yang menjadi fokus dan acuan Complex Design dalam pembuatan aplikasi mobile BSM Priority. Aplikasi ini dikembangkan untuk memudahkan nasabah prioritas dalam mengakses berbagai layanan dan informasi secara praktis melalui perangkat mobile.
 
