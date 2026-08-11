@@ -84,20 +84,20 @@ export const projects: PortfolioProject[] = [
 	},
 	{
 		id: '5',
-		slug: 'bsm-priority-mobile',
+		slug: 'arsip-complex-design-bsm-priority-mobile',
 		categorySlug: 'mobile-application',
 		title: 'BSM PRIORITY — MOBILE APP',
 		client: 'BANK SYARIAH MANDIRI',
 		description:
-			"\"Archived portfolio case study. This page is not a banking portal, does not provide financial services, and never requests account credentials or application downloads.\"\n\n“Layanan finansial premium dalam satu genggaman.”\nThis was the primary focus and guiding principle for Complex Design in developing the BSM Priority mobile application. The application was designed to provide Priority customers with convenient access to various services and information through their mobile devices.\nWhile maintaining the elegant and premium identity of BSM Priority, we translated the website experience into a mobile application that is more compact, intuitive, and user-friendly. The entire interface and navigation were carefully designed to deliver a consistent user experience across Android, iOS, and RIM BlackBerry platforms.\n\nTechnical\nThis mobile application project was developed simultaneously with the BSM Priority website, featuring almost identical functionalities. We utilized a single shared database with the website, where the application sends API (Application Programming Interface) requests to the server. The server then processes database queries and returns the data in JSON format for display within the application.\nIn 2016, API integration and the use of JSON format to connect websites with mobile applications were still considered relatively new technologies. The implementation of these technologies demonstrated Complex Design's capability to build integrated and efficient digital systems while adopting modern development practices of the time.",
+			"“This is an archived Complex Design Studio portfolio case study documenting our previous work for Bank Syariah Mandiri. This page is not an official banking portal, does not provide banking or financial services, and never requests account credentials or offers application downloads.”\n\n“Layanan finansial premium dalam satu genggaman.”\nThis was the primary focus and guiding principle for Complex Design in developing the BSM Priority mobile application. The application was designed to provide Priority customers with convenient access to various services and information through their mobile devices.\nWhile maintaining the elegant and premium identity of BSM Priority, we translated the website experience into a mobile application that is more compact, intuitive, and user-friendly. The entire interface and navigation were carefully designed to deliver a consistent user experience across Android, iOS, and RIM BlackBerry platforms.\n\nTechnical\nThis mobile application project was developed simultaneously with the BSM Priority website, featuring almost identical functionalities. We utilized a single shared database with the website, where the application sends API (Application Programming Interface) requests to the server. The server then processes database queries and returns the data in JSON format for display within the application.\nIn 2016, API integration and the use of JSON format to connect websites with mobile applications were still considered relatively new technologies. The implementation of these technologies demonstrated Complex Design's capability to build integrated and efficient digital systems while adopting modern development practices of the time.",
 		clientLogo:
-			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/logo-mobile-mandirisyariahpriority-complexdesignstudio.webp',
+			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/arsip-portofolio-logo-complexdesign-mobile-bsm-priority.webp',
 		coverImage:
-			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-a.webp',
+			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/arsip-portofolio-complexdesign-mobile-bsm-priority-a.webp',
 		images: [
-			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-a.webp',
-			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-b.webp',
-			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/mobile-bsm-priority-complexdesign-banner-c.webp'
+			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/arsip-portofolio-complexdesign-mobile-bsm-priority-a.webp',
+			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/arsip-portofolio-complexdesign-mobile-bsm-priority-b.webp',
+			'/images/portfolio/apps-mobile-applications/bsm-priority-mobile/arsip-portofolio-complexdesign-mobile-bsm-priority-c.webp'
 		],
 		tags: ['ANDROID, IOS & RIM BLACKBERRY APPS'],
 		year: 2016,
@@ -109,38 +109,39 @@ export const projects: PortfolioProject[] = [
 	// ==========================================
 	{
 		id: '1',
-		slug: 'bsmpriority',
+		slug: 'arsip-complex-design-bsm-priority',
 		categorySlug: 'website-development',
 		title: 'BSM PRIORITY',
 		client: 'Bank Syariah Mandiri',
 		description:
-			'"Archived portfolio case study. This page is not a banking portal, does not provide financial services, and never requests account credentials or application downloads."\n\nBank Syariah Mandiri entrusted Complex Design as the vendor to plan the website development for Bank Syariah Mandiri Priority, commonly known as BSM PRIORITY.\nThe website was built with a Smooth Experience concept, featuring a Brown Elegant theme. It includes features such as a Financial Check-up, Zakat Calculator, Merchant Program, E-magazine, and features offering services every month that regular customers do not have.\nOur team provided maximum service for Bank Syariah Mandiri by implementing the most advanced and modern engine and features at that time. We prioritized user experience by creating a Super Responsive Website and developing APKs that can be downloaded from the Play Store and App Store.',
+			'“This is an archived Complex Design Studio portfolio case study documenting our previous work for Bank Syariah Mandiri. This page is not an official banking portal, does not provide banking or financial services, and never requests account credentials or offers application downloads.”\n\nBank Syariah Mandiri entrusted Complex Design as the vendor to plan the website development for Bank Syariah Mandiri Priority, commonly known as BSM PRIORITY.\nThe website was built with a Smooth Experience concept, featuring a Brown Elegant theme. It includes features such as a Financial Check-up, Zakat Calculator, Merchant Program, E-magazine, and features offering services every month that regular customers do not have.\nOur team provided maximum service for Bank Syariah Mandiri by implementing the most advanced and modern engine and features at that time. We prioritized user experience by creating a Super Responsive Website. We also developed companion applications for BlackBerry RIM, Android, and iOS as part of this project.',
 		clientLogo:
-			'/images/portfolio/website-development/bsmpriority/logo-mandirisyariahpriority-complexdesignstudio.webp',
+			'/images/portfolio/website-development/bsmpriority/arsip-portofolio-complexdesignstudio-logo-mandirisyariahpriority-.webp',
 		coverImage:
-			'/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-a.webp',
+			'/images/portfolio/website-development/bsmpriority/arsip-portofolio-complexdesign-website-bsm-priority-a.webp',
 		images: [
-			'/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-a.webp',
-			'https://www.youtube.com/embed/AkiPAxX7MYY',
-			'/images/portfolio/website-development/bsmpriority/website-bsm-priority-complexdesign-b.webp'
+			'/images/portfolio/website-development/bsmpriority/arsip-portofolio-complexdesign-website-bsm-priority-a.webp',
+			'/images/portfolio/website-development/bsmpriority/arsip-portofolio-complexdesign-website-bsm-priority-b.webp'
 		],
 		tags: ['WEBSITE APPLICATION & MOBILE APP'],
 		year: 2016
 	},
 	{
 		id: '5',
-		slug: 'bank-syariah-mandiri',
+		slug: 'arsip-complex-design-bank-syariah-mandiri',
 		categorySlug: 'website-development',
 		title: 'BANK SYARIAH MANDIRI — MAIN WEBSITE',
 		client: 'Bank Syariah Mandiri',
 		description:
-			'"Archived portfolio case study. This page is not a banking portal, does not provide financial services, and never requests account credentials or application downloads."\n\nComplex Design and Bank Syariah Mandiri continued their collaboration after we successfully earned the trust to develop the Bank Syariah Mandiri Priority website, also known as BSM Priority. We were then appointed as the vendor responsible for handling the maintenance of Bank Syariah Mandiri’s main website. The daily work contract between Bank Syariah Mandiri and Complex Design included updating various slider features (daily), updating website pages (weekly), fixing bugs based on reports, preparing traffic reports and SEO reports, performing database backups and database optimization, as well as managing and inputting content. Every process was carried out according to a structured schedule, supported by well-organized work reports to ensure that the website remained secure, optimal, and accessible at all times.\nAt that time, Bank Syariah Mandiri was the largest bank syariah in Indonesia. Being trusted to manage the maintenance of Bank Syariah Mandiri’s main website became an important experience for Complex Design in managing a corporate website with a large volume of content and traffic. Bank Syariah Mandiri has since merged with two other bank syariah BUMN, BRI Syariah and BNI Syariah, to become Bank Syariah Indonesia, or BSI. The merger officially took effect on 1 February 2021.',
+			'“This is an archived Complex Design Studio portfolio case study documenting our previous work for Bank Syariah Mandiri. This page is not an official banking portal, does not provide banking or financial services, and never requests account credentials or offers application downloads.”\n\nComplex Design and Bank Syariah Mandiri continued their collaboration after we successfully earned the trust to develop the Bank Syariah Mandiri Priority website, also known as BSM Priority. We were then appointed as the vendor responsible for handling the maintenance of Bank Syariah Mandiri’s main website. The daily work contract between Bank Syariah Mandiri and Complex Design included updating various slider features (daily), updating website pages (weekly), fixing bugs based on reports, preparing traffic reports and SEO reports, performing database backups and database optimization, as well as managing and inputting content. Every process was carried out according to a structured schedule, supported by well-organized work reports to ensure that the website remained secure, optimal, and accessible at all times.\nAt that time, Bank Syariah Mandiri was the largest bank syariah in Indonesia. Being trusted to manage the maintenance of Bank Syariah Mandiri’s main website became an important experience for Complex Design in managing a corporate website with a large volume of content and traffic. Bank Syariah Mandiri has since merged with two other bank syariah BUMN, BRI Syariah and BNI Syariah, to become Bank Syariah Indonesia, or BSI. The merger officially took effect on 1 February 2021.',
+		clientLogo:
+			'/images/portfolio/website-development/bank-syariah-mandiri/arsip-portofolio-logo-syariahmandiri.jpg',
 		coverImage:
-			'/images/portfolio/website-development/bank-syariah-mandiri/madirisyariah-complexdesign-project-a.webp',
+			'/images/portfolio/website-development/bank-syariah-mandiri/arsip-portofolio-mandirisyariah-complexdesign-project-a.webp',
 		images: [
-			'/images/portfolio/website-development/bank-syariah-mandiri/madirisyariah-complexdesign-project-a.webp',
-			'/images/portfolio/website-development/bank-syariah-mandiri/howwework-maintenance-bank-mandri syariah -complexdesign.webp',
-			'/images/portfolio/website-development/bank-syariah-mandiri/bsm-SEO-complexdesign.webp'
+			'/images/portfolio/website-development/bank-syariah-mandiri/arsip-portofolio-mandirisyariah-complexdesign-project-a.webp',
+			'/images/portfolio/website-development/bank-syariah-mandiri/arsip-portofolio-howwework-maintenance-bank-mandri syariah -complexdesign-b.webp',
+			'/images/portfolio/website-development/bank-syariah-mandiri/arsip-portofolio-bsm-SEO-complexdesign-c.webp'
 		],
 		tags: ['WEBSITE MAINTENANCE', 'SEO'],
 		year: 2016,
@@ -233,20 +234,22 @@ export const projects: PortfolioProject[] = [
 	// ==========================================
 	{
 		id: '1',
-		slug: 'bsm-pawning',
+		slug: 'arsip-complex-design-bsm-pawning',
 		categorySlug: 'ux-design',
 		title: 'BSM Pawning Division',
 		client: 'Bank Syariah Mandiri',
 		description:
-			"\"Archived portfolio case study. This page is not a banking portal, does not provide financial services, and never requests account credentials or application downloads.\"\n\nOnce again, Bank Syariah Mandiri (BSM) entrusted us to collaborate with their newly established unit at the time, the BSM Pawning Division. This division was exclusively dedicated to facilitating a comprehensive suite of gold-related services, encompassing buying and selling, pawning, installment plans, and investments.\nWe were commissioned to design the User Interface (UI) and User Experience (UX) concepts for their mobile application across both Android and iOS platforms. We take immense pride in winning this project, distinguishing ourselves among a highly competitive pool of participating agencies.\nThe Complex Design team presented a variety of engaging and elegant design concepts. A key highlight of our approach was the implementation of a carousel menu on the landing page, enabling seamless vertical scrolling that significantly elevates the visual experience for visitors.\nWe meticulously analyzed user preferences and needs, incorporating modern color palettes and sophisticated animations. This strategic approach was designed to deliver an intuitive and highly comfortable navigation experience for all users, particularly BSM's esteemed clientele.",
+			"“This is an archived Complex Design Studio portfolio case study documenting our previous work for Bank Syariah Mandiri. This page is not an official banking portal, does not provide banking or financial services, and never requests account credentials or offers application downloads.”\n\nOnce again, Bank Syariah Mandiri (BSM) entrusted us to collaborate with their newly established unit at the time, the BSM Pawning Division. This division was exclusively dedicated to facilitating a comprehensive suite of gold-related services, encompassing buying and selling, pawning, installment plans, and investments.\nWe were commissioned to design the User Interface (UI) and User Experience (UX) concepts for their mobile application across both Android and iOS platforms. We take immense pride in winning this project, distinguishing ourselves among a highly competitive pool of participating agencies.\nThe Complex Design team presented a variety of engaging and elegant design concepts. A key highlight of our approach was the implementation of a carousel menu on the landing page, enabling seamless vertical scrolling that significantly elevates the visual experience for visitors.\nWe meticulously analyzed user preferences and needs, incorporating modern color palettes and sophisticated animations. This strategic approach was designed to deliver an intuitive and highly comfortable navigation experience for all users, particularly BSM's esteemed clientele.",
+		clientLogo:
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-logo-syariahmandiri.jpg',
 		coverImage:
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-A.webp',
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-a.webp',
 		images: [
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-A.webp',
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-B.webp',
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-C.webp',
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-D.webp',
-			'/images/portfolio/ux-design/bsm-pawning/bsm-pawning-division-complex-design-E.webp'
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-a.webp',
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-b.webp',
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-c.webp',
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-d.webp',
+			'/images/portfolio/ux-design/bsm-pawning/arsip-portofolio-complex-design-bsm-pawning-division-e.webp'
 		],
 		tags: ['Mobile App Design'],
 		year: 2017
