@@ -2,18 +2,22 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { deLocalizeHref, getLocale, localizeHref, type Locale } from '$lib/paraglide/runtime';
+	import { getLocalizedPortfolioPath } from '$lib/utils/portfolio-routes';
 
 	const currentLocale = getLocale();
 	const targetLocale: Locale = currentLocale === 'en' ? 'id' : 'en';
 	const currentHref = $derived(
 		browser ? `${page.url.pathname}${page.url.search}${page.url.hash}` : page.url.pathname
 	);
-	const targetHref = $derived(
-		localizeHref(deLocalizeHref(currentHref), { locale: targetLocale }).replace(
+	const targetHref = $derived.by(() => {
+		const portfolioPath = getLocalizedPortfolioPath(page.url.pathname, targetLocale);
+		if (portfolioPath) return `${portfolioPath}${page.url.search}${page.url.hash}`;
+
+		return localizeHref(deLocalizeHref(currentHref), { locale: targetLocale }).replace(
 			/^\/id\/([?#]|$)/,
 			'/id$1'
-		)
-	);
+		);
+	});
 </script>
 
 <a

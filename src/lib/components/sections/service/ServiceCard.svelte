@@ -5,10 +5,12 @@
   - Hover: Image zoom + blur, dark overlay fade-in, service tags muncul sebagai pills
 -->
 <script lang="ts">
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import type { Service } from '$lib/types';
+	import { getPortfolioCategoryPath } from '$lib/utils/portfolio-routes';
 
 	let { service, index = 0 }: { service: Service; index?: number } = $props();
+	const locale = getLocale();
 
 	/**
 	 * Mapping slug service ke nama file gambar di /static/images/service/
@@ -29,7 +31,7 @@
 </script>
 
 <a
-	href={localizeHref(`/portfolio/${service.slug}`)}
+	href={getPortfolioCategoryPath(service.slug, locale)}
 	class="service-card group"
 	aria-label="Lihat portofolio {service.title}"
 >

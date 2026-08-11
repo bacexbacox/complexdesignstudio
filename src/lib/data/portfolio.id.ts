@@ -3,11 +3,11 @@ import type { PortfolioProject } from '$lib/types';
 type PortfolioTranslation = Pick<PortfolioProject, 'description'>;
 
 export const portfolioId = {
-	'website-development/arsip-complex-design-bank-syariah-mandiri': {
+	'website-development/complex-design-portfolio-archive-bank-syariah-mandiri': {
 		description:
 			'“Ini adalah halaman arsip studi kasus portofolio Complex Design Studio yang mendokumentasikan proyek terdahulu untuk Bank Syariah Mandiri. Halaman ini bukan portal resmi bank, tidak menyediakan layanan perbankan atau keuangan, serta tidak meminta kredensial rekening maupun menawarkan unduhan aplikasi.”\n\nComplex Design dan Bank Syariah Mandiri terus menjalin kerja sama setelah kami berhasil dan dipercaya untuk membuat website Bank Syariah Mandiri Priority atau BSM Priority. Kami kemudian menjadi vendor yang menangani maintenance website utama Bank Syariah Mandiri. Kontrak tugas harian Bank Syariah Mandiri dengan Complex Design meliputi update berbagai fitur slider (daily), update halaman (weekly), fix bugs berdasarkan laporan, traffic report, SEO report, backup database, optimasi database, serta pengelolaan dan input konten. Setiap proses dilakukan secara terjadwal dengan laporan kerja yang rapi untuk memastikan website tetap aman, optimal, dan selalu dapat diakses dengan baik.\nBank Syariah Mandiri merupakan bank syariah terbesar di Indonesia pada saat itu. Kepercayaan untuk menangani maintenance website utama Bank Syariah Mandiri menjadi salah satu pengalaman penting bagi Complex Design dalam mengelola website perusahaan dengan jumlah konten dan traffic yang besar. Saat ini, Bank Syariah Mandiri telah bergabung dengan dua bank syariah BUMN lainnya, yaitu BRI Syariah dan BNI Syariah, menjadi Bank Syariah Indonesia atau BSI. Penggabungan tersebut resmi berlaku pada 1 Februari 2021.'
 	},
-	'website-development/arsip-complex-design-bsm-priority': {
+	'website-development/complex-design-portfolio-archive-bsm-priority': {
 		description: `“Ini adalah halaman arsip studi kasus portofolio Complex Design Studio yang mendokumentasikan proyek terdahulu untuk Bank Syariah Mandiri. Halaman ini bukan portal resmi bank, tidak menyediakan layanan perbankan atau keuangan, serta tidak meminta kredensial rekening maupun menawarkan unduhan aplikasi.”
 
 Bank Syariah Mandiri mempercayakan Complex Design sebagai vendor untuk merencanakan pembuatan website Bank Syariah Mandiri Priority, atau yang biasa disebut BSM Priority.
@@ -16,7 +16,7 @@ Website ini dibuat dengan konsep Smooth Experience dan mengusung tema Brown Eleg
 
 Tim kami memberikan layanan maksimal untuk Bank Syariah Mandiri dengan menerapkan engine dan fitur mutakhir yang paling modern saat itu. Pengalaman pengguna (user experience) menjadi prioritas kami dengan membangun website yang Super Responsive. Kami juga mengembangkan aplikasi pendamping untuk BlackBerry RIM, Android, dan iOS sebagai bagian dari proyek ini.`
 	},
-	'ux-design/arsip-complex-design-bsm-pawning': {
+	'ux-design/complex-design-portfolio-archive-bsm-pawning': {
 		description: `“Ini adalah halaman arsip studi kasus portofolio Complex Design Studio yang mendokumentasikan proyek terdahulu untuk Bank Syariah Mandiri. Halaman ini bukan portal resmi bank, tidak menyediakan layanan perbankan atau keuangan, serta tidak meminta kredensial rekening maupun menawarkan unduhan aplikasi.”
 
 Lagi dan lagi, Bank Syariah Mandiri (BSM) memberikan kepercayaannya kepada kami untuk berkolaborasi dengan divisi baru mereka pada saat itu, yaitu BSM Pawning Division. Divisi ini dibentuk khusus untuk memfasilitasi berbagai layanan terkait emas, mulai dari transaksi jual beli, gadai, cicilan, hingga investasi.
@@ -75,7 +75,7 @@ Kehadiran platform ini memberikan kemudahan akses secara penuh bagi pengguna men
 
 Dengan mengusung konsep kontribusi berbasis komunitas dari para pendidik secara nasional, HIVAL dilengkapi dengan fitur analitik pintar yang secara spesifik membantu siswa memetakan kelemahan akademik mereka setelah mengerjakan tryout. Selain itu, integrasi fitur 'Kelas Online' publik maupun privat serta Notifikasi Real-time memungkinkan pengguna untuk terhubung secara dinamis, menjadikannya solusi pendidikan digital yang komprehensif, adaptif, dan sangat relevan untuk kebutuhan belajar modern.`
 	},
-	'mobile-application/arsip-complex-design-bsm-priority-mobile': {
+	'mobile-application/complex-design-portfolio-archive-bsm-priority-mobile': {
 		description: `“Ini adalah halaman arsip studi kasus portofolio Complex Design Studio yang mendokumentasikan proyek terdahulu untuk Bank Syariah Mandiri. Halaman ini bukan portal resmi bank, tidak menyediakan layanan perbankan atau keuangan, serta tidak meminta kredensial rekening maupun menawarkan unduhan aplikasi.”
 
 “Layanan finansial premium dalam satu genggaman.”

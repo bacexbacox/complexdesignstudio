@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale } from '$lib/paraglide/runtime';
 	import type { PortfolioProject } from '$lib/types';
+	import { getPortfolioCategoryPath } from '$lib/utils/portfolio-routes';
 
 	let { project }: { project: PortfolioProject } = $props();
+	const locale = getLocale();
 
 	const formattedDescription = $derived(
 		project.description.replace(/\n+/g, '\n').replace(/\n/g, '<br/><br/>')
@@ -79,7 +81,7 @@
 			<div class="mt-12 flex pb-8">
 				<a
 					class="group flex w-fit items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-6 py-3 text-sm font-medium text-gray-700 transition-all duration-300 hover:border-gray-300 hover:bg-gray-100"
-					href={localizeHref(`/portfolio/${project.categorySlug}`)}
+					href={getPortfolioCategoryPath(project.categorySlug, locale)}
 				>
 					<svg
 						class="h-4 w-4 rotate-180 transition-transform duration-300 group-hover:-translate-x-1"

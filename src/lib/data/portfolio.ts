@@ -84,7 +84,7 @@ export const projects: PortfolioProject[] = [
 	},
 	{
 		id: '5',
-		slug: 'arsip-complex-design-bsm-priority-mobile',
+		slug: 'complex-design-portfolio-archive-bsm-priority-mobile',
 		categorySlug: 'mobile-application',
 		title: 'BSM PRIORITY — MOBILE APP',
 		client: 'BANK SYARIAH MANDIRI',
@@ -109,7 +109,7 @@ export const projects: PortfolioProject[] = [
 	// ==========================================
 	{
 		id: '1',
-		slug: 'arsip-complex-design-bsm-priority',
+		slug: 'complex-design-portfolio-archive-bsm-priority',
 		categorySlug: 'website-development',
 		title: 'BSM PRIORITY',
 		client: 'Bank Syariah Mandiri',
@@ -128,7 +128,7 @@ export const projects: PortfolioProject[] = [
 	},
 	{
 		id: '5',
-		slug: 'arsip-complex-design-bank-syariah-mandiri',
+		slug: 'complex-design-portfolio-archive-bank-syariah-mandiri',
 		categorySlug: 'website-development',
 		title: 'BANK SYARIAH MANDIRI — MAIN WEBSITE',
 		client: 'Bank Syariah Mandiri',
@@ -234,7 +234,7 @@ export const projects: PortfolioProject[] = [
 	// ==========================================
 	{
 		id: '1',
-		slug: 'arsip-complex-design-bsm-pawning',
+		slug: 'complex-design-portfolio-archive-bsm-pawning',
 		categorySlug: 'ux-design',
 		title: 'BSM Pawning Division',
 		client: 'Bank Syariah Mandiri',

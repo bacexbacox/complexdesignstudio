@@ -1,8 +1,9 @@
 <!-- Navbar.svelte - Komponen navigasi utama dengan mega menu services dan smooth scroll -->
 <script lang="ts">
 	import { m } from '$lib/paraglide/messages';
-	import { localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 	import LanguageSwitcher from '$lib/components/layout/LanguageSwitcher.svelte';
+	import { getPortfolioCategoryPath } from '$lib/utils/portfolio-routes';
 	import { fade, slide } from 'svelte/transition';
 	import { cubicOut, quintOut } from 'svelte/easing';
 
@@ -12,6 +13,7 @@
 	let hoveredService = $state<number | null>(null);
 	let isMobileMenuOpen = $state(false);
 	let navElement = $state<HTMLElement | null>(null);
+	const locale = getLocale();
 
 	// Data navigasi utama
 	const navItems = [
@@ -39,7 +41,7 @@
 			key: 'website-development',
 			title: 'Web Development',
 			count: 6,
-			href: '/portfolio/website-development',
+			href: getPortfolioCategoryPath('website-development', locale),
 			image: '/images/service/website-development-complexdesignstudio.webp',
 			icon: '💻'
 		},
@@ -47,7 +49,7 @@
 			key: 'mobile-application',
 			title: 'Mobile Application',
 			count: 6,
-			href: '/portfolio/mobile-application',
+			href: getPortfolioCategoryPath('mobile-application', locale),
 			image: '/images/service/web-and-mobile-applications-complexdesignstudio.webp',
 			icon: '📱'
 		},
@@ -55,7 +57,7 @@
 			key: 'digital-marketing',
 			title: 'Digital Marketing',
 			count: 6,
-			href: '/portfolio/digital-marketing',
+			href: getPortfolioCategoryPath('digital-marketing', locale),
 			image: '/images/service/digitak-marketing-complexdesignstudio.webp',
 			icon: '🛒'
 		},
@@ -63,7 +65,7 @@
 			key: 'ux-design',
 			title: 'User Experience Design',
 			count: 4,
-			href: '/portfolio/ux-design',
+			href: getPortfolioCategoryPath('ux-design', locale),
 			image: '/images/service/user-experience-design-complexdesignstudio.webp',
 			icon: '📐'
 		},
@@ -71,7 +73,7 @@
 			key: 'creative-design',
 			title: 'Creative Design',
 			count: 4,
-			href: '/portfolio/creative-design',
+			href: getPortfolioCategoryPath('creative-design', locale),
 			image: '/images/service/creative-design-complexdesignstudio.webp',
 			icon: '🎨'
 		},
@@ -79,7 +81,7 @@
 			key: 'branding-product',
 			title: 'Branding Product',
 			count: 5,
-			href: '/portfolio/branding-product',
+			href: getPortfolioCategoryPath('branding-product', locale),
 			image: '/images/service/branding-product-complexdesignstudio.webp',
 			icon: '⚙️'
 		}
@@ -243,7 +245,7 @@
 				<div class="service-col">
 					{#each leftCol as service, colIndex}
 						<a
-							href={localizeHref(service.href)}
+							href={service.href}
 							class="service-card"
 							role="menuitem"
 							style="flex-grow: {getFlexGrow(service.globalIndex)}"
@@ -275,7 +277,7 @@
 				<div class="service-col">
 					{#each rightCol as service, colIndex}
 						<a
-							href={localizeHref(service.href)}
+							href={service.href}
 							class="service-card"
 							role="menuitem"
 							style="flex-grow: {getFlexGrow(service.globalIndex)}"
@@ -376,7 +378,7 @@
 			<!-- Services sub-menu -->
 			{#each services as service, i}
 				<a
-					href={localizeHref(service.href)}
+					href={service.href}
 					class="mobile-service-link"
 					in:fade={{ delay: 360 + i * 40, duration: 280 }}
 					onclick={() => (isMobileMenuOpen = false)}

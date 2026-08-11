@@ -1,5 +1,10 @@
 import { projects } from '$lib/data/portfolio';
 import { services } from '$lib/data/services';
+import {
+	getPortfolioCategoryPath,
+	getPortfolioProjectPath,
+	type PortfolioLocale
+} from '$lib/utils/portfolio-routes';
 
 const baseUrl = 'https://complexdesignstudio.com';
 
@@ -19,16 +24,21 @@ export const GET = () => {
 		{ path: '/about', priority: '0.7', changefreq: 'monthly' },
 		{ path: '/contact', priority: '0.7', changefreq: 'yearly' }
 	];
-	const projectRoutes = projects.map((project) => ({
-		path: `/portfolio/${project.categorySlug}/${project.slug}`,
-		priority: '0.8',
-		changefreq: 'monthly'
-	}));
-	const categoryRoutes = services.map((service) => ({
-		path: `/portfolio/${service.slug}`,
-		priority: '0.8',
-		changefreq: 'monthly'
-	}));
+	const locales: PortfolioLocale[] = ['en', 'id'];
+	const projectRoutes = projects.flatMap((project) =>
+		locales.map((locale) => ({
+			path: getPortfolioProjectPath(project.categorySlug, project.slug, locale),
+			priority: '0.8',
+			changefreq: 'monthly'
+		}))
+	);
+	const categoryRoutes = services.flatMap((service) =>
+		locales.map((locale) => ({
+			path: getPortfolioCategoryPath(service.slug, locale),
+			priority: '0.8',
+			changefreq: 'monthly'
+		}))
+	);
 
 	const urls = [...staticRoutes, ...categoryRoutes, ...projectRoutes]
 		.map(

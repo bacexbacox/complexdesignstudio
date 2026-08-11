@@ -3,23 +3,24 @@ import type { PageLoad } from './$types';
 import { getProjectBySlug, projects } from '$lib/data/portfolio';
 import { getLocale } from '$lib/paraglide/runtime';
 import type { SeoMeta } from '$lib/types';
+import { getPortfolioProjectPath } from '$lib/utils/portfolio-routes';
 
 const archivedBankingMetaTitles: Record<string, { en: string; id: string }> = {
-	'mobile-application/arsip-complex-design-bsm-priority-mobile': {
-		en: 'Archived Case Study: BSM Priority Mobile | Complex Design',
-		id: 'Arsip Studi Kasus BSM Priority Mobile | Complex Design'
+	'mobile-application/complex-design-portfolio-archive-bsm-priority-mobile': {
+		en: 'Complex Design Portfolio Archive: BSM Priority Mobile',
+		id: 'Arsip Portofolio Complex Design: Aplikasi BSM Priority'
 	},
-	'website-development/arsip-complex-design-bsm-priority': {
-		en: 'Archived Case Study: BSM Priority | Complex Design Studio',
-		id: 'Arsip Studi Kasus BSM Priority | Complex Design Studio'
+	'website-development/complex-design-portfolio-archive-bsm-priority': {
+		en: 'Complex Design Portfolio Archive: BSM Priority Website',
+		id: 'Arsip Portofolio Complex Design: Situs BSM Priority'
 	},
-	'website-development/arsip-complex-design-bank-syariah-mandiri': {
-		en: 'Archived Case Study: Bank Syariah Mandiri | Complex Design',
-		id: 'Arsip Studi Kasus Bank Syariah Mandiri | Complex Design'
+	'website-development/complex-design-portfolio-archive-bank-syariah-mandiri': {
+		en: 'Complex Design Portfolio Archive: Bank Syariah Mandiri',
+		id: 'Arsip Portofolio Complex Design: Bank Syariah Mandiri'
 	},
-	'ux-design/arsip-complex-design-bsm-pawning': {
-		en: 'Archived Case Study: BSM Pawning | Complex Design Studio',
-		id: 'Arsip Studi Kasus BSM Pawning | Complex Design Studio'
+	'ux-design/complex-design-portfolio-archive-bsm-pawning': {
+		en: 'Complex Design Portfolio Archive: BSM Pawning UI/UX',
+		id: 'Arsip Portofolio Complex Design: UI/UX BSM Pawning'
 	}
 };
 
@@ -37,11 +38,13 @@ export const load: PageLoad = ({ params }) => {
 	const projectKey = `${params.category}/${params.slug}`;
 	const archivedTitle = archivedBankingMetaTitles[projectKey];
 	const metaTitle = archivedTitle?.[locale === 'id' ? 'id' : 'en'];
+	const publicPath = getPortfolioProjectPath(params.category, params.slug, locale);
+	const publicUrl = `https://complexdesignstudio.com${publicPath}`;
 
 	const meta: SeoMeta = {
 		title: metaTitle ?? `${project.title} - ${project.client} | Complex Design Studio`,
 		description: project.description.substring(0, 155) + '...',
-		canonical: `https://complexdesignstudio.com/portfolio/${params.category}/${params.slug}`,
+		canonical: publicUrl,
 		noIndex: false,
 		jsonLd: {
 			'@context': 'https://schema.org',
@@ -51,7 +54,7 @@ export const load: PageLoad = ({ params }) => {
 				'@type': 'Organization',
 				name: 'Complex Design Studio'
 			},
-			url: `https://complexdesignstudio.com/portfolio/${params.category}/${params.slug}`,
+			url: publicUrl,
 			image: `https://complexdesignstudio.com${project.coverImage}`,
 			description: project.description
 		}
