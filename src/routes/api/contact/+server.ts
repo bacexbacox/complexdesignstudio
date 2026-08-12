@@ -173,9 +173,6 @@ export const POST = async ({ request }) => {
 			auth: {
 				user: env.SMTP_USER,
 				pass: env.SMTP_PASS
-			},
-			tls: {
-				rejectUnauthorized: false
 			}
 		});
 
