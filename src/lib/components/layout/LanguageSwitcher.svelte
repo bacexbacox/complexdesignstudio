@@ -11,7 +11,7 @@
 	);
 	const targetHref = $derived.by(() => {
 		const portfolioPath = getLocalizedPortfolioPath(page.url.pathname, targetLocale);
-		if (portfolioPath) return `${portfolioPath}${page.url.search}${page.url.hash}`;
+		if (portfolioPath) return `${portfolioPath}${currentHref.slice(page.url.pathname.length)}`;
 
 		return localizeHref(deLocalizeHref(currentHref), { locale: targetLocale }).replace(
 			/^\/id\/([?#]|$)/,
