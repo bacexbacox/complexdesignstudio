@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://complexdesignstudio.com/sitemap.xml
+Sitemap: https://www.complexdesignstudio.com/sitemap.xml

@@ -3,7 +3,7 @@ import type { PageLoad } from './$types';
 import { getProjectBySlug, projects } from '$lib/data/portfolio';
 import { getLocale } from '$lib/paraglide/runtime';
 import type { SeoMeta } from '$lib/types';
-import { getPortfolioProjectPath } from '$lib/utils/portfolio-routes';
+import { getPortfolioProjectPath, siteUrl } from '$lib/utils/portfolio-routes';
 
 const archivedBankingMetaTitles: Record<string, { en: string; id: string }> = {
 	'mobile-application/complex-design-portfolio-archive-bsm-priority-mobile': {
@@ -39,12 +39,18 @@ export const load: PageLoad = ({ params }) => {
 	const archivedTitle = archivedBankingMetaTitles[projectKey];
 	const metaTitle = archivedTitle?.[locale === 'id' ? 'id' : 'en'];
 	const publicPath = getPortfolioProjectPath(params.category, params.slug, locale);
-	const publicUrl = `https://complexdesignstudio.com${publicPath}`;
+	const publicUrl = `${siteUrl}${publicPath}`;
+	const languageAlternates = {
+		en: `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'en')}`,
+		id: `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'id')}`,
+		'x-default': `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'id')}`
+	};
 
 	const meta: SeoMeta = {
 		title: metaTitle ?? `${project.title} - ${project.client} | Complex Design Studio`,
 		description: project.description.substring(0, 155) + '...',
 		canonical: publicUrl,
+		languageAlternates,
 		noIndex: false,
 		jsonLd: {
 			'@context': 'https://schema.org',
@@ -55,7 +61,7 @@ export const load: PageLoad = ({ params }) => {
 				name: 'Complex Design Studio'
 			},
 			url: publicUrl,
-			image: `https://complexdesignstudio.com${project.coverImage}`,
+			image: `${siteUrl}${project.coverImage}`,
 			description: project.description
 		}
 	};

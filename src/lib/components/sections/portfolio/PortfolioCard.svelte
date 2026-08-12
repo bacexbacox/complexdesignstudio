@@ -1,10 +1,20 @@
 <script lang="ts">
 	import { getLocale } from '$lib/paraglide/runtime';
 	import type { PortfolioProject } from '$lib/types';
-	import { getPortfolioProjectPath } from '$lib/utils/portfolio-routes';
+	import {
+		getPortfolioProjectPath,
+		isArchivedBankingPortfolioSlug
+	} from '$lib/utils/portfolio-routes';
 
 	let { project } = $props<{ project: PortfolioProject }>();
 	const locale = getLocale();
+	const coverAlt = $derived(
+		isArchivedBankingPortfolioSlug(project.slug)
+			? locale === 'id'
+				? `Arsip studi kasus portofolio ${project.title} oleh Complex Design Studio`
+				: `Archived ${project.title} portfolio case study by Complex Design Studio`
+			: project.title
+	);
 </script>
 
 <a
@@ -18,7 +28,7 @@
 		{#if project.coverImage}
 			<img
 				src={project.coverImage}
-				alt={project.title}
+				alt={coverAlt}
 				class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
 				loading="lazy"
 				width="400"

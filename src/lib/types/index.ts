@@ -36,6 +36,7 @@ export interface SeoMeta {
 	title: string;
 	description: string;
 	canonical: string;
+	languageAlternates?: Partial<Record<'en' | 'id' | 'x-default', string>>;
 	ogImage?: string;
 	noIndex?: boolean;
 	jsonLd?: Record<string, unknown>;

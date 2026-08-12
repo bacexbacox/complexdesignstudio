@@ -1,10 +1,29 @@
 <script lang="ts">
 	import { getLocale } from '$lib/paraglide/runtime';
 	import type { PortfolioProject } from '$lib/types';
-	import { getPortfolioCategoryPath } from '$lib/utils/portfolio-routes';
+	import {
+		getPortfolioCategoryPath,
+		isArchivedBankingPortfolioSlug
+	} from '$lib/utils/portfolio-routes';
 
 	let { project }: { project: PortfolioProject } = $props();
 	const locale = getLocale();
+	const isArchivedBankingProject = $derived(isArchivedBankingPortfolioSlug(project.slug));
+	const clientLogoAlt = $derived(
+		isArchivedBankingProject
+			? locale === 'id'
+				? `Logo ${project.client} dalam arsip studi kasus portofolio Complex Design Studio`
+				: `${project.client} logo in an archived Complex Design Studio portfolio case study`
+			: `${project.client} Logo`
+	);
+
+	function getProjectImageAlt(index: number): string {
+		if (!isArchivedBankingProject) return `${project.title} mockup ${index + 1}`;
+
+		return locale === 'id'
+			? `Arsip studi kasus portofolio ${project.title} oleh Complex Design Studio, gambar proyek ${index + 1}`
+			: `Archived ${project.title} portfolio case study by Complex Design Studio, project image ${index + 1}`;
+	}
 
 	const formattedDescription = $derived(
 		project.description.replace(/\n+/g, '\n').replace(/\n/g, '<br/><br/>')
@@ -25,7 +44,7 @@
 				<div class="mt-8 mb-4 h-auto w-[150px]">
 					<img
 						src={project.clientLogo}
-						alt="{project.client} Logo"
+						alt={clientLogoAlt}
 						class="h-auto w-full object-contain object-left"
 						width="150"
 						height="150"
@@ -116,7 +135,7 @@
 						{:else}
 							<img
 								src={media}
-								alt="{project.title} mockup {i + 1}"
+								alt={getProjectImageAlt(i)}
 								class="h-auto w-full object-cover"
 								loading={i === 0 ? 'eager' : 'lazy'}
 							/>

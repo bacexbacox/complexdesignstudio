@@ -1,5 +1,7 @@
 export type PortfolioLocale = 'en' | 'id';
 
+export const siteUrl = 'https://www.complexdesignstudio.com';
+
 const archivedBankingSlugs: Record<string, string> = {
 	'complex-design-portfolio-archive-bsm-priority-mobile':
 		'arsip-portofolio-complex-design-bsm-priority-mobile',
@@ -17,6 +19,10 @@ export function getEnglishPortfolioSlug(slug: string): string {
 	);
 
 	return translatedSlug?.[0] ?? slug;
+}
+
+export function isArchivedBankingPortfolioSlug(slug: string): boolean {
+	return Object.prototype.hasOwnProperty.call(archivedBankingSlugs, getEnglishPortfolioSlug(slug));
 }
 
 export function getLocalizedPortfolioSlug(slug: string, locale: PortfolioLocale): string {

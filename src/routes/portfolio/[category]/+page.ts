@@ -4,7 +4,7 @@ import { localizeService, services } from '$lib/data/services';
 import { getLocale } from '$lib/paraglide/runtime';
 import { getProjectsByCategory } from '$lib/data/portfolio';
 import type { SeoMeta } from '$lib/types';
-import { getPortfolioCategoryPath } from '$lib/utils/portfolio-routes';
+import { getPortfolioCategoryPath, siteUrl } from '$lib/utils/portfolio-routes';
 
 export const entries = () => services.map((service) => ({ category: service.slug }));
 
@@ -21,7 +21,12 @@ export const load: PageLoad = ({ params }) => {
 	const service = localizeService(sourceService, locale);
 
 	const categoryProjects = getProjectsByCategory(categorySlug, locale);
-	const publicUrl = `https://complexdesignstudio.com${getPortfolioCategoryPath(categorySlug, locale)}`;
+	const publicUrl = `${siteUrl}${getPortfolioCategoryPath(categorySlug, locale)}`;
+	const languageAlternates = {
+		en: `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'en')}`,
+		id: `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'id')}`,
+		'x-default': `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'id')}`
+	};
 
 	const meta: SeoMeta = {
 		title: `${service.title} Portfolio - Complex Design Studio`,
@@ -29,6 +34,7 @@ export const load: PageLoad = ({ params }) => {
 			service.description ||
 			`Explore our ${service.title} projects. Complex is a design and technology studio building digital products from concept to production.`,
 		canonical: publicUrl,
+		languageAlternates,
 		noIndex: false,
 		jsonLd: {
 			'@context': 'https://schema.org',

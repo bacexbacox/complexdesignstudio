@@ -8,6 +8,15 @@
 	<title>{meta.title}</title>
 	<meta name="description" content={meta.description} />
 	<link rel="canonical" href={meta.canonical} />
+	{#if meta.languageAlternates?.en}
+		<link rel="alternate" hreflang="en" href={meta.languageAlternates.en} />
+	{/if}
+	{#if meta.languageAlternates?.id}
+		<link rel="alternate" hreflang="id" href={meta.languageAlternates.id} />
+	{/if}
+	{#if meta.languageAlternates?.['x-default']}
+		<link rel="alternate" hreflang="x-default" href={meta.languageAlternates['x-default']} />
+	{/if}
 
 	<!-- Open Graph -->
 	<meta property="og:title" content={meta.title} />

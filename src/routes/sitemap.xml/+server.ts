@@ -3,10 +3,9 @@ import { services } from '$lib/data/services';
 import {
 	getPortfolioCategoryPath,
 	getPortfolioProjectPath,
+	siteUrl,
 	type PortfolioLocale
 } from '$lib/utils/portfolio-routes';
-
-const baseUrl = 'https://complexdesignstudio.com';
 
 const escapeXml = (value: string) =>
 	value
@@ -43,7 +42,7 @@ export const GET = () => {
 	const urls = [...staticRoutes, ...categoryRoutes, ...projectRoutes]
 		.map(
 			({ path, priority, changefreq }) => `  <url>
-    <loc>${escapeXml(`${baseUrl}${path}`)}</loc>
+    <loc>${escapeXml(`${siteUrl}${path}`)}</loc>
     <lastmod>${lastModified}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
