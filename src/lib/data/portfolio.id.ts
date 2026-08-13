@@ -61,7 +61,7 @@ Dalam proyek ini, tim Complex Design turut serta dalam pengembangan aplikasi unt
 Poltracking Indonesia sendiri merupakan perusahaan riset opini publik dan konsultan strategi pemenangan pemilu yang didirikan di Jakarta pada 14 Agustus 2012 oleh pengamat politik, Hanta Yuda AR. Lembaga ini secara aktif menyelenggarakan survei nasional, riset perilaku pemilih, serta memberikan konsultasi tata kelola pemilu dan pemerintahan.`
 	},
 	'mobile-application/kuningan-city': {
-		description: `Website dan aplikasi Kuningan City menyuguhkan informasi dengan berbagai konten yang terkonsep secara matang, dibalut dengan desain antarmuka (UI) bernuansa gelap yang elegan dan premium. Aplikasi ini dirancang untuk mendukung mobilitas pengguna yang tinggi dan telah didistribusikan secara resmi untuk dapat diunduh melalui Google Play Store (Android) maupun Apple App Store (iOS).
+		description: `Website dan aplikasi Kuningan City menyuguhkan informasi dengan berbagai konten yang terkonsep secara matang, dibalut dengan desain antarmuka (UI) bernuansa gelap yang elegan dan premium. Aplikasi tersebut sebelumnya pernah didistribusikan melalui listing resmi Google Play Store untuk Android dan Apple App Store untuk iOS.
 
 Aplikasi ini hadir dengan fitur-fitur esensial yang dirancang khusus untuk mempermudah pengunjung mal. Beberapa menu andalannya meliputi "What's On" untuk update acara terbaru, "Promotion" untuk penawaran eksklusif dari berbagai tenant, hingga fitur interaktif dan solutif "Where Do I Park?" yang sangat membantu pengunjung melacak lokasi parkir kendaraan mereka. Dengan pengalaman pengguna (UX) yang mulus, aplikasi ini berhasil menyempurnakan pengalaman berbelanja sekaligus menunjang gaya hidup kaum urban Jakarta.`
 	},

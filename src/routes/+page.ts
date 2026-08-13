@@ -1,16 +1,28 @@
 import type { SeoMeta } from '$lib/types';
+import { getLocale } from '$lib/paraglide/runtime';
+import { siteUrl } from '$lib/utils/portfolio-routes';
 
 export const load = () => {
+	const locale = getLocale();
+	const englishUrl = `${siteUrl}/`;
+	const indonesianUrl = `${siteUrl}/id`;
+	const publicUrl = locale === 'id' ? indonesianUrl : englishUrl;
+
 	const meta: SeoMeta = {
 		title: 'Website, Mobile App & Design Agency | Complex Design Studio',
 		description:
 			'Complex Design Studio is an agency for website development, mobile app development, digital design, branding, and user experience.',
-		canonical: 'https://complexdesignstudio.com/',
+		canonical: publicUrl,
+		languageAlternates: {
+			en: englishUrl,
+			id: indonesianUrl,
+			'x-default': englishUrl
+		},
 		jsonLd: {
 			'@context': 'https://schema.org',
 			'@type': 'Organization',
 			name: 'Complex Design Studio',
-			url: 'https://complexdesignstudio.com',
+			url: publicUrl,
 			description:
 				'Agency for website development, mobile app development, digital design, branding, and user experience.'
 		}

@@ -43,7 +43,7 @@ export const load: PageLoad = ({ params }) => {
 	const languageAlternates = {
 		en: `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'en')}`,
 		id: `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'id')}`,
-		'x-default': `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'id')}`
+		'x-default': `${siteUrl}${getPortfolioProjectPath(params.category, params.slug, 'en')}`
 	};
 
 	const meta: SeoMeta = {

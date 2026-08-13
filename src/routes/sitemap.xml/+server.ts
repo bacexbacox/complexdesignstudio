@@ -16,36 +16,28 @@ const escapeXml = (value: string) =>
 		.replace(/'/g, '&apos;');
 
 export const GET = () => {
-	const lastModified = new Date().toISOString().split('T')[0];
 	const staticRoutes = [
-		{ path: '/', priority: '1.0', changefreq: 'weekly' },
-		{ path: '/service', priority: '0.9', changefreq: 'monthly' },
-		{ path: '/about', priority: '0.7', changefreq: 'monthly' },
-		{ path: '/contact', priority: '0.7', changefreq: 'yearly' }
+		'/',
+		'/id',
+		'/service',
+		'/id/service',
+		'/about',
+		'/id/about',
+		'/contact',
+		'/id/contact'
 	];
 	const locales: PortfolioLocale[] = ['en', 'id'];
 	const projectRoutes = projects.flatMap((project) =>
-		locales.map((locale) => ({
-			path: getPortfolioProjectPath(project.categorySlug, project.slug, locale),
-			priority: '0.8',
-			changefreq: 'monthly'
-		}))
+		locales.map((locale) => getPortfolioProjectPath(project.categorySlug, project.slug, locale))
 	);
 	const categoryRoutes = services.flatMap((service) =>
-		locales.map((locale) => ({
-			path: getPortfolioCategoryPath(service.slug, locale),
-			priority: '0.8',
-			changefreq: 'monthly'
-		}))
+		locales.map((locale) => getPortfolioCategoryPath(service.slug, locale))
 	);
 
 	const urls = [...staticRoutes, ...categoryRoutes, ...projectRoutes]
 		.map(
-			({ path, priority, changefreq }) => `  <url>
+			(path) => `  <url>
     <loc>${escapeXml(`${siteUrl}${path}`)}</loc>
-    <lastmod>${lastModified}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
   </url>`
 		)
 		.join('\n');

@@ -25,7 +25,7 @@ export const load: PageLoad = ({ params }) => {
 	const languageAlternates = {
 		en: `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'en')}`,
 		id: `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'id')}`,
-		'x-default': `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'id')}`
+		'x-default': `${siteUrl}${getPortfolioCategoryPath(categorySlug, 'en')}`
 	};
 
 	const meta: SeoMeta = {
