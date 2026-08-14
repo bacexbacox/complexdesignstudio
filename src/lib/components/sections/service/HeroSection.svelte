@@ -4,14 +4,17 @@
   lalu tagline besar di bawah (center-aligned)
 -->
 <script lang="ts">
+	import ScrollRevealText from '$lib/components/shared/ScrollRevealText.svelte';
 	import { m } from '$lib/paraglide/messages';
 
 	/**
-	 * Intersection Observer untuk animasi masuk elemen
-	 * Menggunakan $effect agar observer di-cleanup saat komponen unmount
+	 * Intersection Observer untuk animasi masuk elemen.
+	 * Menggunakan $effect agar observer di-cleanup saat komponen unmount.
 	 */
 	let sectionEl: HTMLElement | undefined = $state();
 	let isVisible = $state(false);
+
+	const headline = $derived(m.service_hero_center());
 
 	$effect(() => {
 		if (!sectionEl) return;
@@ -64,10 +67,10 @@
 		class="transition-all delay-500 duration-900 ease-[cubic-bezier(0.16,1,0.3,1)]"
 		style="opacity: {isVisible ? 1 : 0}; transform: translateY({isVisible ? '0' : '32px'})"
 	>
-		<p
+		<ScrollRevealText
+			text={headline}
+			anchor={sectionEl}
 			class="mx-auto max-w-4xl text-center text-2xl leading-[1.15] font-medium tracking-tight md:text-4xl lg:text-[3.5vw]"
-		>
-			{m.service_hero_center()}
-		</p>
+		/>
 	</div>
 </section>
