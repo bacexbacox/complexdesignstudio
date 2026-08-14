@@ -8,12 +8,15 @@ export const load = () => {
 	const indonesianUrl = `${siteUrl}/id`;
 	const publicUrl = locale === 'id' ? indonesianUrl : englishUrl;
 	const isIndonesian = locale === 'id';
+	const title = isIndonesian
+		? 'Jasa Pembuatan Website dan Aplikasi | Complex Design Studio'
+		: 'Website, Mobile App & Design Agency | Complex Design Studio';
 	const description = isIndonesian
 		? 'Complex Design Studio adalah agency jasa pembuatan website, aplikasi iOS dan Android, UI/UX, digital marketing, serta desain produk berbasis di Jakarta.'
 		: 'Complex Design Studio is a Jakarta-based agency for website development, iOS and Android apps, UI/UX design, digital marketing, and product design.';
 
 	const meta: SeoMeta = {
-		title: 'Website, Mobile App & Design Agency | Complex Design Studio',
+		title,
 		description,
 		canonical: publicUrl,
 		languageAlternates: {
