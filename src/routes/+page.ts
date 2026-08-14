@@ -10,7 +10,7 @@ export const load = () => {
 	const isIndonesian = locale === 'id';
 	const description = isIndonesian
 		? 'Complex Design Studio adalah agency jasa pembuatan website, aplikasi iOS dan Android, UI/UX, digital marketing, serta desain produk berbasis di Jakarta.'
-		: 'Complex Design Studio is an agency for website development, mobile app development, digital design, branding, and user experience.';
+		: 'Complex Design Studio is a Jakarta-based agency for website development, iOS and Android apps, UI/UX design, digital marketing, and product design.';
 
 	const meta: SeoMeta = {
 		title: 'Website, Mobile App & Design Agency | Complex Design Studio',
