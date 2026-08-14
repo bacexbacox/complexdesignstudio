@@ -7,11 +7,14 @@ export const load = () => {
 	const englishUrl = `${siteUrl}/`;
 	const indonesianUrl = `${siteUrl}/id`;
 	const publicUrl = locale === 'id' ? indonesianUrl : englishUrl;
+	const isIndonesian = locale === 'id';
+	const description = isIndonesian
+		? 'Complex Design Studio adalah agency jasa pembuatan website, aplikasi iOS dan Android, UI/UX, digital marketing, serta desain produk berbasis di Jakarta.'
+		: 'Complex Design Studio is an agency for website development, mobile app development, digital design, branding, and user experience.';
 
 	const meta: SeoMeta = {
 		title: 'Website, Mobile App & Design Agency | Complex Design Studio',
-		description:
-			'Complex Design Studio is an agency for website development, mobile app development, digital design, branding, and user experience.',
+		description,
 		canonical: publicUrl,
 		languageAlternates: {
 			en: englishUrl,
@@ -23,8 +26,7 @@ export const load = () => {
 			'@type': 'Organization',
 			name: 'Complex Design Studio',
 			url: publicUrl,
-			description:
-				'Agency for website development, mobile app development, digital design, branding, and user experience.'
+			description
 		}
 	};
 
